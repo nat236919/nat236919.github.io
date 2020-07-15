@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Nuttaphat Arunoprayoch ">
+<meta name="description" content="Objective In this short blog, I would like to introduce Python decorators to everyone. Some of you might have heard and used it daily. And to those who have never heard of it, let go through some demonstration to show how powerful it can be.
+What a Python Decorator is TL;DR: It is a Python object that is used to modify function or class regarding its behaviour.
+ Examples 1." />
+<meta name="keywords" content="Nuttaphat, Arunoprayoch, Software Engineer, Data Analyst, blog, python, decorators" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://nat236919.github.io/blog/2020/06/python-decorators/" />
+
+
+    <title>
+        
+            Python Decorators :: Nuttaphat Arunoprayoch 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://nat236919.github.io/main.9bdff9aab5870f5876de1ad58e176f87b822d8e655e227ac133a9958540c80e2.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://nat236919.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://nat236919.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://nat236919.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://nat236919.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://nat236919.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://nat236919.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Python Decorators">
+<meta itemprop="description" content="Objective In this short blog, I would like to introduce Python decorators to everyone. Some of you might have heard and used it daily. And to those who have never heard of it, let go through some demonstration to show how powerful it can be.
+What a Python Decorator is TL;DR: It is a Python object that is used to modify function or class regarding its behaviour.
+ Examples 1.">
+<meta itemprop="datePublished" content="2020-06-28T14:18:03&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-28T14:18:03&#43;08:00" />
+<meta itemprop="wordCount" content="536">
+<meta itemprop="image" content="https://nat236919.github.io"/>
+
+
+
+<meta itemprop="keywords" content="blog,python,decorators," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nat236919.github.io"/>
+
+<meta name="twitter:title" content="Python Decorators"/>
+<meta name="twitter:description" content="Objective In this short blog, I would like to introduce Python decorators to everyone. Some of you might have heard and used it daily. And to those who have never heard of it, let go through some demonstration to show how powerful it can be.
+What a Python Decorator is TL;DR: It is a Python object that is used to modify function or class regarding its behaviour.
+ Examples 1."/>
+
+
+
+
+
+    <meta property="article:section" content="blog" />
+
+
+
+    <meta property="article:published_time" content="2020-06-28 14:18:03 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://nat236919.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://nat236919.github.io/about/">About</a></li><li><a href="https://nat236919.github.io/blog/">Blog</a></li><li><a href="https://nat236919.github.io/projects/">Projects</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://nat236919.github.io/blog/2020/06/python-decorators/">Python Decorators</a></h2>
+
+            
+
+            <div class="post-content">
+                
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Python_logo_and_wordmark.svg"  alt="Python Logo"  class="center"  />
+
+
+<h2 id="objective">Objective</h2>
+<p>In this short blog, I would like to introduce <strong>Python decorators</strong> to everyone. Some of you might have heard and used it daily.
+And to those who have never heard of it, let go through some demonstration to show how powerful it can be.</p>
+<h2 id="what-a-python-decorator-is">What a Python Decorator is</h2>
+<p><em>TL;DR</em>: It is a Python object that is used to modify function or class regarding its behaviour.</p>
+<hr>
+<h3 id="examples">Examples</h3>
+<h4 id="1-without-decorators">1. Without Decorators</h4>
+<p>Let&rsquo;s start with vanilla functions to do some basic arithmetic operations.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">addition</span>(a: int, b: int) <span style="color:#f92672">-&gt;</span> int:
+    <span style="color:#66d9ef">return</span> a<span style="color:#f92672">+</span>b
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">substraction</span>(a: int, b: int) <span style="color:#f92672">-&gt;</span> int:
+    <span style="color:#66d9ef">return</span> a<span style="color:#f92672">-</span>b
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">multiplication</span>(a: int, b: int) <span style="color:#f92672">-&gt;</span> int:
+    <span style="color:#66d9ef">return</span> a<span style="color:#f92672">*</span>b
+</code></pre></div><p>Clearly, the results from using those functions are pretty simple and straight forward.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">addition(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>) <span style="color:#75715e"># 3</span>
+substraction(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>) <span style="color:#75715e"># -1</span>
+multiplication(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>) <span style="color:#75715e"># 2</span>
+</code></pre></div><p>So far so good. What&rsquo;s the problem with those functions? What if we parse other data types, besides <em>integer</em>, to one of the functions. What will happen? Of course, it will display an error since we have not handled type checking at all.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">addition(<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#ae81ff">2</span>)
+Traceback (most recent call last):
+  File <span style="color:#e6db74">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ae81ff">1</span>, <span style="color:#f92672">in</span> <span style="color:#f92672">&lt;</span>module<span style="color:#f92672">&gt;</span>
+  File <span style="color:#e6db74">&#34;main.py&#34;</span>, line <span style="color:#ae81ff">8</span>, <span style="color:#f92672">in</span> addition
+    <span style="color:#66d9ef">return</span> a<span style="color:#f92672">+</span>b
+<span style="color:#a6e22e">TypeError</span>: can only concatenate str (<span style="color:#f92672">not</span> <span style="color:#e6db74">&#34;int&#34;</span>) to str
+</code></pre></div><p>Let&rsquo;s fix it by adding type checking to each function. There are a good number of approaches to check data type. For the sake of simplicity, we will use this following condition.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">isinstance(num, int) <span style="color:#75715e"># one parameter</span>
+
+all([isinstance(num, int) <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> [<span style="color:#ae81ff">1.</span><span style="color:#f92672">....</span>n]]) <span style="color:#75715e"># multiple parameters</span>
+</code></pre></div><p>Apply the condition to all existing functions</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">addition</span>(a: int, b: int) <span style="color:#f92672">-&gt;</span> int:
+    <span style="color:#66d9ef">if</span> all([isinstance(num, int) <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> [a, b]]):
+        <span style="color:#66d9ef">return</span> a<span style="color:#f92672">+</span>b
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">substraction</span>(a: int, b: int) <span style="color:#f92672">-&gt;</span> int:
+    <span style="color:#66d9ef">if</span> all([isinstance(num, int) <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> [a, b]]):
+        <span style="color:#66d9ef">return</span> a<span style="color:#f92672">-</span>b
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">multiplication</span>(a: int, b: int) <span style="color:#f92672">-&gt;</span> int:
+    <span style="color:#66d9ef">if</span> all([isinstance(num, int) <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> [a, b]]):
+        <span style="color:#66d9ef">return</span> a<span style="color:#f92672">*</span>b
+</code></pre></div><p>As you can see, the functions will now only return data when the arguments parsed are all <em>integer</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">addition(<span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>) <span style="color:#75715e"># -4</span>
+addition(<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;sd&#39;</span>)
+</code></pre></div><p>The problem of using this approach is that we need to apply the condition to every function that requires type checking which can be tedious.</p>
+<hr>
+<h4 id="2-with-decorators">2. With Decorators</h4>
+<p>We can simplify all of that by using <strong>python decorators</strong>. First, we define an outer function to receive a decorated function. Then we create a wrapper function (inner) to deal with all logics we need.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> wraps
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">type_check</span>(func):
+    wraps(func)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+        res <span style="color:#f92672">=</span> None
+        <span style="color:#66d9ef">if</span> all([isinstance(num, int) <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> [<span style="color:#f92672">*</span>args]]):
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Running function {}&#39;</span><span style="color:#f92672">.</span>format(func<span style="color:#f92672">.</span>__name__))
+            res <span style="color:#f92672">=</span> func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+        <span style="color:#66d9ef">return</span> res
+    <span style="color:#66d9ef">return</span> wrapper
+</code></pre></div><p>Apply the decorators to all existing functions with <em>@decoration_function_name</em>. As a result, we have a clear and clean code which works as intended.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#a6e22e">@type_check</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">addition</span>(a: int, b: int) <span style="color:#f92672">-&gt;</span> int:
+    <span style="color:#66d9ef">return</span> a<span style="color:#f92672">+</span>b
+
+
+<span style="color:#a6e22e">@type_check</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">substraction</span>(a: int, b: int) <span style="color:#f92672">-&gt;</span> int:
+    <span style="color:#66d9ef">return</span> a<span style="color:#f92672">-</span>b
+
+
+<span style="color:#a6e22e">@type_check</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">multiplication</span>(a: int, b: int) <span style="color:#f92672">-&gt;</span> int:
+    <span style="color:#66d9ef">return</span> a<span style="color:#f92672">*</span>b
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">multiplication(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">434</span>)
+<span style="color:#75715e"># Running function multiplication</span>
+<span style="color:#75715e"># 434</span>
+
+multiplication(<span style="color:#ae81ff">1</span>, []) <span style="color:#75715e"># None</span>
+</code></pre></div><hr>
+<h2 id="wrap-up">Wrap Up</h2>
+<p>A Python decorator is a higher-order function that allows a user to add new functionality to an existing object without modifying its structure. The applications of a decorator can be..</p>
+<ul>
+<li>Authorization (JWT, etc)</li>
+<li>Indicate running functions</li>
+<li>Measure time executed</li>
+<li>etc.</li>
+</ul>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://nat236919.github.io/tags/blog">blog</a></span><span class="tag"><a href="https://nat236919.github.io/tags/python">python</a></span><span class="tag"><a href="https://nat236919.github.io/tags/decorators">decorators</a></span>
+  				</p>
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://nat236919.github.io">Nuttaphat Arunoprayoch</a></span>
+            
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://nat236919.github.io/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-125164332-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+            data-id="HdYFLQU"
+            data-description="Support me on Buy me a coffee!"
+            data-color="#FF813F"
+            data-position="right"
+            data-x_margin="18"
+            data-y_margin="18">
+    </script>
+
+
+    </body>
+</html>

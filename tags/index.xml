@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Nuttaphat Arunoprayoch</title>
+    <link>https://nat236919.github.io/tags/</link>
+    <description>Recent content in Tags on Nuttaphat Arunoprayoch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Jun 2020 14:18:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://nat236919.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>blog</title>
+      <link>https://nat236919.github.io/tags/blog/</link>
+      <pubDate>Sun, 28 Jun 2020 14:18:03 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>decorators</title>
+      <link>https://nat236919.github.io/tags/decorators/</link>
+      <pubDate>Sun, 28 Jun 2020 14:18:03 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/tags/decorators/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://nat236919.github.io/tags/python/</link>
+      <pubDate>Sun, 28 Jun 2020 14:18:03 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api</title>
+      <link>https://nat236919.github.io/tags/api/</link>
+      <pubDate>Sat, 20 Jun 2020 14:39:53 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>covid19</title>
+      <link>https://nat236919.github.io/tags/covid19/</link>
+      <pubDate>Sat, 20 Jun 2020 14:39:53 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/tags/covid19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>project</title>
+      <link>https://nat236919.github.io/tags/project/</link>
+      <pubDate>Sat, 20 Jun 2020 14:39:53 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/tags/project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>think-tank</title>
+      <link>https://nat236919.github.io/tags/think-tank/</link>
+      <pubDate>Sun, 08 Mar 2020 13:20:11 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/tags/think-tank/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-science</title>
+      <link>https://nat236919.github.io/tags/data-science/</link>
+      <pubDate>Mon, 04 Nov 2019 08:31:17 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>databank</title>
+      <link>https://nat236919.github.io/tags/databank/</link>
+      <pubDate>Tue, 03 Sep 2019 15:38:09 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/tags/databank/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dashboard</title>
+      <link>https://nat236919.github.io/tags/dashboard/</link>
+      <pubDate>Sat, 13 Jul 2019 16:06:18 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/tags/dashboard/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Nuttaphat Arunoprayoch</title>
+    <link>https://nat236919.github.io/categories/blog/</link>
+    <description>Recent content in blog on Nuttaphat Arunoprayoch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Jun 2020 14:18:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://nat236919.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python Decorators</title>
+      <link>https://nat236919.github.io/blog/2020/06/python-decorators/</link>
+      <pubDate>Sun, 28 Jun 2020 14:18:03 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/blog/2020/06/python-decorators/</guid>
+      <description>Objective In this short blog, I would like to introduce Python decorators to everyone. Some of you might have heard and used it daily. And to those who have never heard of it, let go through some demonstration to show how powerful it can be.
+What a Python Decorator is TL;DR: It is a Python object that is used to modify function or class regarding its behaviour.
+ Examples 1.</description>
+    </item>
+    
+    <item>
+      <title>Monty Hall Problem</title>
+      <link>https://nat236919.github.io/blog/2020/03/monty-hall-problem/</link>
+      <pubDate>Sun, 08 Mar 2020 13:20:11 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/blog/2020/03/monty-hall-problem/</guid>
+      <description>Source Code
+What is Monty Hall Problem? The Monty Hall Problem is named for its similarity to the Let&amp;rsquo;s Make a Deal television game show hosted by Monty Hall. The problem is stated as follows. Assume that a room is equipped with three doors. Behind two are goats, and behind the third is a shiny new car. You are asked to pick a door, and will win whatever is behind it.</description>
+    </item>
+    
+    <item>
+      <title>New York Current Job Postings</title>
+      <link>https://nat236919.github.io/blog/2019/11/new-york-current-job-postings/</link>
+      <pubDate>Mon, 04 Nov 2019 08:31:17 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/blog/2019/11/new-york-current-job-postings/</guid>
+      <description>Looking for a job to earn a living is challenging and time consuming, and it might not end up well as expected. Therefore, in order to effectively plan for a career, one must know which career path should be taken. This report analyses job opening positions in NY, USA with a hope that it may be useful individually and socially.
+Read with Jupyter Viewer
+Presentation</description>
+    </item>
+    
+    <item>
+      <title>Student Alcohol Consumption</title>
+      <link>https://nat236919.github.io/blog/2019/06/student-alcohol-consumption/</link>
+      <pubDate>Sat, 15 Jun 2019 08:20:29 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/blog/2019/06/student-alcohol-consumption/</guid>
+      <description>Student life is messy and stressful, eventually it might lead to depression. However, we all know that cracking open a cold one with your lads always helps. In this analysis, I, for no particular reasons, would like to welcome you all to dive into Alcohol Consumption by students. Enjoy :)
+Read with Jupyter Viewer</description>
+    </item>
+    
+    <item>
+      <title>Suicide Rate Report (1985 to 2016)</title>
+      <link>https://nat236919.github.io/blog/2019/04/suicide-rate-report-1985-to-2016/</link>
+      <pubDate>Sun, 21 Apr 2019 16:43:26 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/blog/2019/04/suicide-rate-report-1985-to-2016/</guid>
+      <description>Read with Jupyter Viewer
+1. Introduction Due to a high competion in every field nowadays. We cannot deny that we must speed our pace to get ahed of others. What does it lead to? It leads to anxiety, depression, and endless tiring situations. As a consequence, suicide rates sky rocket daily and they seem to not soon decrease.
+2. Objectives The main objectives of this short report are to raise the awareness of suicide rates, and provide insightful information for future research and usage.</description>
+    </item>
+    
+  </channel>
+</rss>

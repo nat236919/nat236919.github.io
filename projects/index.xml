@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Nuttaphat Arunoprayoch</title>
+    <link>https://nat236919.github.io/projects/</link>
+    <description>Recent content in Projects on Nuttaphat Arunoprayoch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Jun 2020 14:39:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://nat236919.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>COVID19 API</title>
+      <link>https://nat236919.github.io/projects/2020/06/covid19-api/</link>
+      <pubDate>Sat, 20 Jun 2020 14:39:53 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/projects/2020/06/covid19-api/</guid>
+      <description>This API provides the information regarding &amp;lsquo;2019 Novel Coronavirus (covid-19)&amp;rsquo;. It contains a number of confirmed, death, and recovered cases based on the data provided by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE).
+Link  https://nat236919.github.io/covid19-api/  Features  The current data (daily updated) Confirmed, Deaths, Recovered The affected countries Individual affected country Timeseries  Examples:  https://covid2019-api.herokuapp.com/ https://covid2019-api.azurewebsites.net/  Applications:  Coronavirus App by YaseenAbdullah Covid 19 App - Map, info &amp;amp; help by DavidBarbaran COVID-19 Visual Explorer by FitnessAI BAILAM (Data and API Integration) Coronavirus Tech Handbook (Data Tools)  References https://github.</description>
+    </item>
+    
+    <item>
+      <title>HABOOK Databank</title>
+      <link>https://nat236919.github.io/projects/2019/09/habook-databank/</link>
+      <pubDate>Tue, 03 Sep 2019 15:38:09 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/projects/2019/09/habook-databank/</guid>
+      <description>HABOOK DataBank is an in-house web application that simplifies Exploratory Data Analysis for school datasets. It provides a user with the information that stakeholder need to know. It, not only, provides stakeholders with sortable tabular data, it also visualises the data to graphs (e.g., heatmaps, linecharts, scatterplots).
+** NOTE: The data is altered and left out for confidentiality How it works HABOOK DataBank explores the data in the database, then performs data pre-processing.</description>
+    </item>
+    
+    <item>
+      <title>Smart Teaching Dashboard</title>
+      <link>https://nat236919.github.io/projects/2019/07/smart-teaching-dashboard/</link>
+      <pubDate>Sat, 13 Jul 2019 16:06:18 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/projects/2019/07/smart-teaching-dashboard/</guid>
+      <description>The dashboard of Teaching and Learning Bigdata Management Service allows the school team to have a general view of the use of science and technology of teachers in the whole school, and presents charts according to the time, academic year, discipline and other dimensions, which serves as an important reference for the teaching research team to plan teacher professional development plan.
+Responsibility  Created a prototype version of the dashboard by analysing statistical data to determine appropriate presentations Modified MVC modules to extract data and provide an API endpoint (JSON) Validated the correctness of the queried data from the database  Find Out More https://www.</description>
+    </item>
+    
+  </channel>
+</rss>
