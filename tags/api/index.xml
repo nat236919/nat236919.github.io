@@ -17,8 +17,9 @@
       <pubDate>Sat, 20 Jun 2020 14:39:53 +0800</pubDate>
       
       <guid>https://nat236919.github.io/projects/2020/06/covid19-api/</guid>
-      <description>This API provides the information regarding &amp;lsquo;2019 Novel Coronavirus (covid-19)&amp;rsquo;. It contains a number of confirmed, death, and recovered cases based on the data provided by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE).
-Link  https://nat236919.github.io/covid19-api/  Features  The current data (daily updated) Confirmed, Deaths, Recovered The affected countries Individual affected country Timeseries  Examples:  https://covid2019-api.herokuapp.com/ https://covid2019-api.azurewebsites.net/  Applications:  Coronavirus App by YaseenAbdullah Covid 19 App - Map, info &amp;amp; help by DavidBarbaran COVID-19 Visual Explorer by FitnessAI BAILAM (Data and API Integration) Coronavirus Tech Handbook (Data Tools)  References https://github.</description>
+      <description>API for exploring covid-19 cases around the globe powered by FastAPI framework
+Link  https://nat236919.github.io/covid19-api/  Introduction This API provides the information regarding &amp;lsquo;2019 Novel Coronavirus (covid-19)&amp;rsquo;. It contains a number of confirmed, death, and recovered cases based on the data provided by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE)
+Features  The current data (daily updated) Confirmed, Deaths, Recovered The affected countries Individual affected country Timeseries  Examples:  https://covid2019-api.</description>
     </item>
     
   </channel>
