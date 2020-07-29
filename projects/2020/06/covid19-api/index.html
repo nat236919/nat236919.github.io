@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Nuttaphat Arunoprayoch ">
 <meta name="description" content="API for exploring covid-19 cases around the globe powered by FastAPI framework
-Link  https://nat236919.github.io/covid19-api/  Introduction This API provides the information regarding &amp;lsquo;2019 Novel Coronavirus (covid-19)&amp;rsquo;. It contains a number of confirmed, death, and recovered cases based on the data provided by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE)
-Features  The current data (daily updated) Confirmed, Deaths, Recovered The affected countries Individual affected country Timeseries  Examples:  https://covid2019-api." />
+Introduction As going through 2020, it is clear that the year of the Rat has NOT been friendly at all. We have experienced a series of fierce events. For instance, the tension among global giants, protesting, Australian bushfire season, extreme racial discrimination, and noticeably the COVID-19 pandemic.
+COVID-19 has been spreading rapidly without showing any signs of stopping or even slowing down." />
 <meta name="keywords" content="Nuttaphat, Arunoprayoch, Software Engineer, Data Analyst, project, python, covid19, api" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="#252627" />
@@ -45,11 +45,11 @@ Features  The current data (daily updated) Confirmed, Deaths, Recovered The affe
 
 <meta itemprop="name" content="COVID19 API">
 <meta itemprop="description" content="API for exploring covid-19 cases around the globe powered by FastAPI framework
-Link  https://nat236919.github.io/covid19-api/  Introduction This API provides the information regarding &lsquo;2019 Novel Coronavirus (covid-19)&rsquo;. It contains a number of confirmed, death, and recovered cases based on the data provided by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE)
-Features  The current data (daily updated) Confirmed, Deaths, Recovered The affected countries Individual affected country Timeseries  Examples:  https://covid2019-api.">
+Introduction As going through 2020, it is clear that the year of the Rat has NOT been friendly at all. We have experienced a series of fierce events. For instance, the tension among global giants, protesting, Australian bushfire season, extreme racial discrimination, and noticeably the COVID-19 pandemic.
+COVID-19 has been spreading rapidly without showing any signs of stopping or even slowing down.">
 <meta itemprop="datePublished" content="2020-06-20T14:39:53&#43;08:00" />
 <meta itemprop="dateModified" content="2020-06-20T14:39:53&#43;08:00" />
-<meta itemprop="wordCount" content="104">
+<meta itemprop="wordCount" content="541">
 <meta itemprop="image" content="https://nat236919.github.io"/>
 
 
@@ -60,8 +60,8 @@ Features  The current data (daily updated) Confirmed, Deaths, Recovered The affe
 
 <meta name="twitter:title" content="COVID19 API"/>
 <meta name="twitter:description" content="API for exploring covid-19 cases around the globe powered by FastAPI framework
-Link  https://nat236919.github.io/covid19-api/  Introduction This API provides the information regarding &lsquo;2019 Novel Coronavirus (covid-19)&rsquo;. It contains a number of confirmed, death, and recovered cases based on the data provided by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE)
-Features  The current data (daily updated) Confirmed, Deaths, Recovered The affected countries Individual affected country Timeseries  Examples:  https://covid2019-api."/>
+Introduction As going through 2020, it is clear that the year of the Rat has NOT been friendly at all. We have experienced a series of fierce events. For instance, the tension among global giants, protesting, Australian bushfire season, extreme racial discrimination, and noticeably the COVID-19 pandemic.
+COVID-19 has been spreading rapidly without showing any signs of stopping or even slowing down."/>
 
 
 
@@ -147,35 +147,57 @@ Features  The current data (daily updated) Confirmed, Deaths, Recovered The affe
 
 
 <p><em>API for exploring covid-19 cases around the globe powered by FastAPI framework</em></p>
-<h2 id="link">Link</h2>
-<ul>
-<li><a href="https://nat236919.github.io/covid19-api/">https://nat236919.github.io/covid19-api/</a></li>
-</ul>
 <h2 id="introduction">Introduction</h2>
-<p>This API provides the information regarding &lsquo;2019 Novel Coronavirus (covid-19)&rsquo;. It contains a number of confirmed, death, and recovered cases based on the data provided by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE)</p>
-<h2 id="features">Features</h2>
+<p>As going through 2020, it is clear that the year of the Rat has NOT been friendly at all. We have experienced a series of fierce events.
+For instance, the tension among global giants, protesting, Australian bushfire season, extreme racial discrimination, and noticeably the COVID-19 pandemic.</p>
+<p>COVID-19 has been spreading rapidly without showing any signs of stopping or even slowing down. Even though this pandemic has made a lot of lives miserable, we work together closely as a community to tackle this problem and prevent further damage. Hence, all the data related MUST be collected and disseminated. More importantly, the data MUST also be accurate and accessible.</p>
+<p>Therefore, as a software engineer, I have created my version of API allowing those who are in need of the data to be able to access to the public data collected by Johns Hopkins University. I do hope that this project will be useful as a contribution.</p>
+<h2 id="how-it-works-behind-the-scene">How it works behind the scene</h2>
+<p>Data collection is always a demanding process which needs to be done. Luckily, this process was already done by Johns Hopkins University and can be accessed at <a href="https://github.com/CSSEGISandData/COVID-19">COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University</a> However, the data is raw which can be quite difficult to read without knowing what exactly we are looking for.</p>
+<p>By using <a href="https://fastapi.tiangolo.com/">FastAPI framework</a>, I created an API server collecting data from the data repository and pre-processing them using a Python&rsquo;s data analysis and manipulation library <a href="https://pandas.pydata.org/">Pandas</a>. With those powerful tools mentioned earlier, the data is ready to be queried quickly and effortlessly. Not only it provides a faster way to create an API server, but also an automatically-generated API documentation.</p>
+<h3 id="workflow">Workflow</h3>
+
+    <img src="https://nat236919.github.io/img/projects/covid19_api/workflow.png"  alt="WORKFLOW"  class="center"  />
+
+
+<p>As the workflow depicted above suggests, the process is fairly simple and straight forward.</p>
 <ol>
-<li>The current data (daily updated)</li>
-<li>Confirmed, Deaths, Recovered</li>
-<li>The affected countries</li>
-<li>Individual affected country</li>
-<li>Timeseries</li>
+<li>Get a request from a user</li>
+<li>Get the raw data from the repository</li>
+<li>Pre-process the data using Pandas</li>
+<li>Send a response with the result data as JSON</li>
 </ol>
-<h4 id="examples">Examples:</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;data&#34;</span>: {
+    <span style="color:#f92672">&#34;confirmed&#34;</span>: <span style="color:#ae81ff">16682030</span>,
+    <span style="color:#f92672">&#34;deaths&#34;</span>: <span style="color:#ae81ff">659374</span>,
+    <span style="color:#f92672">&#34;recovered&#34;</span>: <span style="color:#ae81ff">9711187</span>,
+    <span style="color:#f92672">&#34;active&#34;</span>: <span style="color:#ae81ff">5538584</span>
+  },
+  <span style="color:#f92672">&#34;dt&#34;</span>: <span style="color:#e6db74">&#34;07-29-2020&#34;</span>,
+  <span style="color:#f92672">&#34;ts&#34;</span>: <span style="color:#ae81ff">1595980800</span>
+}
+</code></pre></div><h3 id="deployment">Deployment</h3>
+<p>Moreover, a Dockerfile is also included. This will allow the API server to be deployed with ease by simply using</p>
+<pre><code class="language-console" data-lang="console">docker-compose up -d
+</code></pre><p>This will deploy and run a server on the background with pre-defined configurations which can be altered as see fit. Alternatively, we can also run a server with uvicorn as shown below for debugging purposes:</p>
+<pre><code class="language-console" data-lang="console">$ uvicorn main:app --reload
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [16788]
+INFO:     Started server process [9784]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:51196 - &quot;GET / HTTP/1.1&quot; 307
+INFO:     127.0.0.1:51196 - &quot;GET /docs HTTP/1.1&quot; 200
+INFO:     127.0.0.1:51196 - &quot;GET /openapi.json HTTP/1.1&quot; 200
+</code></pre><h2 id="summary">Summary</h2>
+<p>This project is an open-source API server powered by FastAPI allowing everyone to access the COVID-19 data effortlessly. With a powerful library, as such Pandas, it allows the data manipulation to be performed quickly and clearly; furthermore, the data analysis can be done more efficiently. Without a doubt, the combination of FastAPI and Pandas demonstrates how impactful open data can be.</p>
+<h2 id="to-learn-more">To Learn More</h2>
+<p>Please visit the following links</p>
 <ul>
-<li><a href="https://covid2019-api.herokuapp.com/">https://covid2019-api.herokuapp.com/</a></li>
-<li><a href="https://covid2019-api.azurewebsites.net/">https://covid2019-api.azurewebsites.net/</a></li>
+<li><a href="https://github.com/nat236919/covid19-api">Repository</a></li>
+<li><a href="https://nat236919.github.io/covid19-api">API documentation</a></li>
 </ul>
-<h4 id="applications">Applications:</h4>
-<ul>
-<li><a href="https://github.com/YaseenAbdullah/coronavirus">Coronavirus App by YaseenAbdullah</a></li>
-<li><a href="https://github.com/DavidBarbaran/Covid19App">Covid 19 App - Map, info &amp; help by DavidBarbaran</a></li>
-<li><a href="https://www.fitnessai.com/covid-19-charts-coronavirus-growth-rate-visual-explorer">COVID-19 Visual Explorer by FitnessAI</a></li>
-<li><a href="https://www.bailam.com/covid19">BAILAM (Data and API Integration)</a></li>
-<li><a href="https://coronavirustechhandbook.com/data-tools">Coronavirus Tech Handbook (Data Tools)</a></li>
-</ul>
-<h4 id="references">References</h4>
-<p><a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a></p>
 
             </div>
         </article>
