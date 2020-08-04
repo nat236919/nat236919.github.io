@@ -18,7 +18,7 @@
       
       <guid>https://nat236919.github.io/projects/2019/09/habook-databank/</guid>
       <description>HABOOK DataBank is an in-house web application that simplifies Exploratory Data Analysis for school datasets. It provides a user with the information that stakeholder need to know. It, not only, provides stakeholders with sortable tabular data, it also visualises the data to graphs (e.g., heatmaps, linecharts, scatterplots).
-** NOTE: The data is altered and left out for confidentiality How it works HABOOK DataBank explores the data in the database, then performs data pre-processing.</description>
+** NOTE: The data is altered and left out for confidentialityHow it works HABOOK DataBank explores the data in the database, then performs data pre-processing.</description>
     </item>
     
   </channel>
