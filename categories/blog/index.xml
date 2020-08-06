@@ -6,10 +6,20 @@
     <description>Recent content in blog on Nuttaphat Arunoprayoch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2020 21:07:36 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2020 09:30:11 +0800</lastBuildDate>
     
 	<atom:link href="https://nat236919.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Video Autoplay and Time Skipping</title>
+      <link>https://nat236919.github.io/blog/2020/08/video-autoplay-and-time-skipping/</link>
+      <pubDate>Thu, 06 Aug 2020 09:30:11 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/blog/2020/08/video-autoplay-and-time-skipping/</guid>
+      <description>Recently, I have been tasked to maintain one of the projects that provide a video player service powered by a powerful library videojs which claims to be the most popular open-source HTML5 player framework, according to its site.
+The previous engineers working before me had contributed a tremendous work by creating a customised version of our own player which provides functionalities, such as time markers, etc. It worked perfectly. Until I was asked to implement three new functionalities onto the video player:</description>
+    </item>
     
     <item>
       <title>Sun Moon Lake e-Passes</title>
