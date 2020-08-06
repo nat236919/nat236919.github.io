@@ -47,7 +47,7 @@ The previous engineers working before me had contributed a tremendous work by cr
 The previous engineers working before me had contributed a tremendous work by creating a customised version of our own player which provides functionalities, such as time markers, etc. It worked perfectly. Until I was asked to implement three new functionalities onto the video player:">
 <meta itemprop="datePublished" content="2020-08-06T09:30:11&#43;08:00" />
 <meta itemprop="dateModified" content="2020-08-06T09:30:11&#43;08:00" />
-<meta itemprop="wordCount" content="971">
+<meta itemprop="wordCount" content="974">
 <meta itemprop="image" content="https://nat236919.github.io"/>
 
 
@@ -203,8 +203,8 @@ The previous engineers working before me had contributed a tremendous work by cr
 
 
 <p>Little did I know, it <strong>DID NOT</strong> work on <strong>iOS Safari</strong>. I found this out weeks later after receiving this bug report. I was caught off guard since I had already moved on to working on other implementations and features; I did not want to go back and deal with it anymore, yet it needed to be done.</p>
-<p>It seemed to be a time-consuming task, I thought to myself. I started Googling for possible solutions, then I found what exactly I was looking for <a href="https://stackoverflow.com/questions/28823567/how-to-set-currenttime-in-video-js-in-safari-for-ios/47332408#47332408">How to set currentTime in video.js in Safari for iOS</a>.</p>
-<p>It turned out that in order to auto skip to a point of video time on <strong>iOS Safari</strong>, a video needs to be played first. By creating an event <strong>canplaythrough</strong> to check a video while being played, we can create a boolean variable to check if a video has already been started; if yes, we can force a current time to given start time.</p>
+<p>It seemed to be a time-consuming task, I thought to myself. I started Googling for possible solutions, then I found what exactly I was looking for on <a href="https://stackoverflow.com/questions/28823567/how-to-set-currenttime-in-video-js-in-safari-for-ios/47332408#47332408">How to set currentTime in video.js in Safari for iOS</a>.</p>
+<p>It turned out that in order to auto skip to a point of video time on <strong>iOS Safari</strong>, a video needs to be played first. By creating an event <strong>canplaythrough</strong> to check a video while being played, we can create a boolean variable to check if a video has already been started; if yes, we can force a current time to jump to given start time.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bool_is_initiation_done</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
 <span style="color:#a6e22e">obj_player</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;canplaythrough&#34;</span>, <span style="color:#66d9ef">function</span>(){
   <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">bool_is_initiation_done</span>) {
