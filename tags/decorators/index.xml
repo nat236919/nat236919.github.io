@@ -13,10 +13,10 @@
     
     <item>
       <title>Python Decorators</title>
-      <link>https://nat236919.github.io/blog/2020/06/python-decorators/</link>
+      <link>https://nat236919.github.io/posts/2020/06/python-decorators/</link>
       <pubDate>Sun, 28 Jun 2020 14:18:03 +0800</pubDate>
       
-      <guid>https://nat236919.github.io/blog/2020/06/python-decorators/</guid>
+      <guid>https://nat236919.github.io/posts/2020/06/python-decorators/</guid>
       <description>Objective In this short blog, I would like to introduce Python decorators to everyone. Some of you might have heard and used it daily. And to those who have never heard of it, let go through some demonstration to show how powerful it can be.
 What a Python Decorator is TL;DR: It is a Python object that is used to modify function or class regarding its behaviour.
  Examples 1.</description>
