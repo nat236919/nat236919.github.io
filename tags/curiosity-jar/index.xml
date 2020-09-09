@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>curiosity-jar on Nuttaphat Arunoprayoch</title>
+    <link>https://nat236919.github.io/tags/curiosity-jar/</link>
+    <description>Recent content in curiosity-jar on Nuttaphat Arunoprayoch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Mar 2020 13:20:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://nat236919.github.io/tags/curiosity-jar/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Monty Hall Problem</title>
+      <link>https://nat236919.github.io/posts/2020/03/monty-hall-problem/</link>
+      <pubDate>Sun, 08 Mar 2020 13:20:11 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/posts/2020/03/monty-hall-problem/</guid>
+      <description>Source Code
+What is Monty Hall Problem? The Monty Hall Problem is named for its similarity to the Let&amp;rsquo;s Make a Deal television game show hosted by Monty Hall. The problem is stated as follows. Assume that a room is equipped with three doors. Behind two are goats, and behind the third is a shiny new car. You are asked to pick a door, and will win whatever is behind it.</description>
+    </item>
+    
+  </channel>
+</rss>
