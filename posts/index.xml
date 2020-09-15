@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Nuttaphat Arunoprayoch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Sep 2020 09:50:26 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2020 16:58:48 +0800</lastBuildDate>
     
 	<atom:link href="https://nat236919.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Humble-Nishiyama Randomness Game</title>
+      <link>https://nat236919.github.io/posts/2020/09/the-humble-nishiyama-randomness-game/</link>
+      <pubDate>Mon, 14 Sep 2020 16:58:48 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/posts/2020/09/the-humble-nishiyama-randomness-game/</guid>
+      <description>Source Code
+What is The Humble-Nishiyama Randomness Game? The Humble-Nishiyama Randomness Game is a game invented by two mathematicians: Steve Humble and Yutaka Nishiyama. It is a game that seems fair at the first glance, yet has a way to increase a chance of winning significantly.
+The game is based on the idea of Penney Ante game in which 2 players select their own sequential outcomes (n = 3) of a coin toss (either HEADS or TAILS).</description>
+    </item>
     
     <item>
       <title>When Null is An Object</title>
@@ -59,7 +70,7 @@ What a Python Decorator is TL;DR: It is a Python object that is used to modify f
       
       <guid>https://nat236919.github.io/posts/2020/03/monty-hall-problem/</guid>
       <description>Source Code
-What is Monty Hall Problem? The Monty Hall Problem is named for its similarity to the Let&amp;rsquo;s Make a Deal television game show hosted by Monty Hall. The problem is stated as follows. Assume that a room is equipped with three doors. Behind two are goats, and behind the third is a shiny new car. You are asked to pick a door, and will win whatever is behind it.</description>
+What is Monty Hall Problem The Monty Hall Problem is named for its similarity to the Let&amp;rsquo;s Make a Deal television game show hosted by Monty Hall. The problem is stated as follows. Assume that a room is equipped with three doors. Behind two are goats, and behind the third is a shiny new car. You are asked to pick a door, and will win whatever is behind it.</description>
     </item>
     
     <item>

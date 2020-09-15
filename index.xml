@@ -6,10 +6,21 @@
     <description>Recent content on Nuttaphat Arunoprayoch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Sep 2020 09:50:26 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2020 16:58:48 +0800</lastBuildDate>
     
 	<atom:link href="https://nat236919.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Humble-Nishiyama Randomness Game</title>
+      <link>https://nat236919.github.io/posts/2020/09/the-humble-nishiyama-randomness-game/</link>
+      <pubDate>Mon, 14 Sep 2020 16:58:48 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/posts/2020/09/the-humble-nishiyama-randomness-game/</guid>
+      <description>Source Code
+What is The Humble-Nishiyama Randomness Game? The Humble-Nishiyama Randomness Game is a game invented by two mathematicians: Steve Humble and Yutaka Nishiyama. It is a game that seems fair at the first glance, yet has a way to increase a chance of winning significantly.
+The game is based on the idea of Penney Ante game in which 2 players select their own sequential outcomes (n = 3) of a coin toss (either HEADS or TAILS).</description>
+    </item>
     
     <item>
       <title>When Null is An Object</title>
@@ -82,7 +93,7 @@ COVID-19 has been spreading rapidly without showing any signs of stopping or eve
       
       <guid>https://nat236919.github.io/posts/2020/03/monty-hall-problem/</guid>
       <description>Source Code
-What is Monty Hall Problem? The Monty Hall Problem is named for its similarity to the Let&amp;rsquo;s Make a Deal television game show hosted by Monty Hall. The problem is stated as follows. Assume that a room is equipped with three doors. Behind two are goats, and behind the third is a shiny new car. You are asked to pick a door, and will win whatever is behind it.</description>
+What is Monty Hall Problem The Monty Hall Problem is named for its similarity to the Let&amp;rsquo;s Make a Deal television game show hosted by Monty Hall. The problem is stated as follows. Assume that a room is equipped with three doors. Behind two are goats, and behind the third is a shiny new car. You are asked to pick a door, and will win whatever is behind it.</description>
     </item>
     
     <item>
@@ -104,16 +115,6 @@ Presentation</description>
       <guid>https://nat236919.github.io/projects/2019/09/habook-databank/</guid>
       <description>HABOOK DataBank is an in-house web application that simplifies Exploratory Data Analysis for school datasets. It provides a user with the information that stakeholder need to know. It, not only, provides stakeholders with sortable tabular data, it also visualises the data to graphs (e.g., heatmaps, linecharts, scatterplots).
 ** NOTE: The data is altered and left out for confidentialityHow it works HABOOK DataBank explores the data in the database, then performs data pre-processing.</description>
-    </item>
-    
-    <item>
-      <title>Smart Teaching Dashboard</title>
-      <link>https://nat236919.github.io/projects/2019/07/smart-teaching-dashboard/</link>
-      <pubDate>Sat, 13 Jul 2019 16:06:18 +0800</pubDate>
-      
-      <guid>https://nat236919.github.io/projects/2019/07/smart-teaching-dashboard/</guid>
-      <description>The dashboard of Teaching and Learning Bigdata Management Service allows the school team to have a general view of the use of science and technology of teachers in the whole school, and presents charts according to the time, academic year, discipline and other dimensions, which serves as an important reference for the teaching research team to plan teacher professional development plan.
-Responsibility  Created a prototype version of the dashboard by analysing statistical data to determine appropriate presentations Modified MVC modules to extract data and provide an API endpoint (JSON) Validated the correctness of the queried data from the database  Find Out More https://www.</description>
     </item>
     
   </channel>
