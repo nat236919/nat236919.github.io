@@ -153,7 +153,8 @@ The game is based on the idea of Penney Ante game in which 2 players select thei
 <h2 id="what-is-the-humble-nishiyama-randomness-game">What is The Humble-Nishiyama Randomness Game?</h2>
 <p><strong>The Humble-Nishiyama Randomness Game</strong> is a game invented by two mathematicians: Steve Humble and Yutaka Nishiyama. It is a game that seems fair at the first glance, yet has a way to increase a chance of winning significantly.</p>
 <p>The game is based on the idea of <a href="https://en.wikipedia.org/wiki/Penney%27s_game">Penney Ante game</a> in which 2 players select their own sequential outcomes (n = 3) of a coin toss (either HEADS or TAILS). The coin will be flipped repeatedly until one of the selected sequences comes first, and whose the sequence appears is the winner of the game. In the case of <strong>The Humble-Nishiyama Randomness Game</strong>, instead of using a coin, a deck of cards consisting 26 black cards and 26 red cards is used (either RED or BLACK).</p>
-<p>The rule seems straight forward and fair. However, there is one great strategy that allows <strong>Player(B)</strong> has a bigger chance of winning than <strong>Player(A)</strong> up to 70%+ (<em>NOTE: Player(A) represents the first player who calls a sequence</em>).</p>
+<p>The rule seems straight forward and fair. However, there is one great strategy that allows <strong>Player(B)</strong> has a bigger chance of winning than <strong>Player(A)</strong> up to 70%+</p>
+<p><em>NOTE: Player(A) represents the first player who calls a sequence</em>.</p>
 <h2 id="the-winning-strategy">The Winning Strategy</h2>
 <p>Assume that <strong>Player(A)</strong> has selected a sequence <em>RED RED BLACK</em>. All <strong>Player(B)</strong> needs to do is that use his/her opponent sequence as a reference, take the second value, convert it into the opposite value, then put it in front of the sequence, finally ditch the last value.</p>
 <p><strong>Example</strong>
@@ -268,7 +269,7 @@ Selecting RED RED BLACK</p>
 </code></pre></div><ul>
 <li>In order to make it easier for the experiment, I also wrote a method to run the game <em>n</em> times.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_start_experiment</span>(self, is_winning_method_used <span style="color:#f92672">=</span> False, n: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>) <span style="color:#f92672">-&gt;</span> Dict[str, int]:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">start_experiment</span>(self, is_winning_method_used <span style="color:#f92672">=</span> False, n: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>) <span style="color:#f92672">-&gt;</span> Dict[str, int]:
         <span style="color:#e6db74">&#34;&#34;&#34; Start an experiment and Display the result &#34;&#34;&#34;</span>
         experimental_result <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;player_won&#39;</span>: <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;computer_won&#39;</span>: <span style="color:#ae81ff">0</span>}
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isinstance(n, int):
@@ -371,7 +372,7 @@ Selecting RED RED BLACK</p>
 
         <span style="color:#66d9ef">return</span> final_result
 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_start_experiment</span>(self, is_winning_method_used <span style="color:#f92672">=</span> False, n: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>) <span style="color:#f92672">-&gt;</span> Dict[str, int]:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">start_experiment</span>(self, is_winning_method_used <span style="color:#f92672">=</span> False, n: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>) <span style="color:#f92672">-&gt;</span> Dict[str, int]:
         <span style="color:#e6db74">&#34;&#34;&#34; Start an experiment and Display the result &#34;&#34;&#34;</span>
         experimental_result <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;player_won&#39;</span>: <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;computer_won&#39;</span>: <span style="color:#ae81ff">0</span>}
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isinstance(n, int):
@@ -383,7 +384,7 @@ Selecting RED RED BLACK</p>
             experimental_result[<span style="color:#e6db74">&#39;computer_won&#39;</span>] <span style="color:#f92672">+=</span> game_result[<span style="color:#e6db74">&#39;computer_has_won&#39;</span>]
 
         <span style="color:#66d9ef">return</span> experimental_result
-</code></pre></div><p>As can be seen from the method <em>_start_experiment</em>, the default value of <em>n</em> is 1000 which means the game will be played 1000 times.
+</code></pre></div><p>As can be seen from the method <em>start_experiment</em>, the default value of <em>n</em> is 1000 which means the game will be played 1000 times.
 To start the experiment, I wrote the main function as follows:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Import libraries</span>
 <span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
@@ -398,10 +399,10 @@ game_engine <span style="color:#f92672">=</span> GameEngine()
 <span style="color:#75715e"># Main function</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>() <span style="color:#f92672">-&gt;</span> None:
     <span style="color:#75715e"># Without a winning method</span>
-    without_winning_method_res <span style="color:#f92672">=</span> game_engine<span style="color:#f92672">.</span>_start_experiment(is_winning_method_used<span style="color:#f92672">=</span>False)
+    without_winning_method_res <span style="color:#f92672">=</span> game_engine<span style="color:#f92672">.</span>start_experiment(is_winning_method_used<span style="color:#f92672">=</span>False)
 
     <span style="color:#75715e"># With a winning method</span>
-    with_winning_method_res <span style="color:#f92672">=</span> game_engine<span style="color:#f92672">.</span>_start_experiment(is_winning_method_used<span style="color:#f92672">=</span>True)
+    with_winning_method_res <span style="color:#f92672">=</span> game_engine<span style="color:#f92672">.</span>start_experiment(is_winning_method_used<span style="color:#f92672">=</span>True)
 
     <span style="color:#75715e"># Prepare DataFrame</span>
     df_without_winning_method <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame([without_winning_method_res])
