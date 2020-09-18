@@ -6,10 +6,22 @@
     <description>Recent content in Projects on Nuttaphat Arunoprayoch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Jun 2020 14:39:53 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2020 15:54:45 +0800</lastBuildDate>
     
 	<atom:link href="https://nat236919.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Curiosity Jar</title>
+      <link>https://nat236919.github.io/projects/2020/09/curiosity-jar/</link>
+      <pubDate>Fri, 18 Sep 2020 15:54:45 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/projects/2020/09/curiosity-jar/</guid>
+      <description>Introduction This repository is a collection of data analysis projects focusing purely on expressing curiosity on a various topics ranging from science, maths, games, etc.
+It generally consists three main parts:
+ Introduction where a concept and questions are introduced Experimental Procedures where a script is written to prove the concept Results where statistical and visual results are presented  All Projects Link to GitHub Repository
+ The Monty Hall problem The Humble-Nishiyama Randomness Game  </description>
+    </item>
     
     <item>
       <title>COVID19 API</title>

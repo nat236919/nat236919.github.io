@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Nuttaphat Arunoprayoch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2020 16:58:48 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2020 15:54:45 +0800</lastBuildDate>
     
 	<atom:link href="https://nat236919.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>projects</title>
+      <link>https://nat236919.github.io/categories/projects/</link>
+      <pubDate>Fri, 18 Sep 2020 15:54:45 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/categories/projects/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>blog</title>
@@ -26,15 +35,6 @@
       <pubDate>Sat, 20 Jun 2020 14:50:31 +0800</pubDate>
       
       <guid>https://nat236919.github.io/categories/about/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>projects</title>
-      <link>https://nat236919.github.io/categories/projects/</link>
-      <pubDate>Sat, 20 Jun 2020 14:39:53 +0800</pubDate>
-      
-      <guid>https://nat236919.github.io/categories/projects/</guid>
       <description></description>
     </item>
     

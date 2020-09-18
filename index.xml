@@ -6,10 +6,22 @@
     <description>Recent content on Nuttaphat Arunoprayoch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2020 16:58:48 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2020 15:54:45 +0800</lastBuildDate>
     
 	<atom:link href="https://nat236919.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Curiosity Jar</title>
+      <link>https://nat236919.github.io/projects/2020/09/curiosity-jar/</link>
+      <pubDate>Fri, 18 Sep 2020 15:54:45 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/projects/2020/09/curiosity-jar/</guid>
+      <description>Introduction This repository is a collection of data analysis projects focusing purely on expressing curiosity on a various topics ranging from science, maths, games, etc.
+It generally consists three main parts:
+ Introduction where a concept and questions are introduced Experimental Procedures where a script is written to prove the concept Results where statistical and visual results are presented  All Projects Link to GitHub Repository
+ The Monty Hall problem The Humble-Nishiyama Randomness Game  </description>
+    </item>
     
     <item>
       <title>The Humble-Nishiyama Randomness Game</title>
@@ -105,16 +117,6 @@ What is Monty Hall Problem The Monty Hall Problem is named for its similarity to
       <description>Looking for a job to earn a living is challenging and time consuming, and it might not end up well as expected. Therefore, in order to effectively plan for a career, one must know which career path should be taken. This report analyses job opening positions in NY, USA with a hope that it may be useful individually and socially.
 Read with Jupyter Viewer
 Presentation</description>
-    </item>
-    
-    <item>
-      <title>HABOOK Databank</title>
-      <link>https://nat236919.github.io/projects/2019/09/habook-databank/</link>
-      <pubDate>Tue, 03 Sep 2019 15:38:09 +0800</pubDate>
-      
-      <guid>https://nat236919.github.io/projects/2019/09/habook-databank/</guid>
-      <description>HABOOK DataBank is an in-house web application that simplifies Exploratory Data Analysis for school datasets. It provides a user with the information that stakeholder need to know. It, not only, provides stakeholders with sortable tabular data, it also visualises the data to graphs (e.g., heatmaps, linecharts, scatterplots).
-** NOTE: The data is altered and left out for confidentialityHow it works HABOOK DataBank explores the data in the database, then performs data pre-processing.</description>
     </item>
     
   </channel>
