@@ -6,10 +6,20 @@
     <description>Recent content in python on Nuttaphat Arunoprayoch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2020 15:54:45 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2020 13:45:41 +0800</lastBuildDate>
     
 	<atom:link href="https://nat236919.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Scavenger</title>
+      <link>https://nat236919.github.io/projects/2020/11/scavenger/</link>
+      <pubDate>Wed, 11 Nov 2020 13:45:41 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/projects/2020/11/scavenger/</guid>
+      <description>Introduction Scavenger is an experimental web scraping project as a service that simply offers an easy-to-use functionality to scrap a website and gather a specific piece of information as needed.
+Features  Web Scraping: It gets its hands dirty going out to endless space of World Wide Web to make sure that you get what you need Processing: Gliding through a scraped website to seek a piece of information as required Presenting: It manages and presents the result beautifully to make it easier to comprehend  Inspiration One of the core ideas on developing this project was that I wanted to create a web app application and deliver it within tight schedules.</description>
+    </item>
     
     <item>
       <title>Curiosity Jar</title>
@@ -104,17 +114,6 @@ Responsibility  Created a prototype version of the dashboard by analysing statis
       <guid>https://nat236919.github.io/posts/2019/06/student-alcohol-consumption/</guid>
       <description>Student life is messy and stressful, eventually it might lead to depression. However, we all know that cracking open a cold one with your lads always helps. In this analysis, I, for no particular reasons, would like to welcome you all to dive into Alcohol Consumption by students. Enjoy :)
 Read with Jupyter Viewer</description>
-    </item>
-    
-    <item>
-      <title>Suicide Rate Report (1985 to 2016)</title>
-      <link>https://nat236919.github.io/posts/2019/04/suicide-rate-report-1985-to-2016/</link>
-      <pubDate>Sun, 21 Apr 2019 16:43:26 +0800</pubDate>
-      
-      <guid>https://nat236919.github.io/posts/2019/04/suicide-rate-report-1985-to-2016/</guid>
-      <description>Read with Jupyter Viewer
-1. Introduction Due to a high competion in every field nowadays. We cannot deny that we must speed our pace to get ahed of others. What does it lead to? It leads to anxiety, depression, and endless tiring situations. As a consequence, suicide rates sky rocket daily and they seem to not soon decrease.
-2. Objectives The main objectives of this short report are to raise the awareness of suicide rates, and provide insightful information for future research and usage.</description>
     </item>
     
   </channel>

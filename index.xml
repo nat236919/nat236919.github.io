@@ -6,10 +6,20 @@
     <description>Recent content on Nuttaphat Arunoprayoch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2020 15:54:45 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2020 13:45:41 +0800</lastBuildDate>
     
 	<atom:link href="https://nat236919.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Scavenger</title>
+      <link>https://nat236919.github.io/projects/2020/11/scavenger/</link>
+      <pubDate>Wed, 11 Nov 2020 13:45:41 +0800</pubDate>
+      
+      <guid>https://nat236919.github.io/projects/2020/11/scavenger/</guid>
+      <description>Introduction Scavenger is an experimental web scraping project as a service that simply offers an easy-to-use functionality to scrap a website and gather a specific piece of information as needed.
+Features  Web Scraping: It gets its hands dirty going out to endless space of World Wide Web to make sure that you get what you need Processing: Gliding through a scraped website to seek a piece of information as required Presenting: It manages and presents the result beautifully to make it easier to comprehend  Inspiration One of the core ideas on developing this project was that I wanted to create a web app application and deliver it within tight schedules.</description>
+    </item>
     
     <item>
       <title>Curiosity Jar</title>
@@ -82,8 +92,8 @@ What a Python Decorator is TL;DR: It is a Python object that is used to modify f
       <guid>https://nat236919.github.io/about/</guid>
       <description>My name is Nuttaphat Arunoprayoch (Chiang)
 I am a software engineer and a data analyst who is gliding around open-source development.
-I have experiences in using Python for various projects and applications ranging from its web frameworks, data manipulation, and data visualization. Additionally, I also have experiences developing and maintaining web-app projects using PHP and JS.
-I am also no stranger with a variety of databases (e.g., MySQL, Azure Cosmos DB, and MongoDB).</description>
+I have experiences in using Python for various projects and applications ranging from its web frameworks, data manipulation, and data visualization for developing APIs, statistical dashboards, and machine learning models.
+Additionally, I have experiences developing and maintaining web-app projects using PHP (CodeIgniter), JS (Vanilla, jQuery, Vue.js). I am also no stranger with a variety of databases (e.</description>
     </item>
     
     <item>
@@ -105,17 +115,6 @@ COVID-19 has been spreading rapidly without showing any signs of stopping or eve
       <guid>https://nat236919.github.io/posts/2020/03/monty-hall-problem/</guid>
       <description>Source Code
 What is Monty Hall Problem The Monty Hall Problem is named for its similarity to the Let&amp;rsquo;s Make a Deal television game show hosted by Monty Hall. The problem is stated as follows. Assume that a room is equipped with three doors. Behind two are goats, and behind the third is a shiny new car. You are asked to pick a door, and will win whatever is behind it.</description>
-    </item>
-    
-    <item>
-      <title>New York Current Job Postings</title>
-      <link>https://nat236919.github.io/posts/2019/11/new-york-current-job-postings/</link>
-      <pubDate>Mon, 04 Nov 2019 08:31:17 +0800</pubDate>
-      
-      <guid>https://nat236919.github.io/posts/2019/11/new-york-current-job-postings/</guid>
-      <description>Looking for a job to earn a living is challenging and time consuming, and it might not end up well as expected. Therefore, in order to effectively plan for a career, one must know which career path should be taken. This report analyses job opening positions in NY, USA with a hope that it may be useful individually and socially.
-Read with Jupyter Viewer
-Presentation</description>
     </item>
     
   </channel>
