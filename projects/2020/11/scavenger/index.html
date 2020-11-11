@@ -54,7 +54,7 @@ Features  Web Scraping: It gets its hands dirty going out to endless space of Wo
 Features  Web Scraping: It gets its hands dirty going out to endless space of World Wide Web to make sure that you get what you need Processing: Gliding through a scraped website to seek a piece of information as required Presenting: It manages and presents the result beautifully to make it easier to comprehend  Inspiration One of the core ideas on developing this project was that I wanted to create a web app application and deliver it within tight schedules.">
 <meta itemprop="datePublished" content="2020-11-11T13:45:41&#43;08:00" />
 <meta itemprop="dateModified" content="2020-11-11T13:45:41&#43;08:00" />
-<meta itemprop="wordCount" content="339">
+<meta itemprop="wordCount" content="343">
 <meta itemprop="image" content="https://nat236919.github.io"/>
 
 
@@ -164,8 +164,11 @@ Features  Web Scraping: It gets its hands dirty going out to endless space of Wo
 app <span style="color:#f92672">=</span> Flask(__name__)
 
 <span style="color:#a6e22e">@app.route</span>(<span style="color:#e6db74">&#39;/&#39;</span>)
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hello_world</span>():
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;Hello, World!&#39;</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>():
+   <span style="color:#66d9ef">return</span> render_template(<span style="color:#e6db74">&#39;index.html&#39;</span>)
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+   app<span style="color:#f92672">.</span>run(debug<span style="color:#f92672">=</span>True)
 </code></pre></div><p>As for the application section, I decided to implement <strong>Vue.js</strong> from CDN in order to minimise server workloads. Combining <strong>Flask templates</strong> and <strong>Vue.js</strong> allowed me to be able to create a simple UI easily.</p>
 
     <img src="https://i.ibb.co/02mNTkh/scavenger-2.jpg"  alt="Scanvenger app page"  class="center"  />
