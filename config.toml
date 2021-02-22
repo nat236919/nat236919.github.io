@@ -1,0 +1,144 @@
+baseURL = "https://nuttaphat.com"
+title   = "Nuttaphat Arunoprayoch"
+languageCode = "en-us"
+theme = "hello-friend-ng"
+
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
+
+paginate  = 10
+rssLimit  = 10  # Maximum number of items in the RSS feed.
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+
+googleAnalytics = "UA-125164332-1"
+# disqusShortname = ""
+
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpired = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = true
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
+
+[permalinks]
+  projects = "/projects/:year/:month/:title/"
+  posts = "/posts/:year/:month/:title/"
+
+[author]
+  name = "Nuttaphat Arunoprayoch"
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  # Metadata mostly used in document's head
+  description = "Nuttaphat Arunoprayoch is a software engineer and a data analyst who is gliding around open-source development"
+  keywords = "Nuttaphat, Arunoprayoch, Software Engineer, Data Analyst"
+  images = [""]
+
+  homeSubtitle = "Software Engineer | Data Analyst | Researcher"
+
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  # gitUrl = ""
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
+  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
+  customCSS = []
+  customJS  = []
+
+  # BuyMeACoffee (id)
+  buyMeACoffee = ""
+
+  # Include Vue.js
+  vueJS = false
+
+  # Social Share Image
+  socialShareImg = "https://i.ibb.co/K280nKy/social-sharing-img.png"
+
+  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
+  justifyContent = true  # Set "text-align: justify" to .content.
+
+  # Default theme "light" or "dark"
+  defaultTheme = "light"
+  themeColor = "#252627"
+
+  # Colors for favicons
+  [params.favicon.color]
+    mask = "#252627"
+    msapplication = "#252627"
+    theme = "#252627"
+
+  [params.logo]
+    logoText     = "$ cd /home/"
+    logoHomeLink = "/"
+    # Set true to remove the logo cursor entirely.
+    # logoCursorDisabled = false
+    # Set to a valid CSS color to change the cursor in the logo.
+    # logoCursorColor    = "#67a2c9"
+    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+    # logoCursorAnimate  = "2s"
+
+  [params.portrait]
+    path = "/img/profile_img.jpg"
+    alt = "Portrait"
+
+  # Social icons
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/nat236919"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/nat236919"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/arunoprayoch-nuttaphat/"
+
+  [[params.social]]
+    name = "stackoverflow"
+    url  = "https://stackoverflow.com/users/6926444/n-arunoprayoch"
+
+[languages]
+  [languages.en]
+    weight    = 1
+    copyright = ""
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "projects/"
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Blog"
+    url        = "posts/"

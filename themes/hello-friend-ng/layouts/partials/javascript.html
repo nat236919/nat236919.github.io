@@ -1,0 +1,31 @@
+{{ $main := resources.Get "js/main.js" }}
+{{ $menu := resources.Get "js/menu.js" }}
+{{ $prism := resources.Get "js/prism.js" }}
+{{ $theme := resources.Get "js/theme.js" }}
+{{ $secureJS := slice $main $menu $prism $theme | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+
+{{- if .Site.GoogleAnalytics }}
+    {{ template "_internal/google_analytics.html" . }}
+{{- end}}
+
+{{ range $val := $.Site.Params.customJS }}
+    {{ if gt (len $val) 0 }}
+        <script src="{{ $val }}"></script>
+    {{ end }}
+{{ end }}
+
+{{ if .Site.Params.buyMeACoffee }}
+    <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+            data-id="{{$.Site.Params.buyMeACoffee}}"
+            data-description="Support me on Buy me a coffee!"
+            data-color="#FF813F"
+            data-position="right"
+            data-x_margin="18"
+            data-y_margin="18">
+    </script>
+{{ end }}
+
+{{ if eq .Site.Params.vueJS true }}
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+{{ end }}
