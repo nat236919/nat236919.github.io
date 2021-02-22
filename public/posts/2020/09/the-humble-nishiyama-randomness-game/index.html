@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Nuttaphat Arunoprayoch ">
+<meta name="description" content="Source Code
+What is The Humble-Nishiyama Randomness Game? The Humble-Nishiyama Randomness Game is a game invented by two mathematicians: Steve Humble and Yutaka Nishiyama. It is a game that seems fair at the first glance, yet has a way to increase a chance of winning significantly.
+The game is based on the idea of Penney Ante game in which 2 players select their own sequential outcomes (n = 3) of a coin toss (either HEADS or TAILS)." />
+<meta name="keywords" content="Nuttaphat, Arunoprayoch, Software Engineer, Data Analyst, blog, python, curiosity-jar" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+
+
+    <meta property="og:image" content=https://i.ibb.co/K280nKy/social-sharing-img.png>
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+
+<link rel="canonical" href="https://nat236919.github.io/posts/2020/09/the-humble-nishiyama-randomness-game/" />
+
+
+    <title>
+        
+            The Humble-Nishiyama Randomness Game :: Nuttaphat Arunoprayoch  — Software Engineer | Data Analyst | Researcher
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://nat236919.github.io/main.3e91afc0f34432eac28c70be9560d7aff6f8a74313533e8b6b1677ba69688dda.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://nat236919.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://nat236919.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://nat236919.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://nat236919.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://nat236919.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://nat236919.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="The Humble-Nishiyama Randomness Game">
+<meta itemprop="description" content="Source Code
+What is The Humble-Nishiyama Randomness Game? The Humble-Nishiyama Randomness Game is a game invented by two mathematicians: Steve Humble and Yutaka Nishiyama. It is a game that seems fair at the first glance, yet has a way to increase a chance of winning significantly.
+The game is based on the idea of Penney Ante game in which 2 players select their own sequential outcomes (n = 3) of a coin toss (either HEADS or TAILS).">
+<meta itemprop="datePublished" content="2020-09-14T16:58:48&#43;08:00" />
+<meta itemprop="dateModified" content="2020-09-14T16:58:48&#43;08:00" />
+<meta itemprop="wordCount" content="1571">
+<meta itemprop="image" content="https://nat236919.github.io"/>
+
+
+
+<meta itemprop="keywords" content="blog,python,curiosity-jar," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nat236919.github.io"/>
+
+<meta name="twitter:title" content="The Humble-Nishiyama Randomness Game"/>
+<meta name="twitter:description" content="Source Code
+What is The Humble-Nishiyama Randomness Game? The Humble-Nishiyama Randomness Game is a game invented by two mathematicians: Steve Humble and Yutaka Nishiyama. It is a game that seems fair at the first glance, yet has a way to increase a chance of winning significantly.
+The game is based on the idea of Penney Ante game in which 2 players select their own sequential outcomes (n = 3) of a coin toss (either HEADS or TAILS)."/>
+
+
+
+
+
+    <meta property="article:section" content="blog" />
+
+
+
+    <meta property="article:published_time" content="2020-09-14 16:58:48 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://nat236919.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://nat236919.github.io/about/">About</a></li><li><a href="https://nat236919.github.io/posts/">Blog</a></li><li><a href="https://nat236919.github.io/projects/">Projects</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://nat236919.github.io/posts/2020/09/the-humble-nishiyama-randomness-game/">The Humble-Nishiyama Randomness Game</a></h2>
+
+            
+
+            <div class="post-content">
+                <p><a href="https://github.com/nat236919/CuriosityJar/tree/master/TheHumbleNishiyamaRandomnessGame">Source Code</a></p>
+<h2 id="what-is-the-humble-nishiyama-randomness-game">What is The Humble-Nishiyama Randomness Game?</h2>
+<p><strong>The Humble-Nishiyama Randomness Game</strong> is a game invented by two mathematicians: Steve Humble and Yutaka Nishiyama. It is a game that seems fair at the first glance, yet has a way to increase a chance of winning significantly.</p>
+<p>The game is based on the idea of <a href="https://en.wikipedia.org/wiki/Penney%27s_game">Penney Ante game</a> in which 2 players select their own sequential outcomes (n = 3) of a coin toss (either HEADS or TAILS). The coin will be flipped repeatedly until one of the selected sequences comes first, and whose the sequence appears is the winner of the game. In the case of <strong>The Humble-Nishiyama Randomness Game</strong>, instead of using a coin, a deck of cards consisting 26 black cards and 26 red cards is used (either RED or BLACK).</p>
+<p>The rule seems straight forward and fair. However, there is one great strategy that allows <strong>Player(B)</strong> has a bigger chance of winning than <strong>Player(A)</strong> up to 70%+</p>
+<p><em>NOTE: Player(A) represents the first player who calls a sequence</em>.</p>
+<h2 id="the-winning-strategy">The Winning Strategy</h2>
+<p>Assume that <strong>Player(A)</strong> has selected a sequence <em>RED RED BLACK</em>. All <strong>Player(B)</strong> needs to do is that use his/her opponent sequence as a reference, take the second value, convert it into the opposite value, then put it in front of the sequence, finally ditch the last value.</p>
+<p><strong>Example</strong>
+Selecting RED RED BLACK</p>
+<ul>
+<li>Take the second value and convert it to the opposite RED -&gt; BLACK</li>
+<li>Put the converted value in front of the sequence -&gt; <strong>BLACK</strong> RED RED BLACK</li>
+<li>Finally ditch the last value -&gt; BLACK RED RED</li>
+</ul>
+<p>According to the table below, with this strategy, it is guaranteed that <strong>Player(B)</strong> will always have a higher chance against <strong>Player(A)</strong> whatsoever.</p>
+
+    <img src="https://plus.maths.org/issue55/features/nishiyama/table2.jpg"  alt="probability table"  class="center"  />
+
+
+<h2 id="experimental-procedures">Experimental Procedures</h2>
+<p>The rules and the strategy are easy to understand, yet clearer evidence is still needed. Therefore, I decided to create a program that simulates the nature of the game. First, I created a <strong>GameEngine</strong> class that contains everything we need (e.g., deck, rules, algorithm, play, experiment).</p>
+<ul>
+<li>Create a GameEngine</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Import libraries</span>
+<span style="color:#f92672">import</span> random
+<span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> List, Dict, Any
+
+
+<span style="color:#75715e"># Core Game Engine</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GameEngine</span>:
+    <span style="color:#e6db74">&#34;&#34;&#34; Two players play the game using an ordinary deck of cards.
+</span><span style="color:#e6db74">        The cards will be dealt out in a row, one after another. 
+</span><span style="color:#e6db74">        Before the dealing begins, each player claims an ordered sequence of colors that might turn up, 
+</span><span style="color:#e6db74">        for example “red black red” (RBR) or “black red red” (BRR). 
+</span><span style="color:#e6db74">        As the cards are dealt, if three successive cards turn up in one of these sequences, 
+</span><span style="color:#e6db74">        the player who claimed it gets to collect those three cards as a trick, and the dealing continues. 
+</span><span style="color:#e6db74">        When all 52 cards have been dealt, the player who has collected the most tricks wins
+</span><span style="color:#e6db74">        (In a typical game, 7 to 9 tricks are won.)
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">def</span> __init__(self) <span style="color:#f92672">-&gt;</span> None:
+        <span style="color:#e6db74">&#34;&#34;&#34; Generate a deck of cards containing blacks (26) and reds (26) &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>all_cards <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;black&#39;</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">26</span>)] <span style="color:#f92672">+</span> [<span style="color:#e6db74">&#39;red&#39;</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">26</span>)]
+</code></pre></div><ul>
+<li>Create a card selection: with and without winning strategy</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_card_selection</span>(self) <span style="color:#f92672">-&gt;</span> List[str]:
+        <span style="color:#e6db74">&#34;&#34;&#34; Select patterns of cards (n=3)
+</span><span style="color:#e6db74">            return [&#39;black&#39;, &#39;black&#39;, &#39;red&#39;]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">return</span> [random<span style="color:#f92672">.</span>choice(self<span style="color:#f92672">.</span>all_cards) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>)]
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_card_selection_winning</span>(self, reference_sequence: List[str]) <span style="color:#f92672">-&gt;</span> List[str]:
+        <span style="color:#e6db74">&#34;&#34;&#34; Apply a winning method
+</span><span style="color:#e6db74">            Take a middle value, conjugate, put it in fromt of the sequence, and ditch the last value
+</span><span style="color:#e6db74">            Ex.1) BBR -&gt; RBBR -&gt; RBB
+</span><span style="color:#e6db74">            Ex.2) RRR -&gt; BRRR -&gt; BRR
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isinstance(reference_sequence, list) <span style="color:#f92672">or</span> len(reference_sequence) <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> [<span style="color:#ae81ff">3</span>]:
+            <span style="color:#66d9ef">return</span> []
+        converted_value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;red&#39;</span> <span style="color:#66d9ef">if</span> reference_sequence[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#39;black&#39;</span>] <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;black&#39;</span>
+        winning_sequence <span style="color:#f92672">=</span> reference_sequence[:<span style="color:#ae81ff">2</span>]
+        winning_sequence<span style="color:#f92672">.</span>insert(<span style="color:#ae81ff">0</span>, converted_value)
+        <span style="color:#66d9ef">return</span> winning_sequence
+</code></pre></div><ul>
+<li>Create a core gameplay</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_play</span>(self, is_winning_method_used: bool <span style="color:#f92672">=</span> False) <span style="color:#f92672">-&gt;</span> Dict[str: bool]:
+        <span style="color:#e6db74">&#34;&#34;&#34; Play the game &#34;&#34;&#34;</span>
+        deck <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>all_cards<span style="color:#f92672">.</span>copy() <span style="color:#75715e"># Get a dek of cards</span>
+        random<span style="color:#f92672">.</span>shuffle(deck) <span style="color:#75715e"># Shuffle a deck (in place)</span>
+
+        <span style="color:#75715e"># Select patterns</span>
+        computer_sequence <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_card_selection()
+        player_sequence <span style="color:#f92672">=</span>  self<span style="color:#f92672">.</span>_card_selection_winning(computer_sequence) \
+                                <span style="color:#66d9ef">if</span> is_winning_method_used <span style="color:#66d9ef">else</span> self<span style="color:#f92672">.</span>_card_selection()
+
+        <span style="color:#75715e"># Start playing game</span>
+        current_game_sequence <span style="color:#f92672">=</span> []
+        final_result <span style="color:#f92672">=</span> {}
+        <span style="color:#66d9ef">while</span> deck:
+            drawn_card <span style="color:#f92672">=</span> deck<span style="color:#f92672">.</span>pop()
+            current_game_sequence<span style="color:#f92672">.</span>append(drawn_card)
+            <span style="color:#75715e"># Adjust current_game_sequence to contain only three elements</span>
+            <span style="color:#66d9ef">if</span> len(current_game_sequence) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span>:
+                current_game_sequence <span style="color:#f92672">=</span> current_game_sequence[<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>:]
+            <span style="color:#75715e"># Check the result</span>
+            <span style="color:#66d9ef">if</span> len(current_game_sequence) <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>:
+                game_result <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_check_result(computer_sequence, player_sequence, current_game_sequence)
+                <span style="color:#66d9ef">if</span> True <span style="color:#f92672">in</span> game_result<span style="color:#f92672">.</span>values():
+                    final_result <span style="color:#f92672">=</span> game_result<span style="color:#f92672">.</span>copy()
+                    <span style="color:#66d9ef">break</span>
+
+        <span style="color:#66d9ef">return</span> final_result
+</code></pre></div><ul>
+<li>Create a result checking method</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_check_result</span>(self, computer_sequence: List[str],
+                                player_sequence: List[str],
+                                current_game_sequence: List[str]) <span style="color:#f92672">-&gt;</span> Dict[str, bool]:
+        <span style="color:#e6db74">&#34;&#34;&#34; Check the result of a game
+</span><span style="color:#e6db74">            All sequences must contain the same length of elements
+</span><span style="color:#e6db74">            return the result of a player winnig a game or not
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        result <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;computer_has_won&#39;</span>: False,
+            <span style="color:#e6db74">&#39;player_has_won&#39;</span>: False
+        }
+
+        <span style="color:#66d9ef">if</span> computer_sequence <span style="color:#f92672">==</span> current_game_sequence:
+            result[<span style="color:#e6db74">&#39;computer_has_won&#39;</span>] <span style="color:#f92672">=</span> True
+
+        <span style="color:#66d9ef">if</span> player_sequence <span style="color:#f92672">==</span> current_game_sequence:
+            result[<span style="color:#e6db74">&#39;player_has_won&#39;</span>] <span style="color:#f92672">=</span> True
+
+        <span style="color:#66d9ef">return</span> result
+</code></pre></div><ul>
+<li>In order to make it easier for the experiment, I also wrote a method to run the game <em>n</em> times.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">start_experiment</span>(self, is_winning_method_used: bool <span style="color:#f92672">=</span> False, n: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>) <span style="color:#f92672">-&gt;</span> Dict[str, int]:
+        <span style="color:#e6db74">&#34;&#34;&#34; Start an experiment and Display the result &#34;&#34;&#34;</span>
+        experimental_result <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;player_won&#39;</span>: <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;computer_won&#39;</span>: <span style="color:#ae81ff">0</span>}
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isinstance(n, int):
+            <span style="color:#66d9ef">return</span> None
+
+        <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n):
+            game_result <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_play(is_winning_method_used)
+            experimental_result[<span style="color:#e6db74">&#39;player_won&#39;</span>] <span style="color:#f92672">+=</span> game_result[<span style="color:#e6db74">&#39;player_has_won&#39;</span>]
+            experimental_result[<span style="color:#e6db74">&#39;computer_won&#39;</span>] <span style="color:#f92672">+=</span> game_result[<span style="color:#e6db74">&#39;computer_has_won&#39;</span>]
+
+        <span style="color:#66d9ef">return</span> experimental_result
+</code></pre></div><ul>
+<li>Lastly, putting them all together, we got a complete core game engine to be used for the experiment.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Import libraries</span>
+<span style="color:#f92672">import</span> random
+<span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> List, Dict, Any
+
+
+<span style="color:#75715e"># Core Game Engine</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GameEngine</span>:
+    <span style="color:#e6db74">&#34;&#34;&#34; Two players play the game using an ordinary deck of cards.
+</span><span style="color:#e6db74">        The cards will be dealt out in a row, one after another. 
+</span><span style="color:#e6db74">        Before the dealing begins, each player claims an ordered sequence of colors that might turn up, 
+</span><span style="color:#e6db74">        for example “red black red” (RBR) or “black red red” (BRR). 
+</span><span style="color:#e6db74">        As the cards are dealt, if three successive cards turn up in one of these sequences, 
+</span><span style="color:#e6db74">        the player who claimed it gets to collect those three cards as a trick, and the dealing continues. 
+</span><span style="color:#e6db74">        When all 52 cards have been dealt, the player who has collected the most tricks wins
+</span><span style="color:#e6db74">        (In a typical game, 7 to 9 tricks are won.)
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> __init__(self) <span style="color:#f92672">-&gt;</span> None:
+        <span style="color:#e6db74">&#34;&#34;&#34; Generate a deck of cards containing blacks (26) and reds (26) &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>all_cards <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;black&#39;</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">26</span>)] <span style="color:#f92672">+</span> [<span style="color:#e6db74">&#39;red&#39;</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">26</span>)]
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_card_selection</span>(self) <span style="color:#f92672">-&gt;</span> List[str]:
+        <span style="color:#e6db74">&#34;&#34;&#34; Select patterns of cards (n=3)
+</span><span style="color:#e6db74">            return [&#39;black&#39;, &#39;black&#39;, &#39;red&#39;]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">return</span> [random<span style="color:#f92672">.</span>choice(self<span style="color:#f92672">.</span>all_cards) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>)]
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_card_selection_winning</span>(self, reference_sequence: List[str]) <span style="color:#f92672">-&gt;</span> List[str]:
+        <span style="color:#e6db74">&#34;&#34;&#34; Apply a winning method
+</span><span style="color:#e6db74">            Take a middle value, conjugate, put it in fromt of the sequence, and ditch the last value
+</span><span style="color:#e6db74">            Ex.1) BBR -&gt; RBBR -&gt; RBB
+</span><span style="color:#e6db74">            Ex.2) RRR -&gt; BRRR -&gt; BRR
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isinstance(reference_sequence, list) <span style="color:#f92672">or</span> len(reference_sequence) <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> [<span style="color:#ae81ff">3</span>]:
+            <span style="color:#66d9ef">return</span> []
+        converted_value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;red&#39;</span> <span style="color:#66d9ef">if</span> reference_sequence[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#39;black&#39;</span>] <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;black&#39;</span>
+        winning_sequence <span style="color:#f92672">=</span> reference_sequence[:<span style="color:#ae81ff">2</span>]
+        winning_sequence<span style="color:#f92672">.</span>insert(<span style="color:#ae81ff">0</span>, converted_value)
+        <span style="color:#66d9ef">return</span> winning_sequence
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_check_result</span>(self, computer_sequence: List[str],
+                                player_sequence: List[str],
+                                current_game_sequence: List[str]) <span style="color:#f92672">-&gt;</span> Dict[str, bool]:
+        <span style="color:#e6db74">&#34;&#34;&#34; Check the result of a game
+</span><span style="color:#e6db74">            All sequences must contain the same length of elements
+</span><span style="color:#e6db74">            return the result of a player winnig a game or not
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        result <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;computer_has_won&#39;</span>: False,
+            <span style="color:#e6db74">&#39;player_has_won&#39;</span>: False
+        }
+
+        <span style="color:#66d9ef">if</span> computer_sequence <span style="color:#f92672">==</span> current_game_sequence:
+            result[<span style="color:#e6db74">&#39;computer_has_won&#39;</span>] <span style="color:#f92672">=</span> True
+
+        <span style="color:#66d9ef">if</span> player_sequence <span style="color:#f92672">==</span> current_game_sequence:
+            result[<span style="color:#e6db74">&#39;player_has_won&#39;</span>] <span style="color:#f92672">=</span> True
+
+        <span style="color:#66d9ef">return</span> result
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_play</span>(self, is_winning_method_used: bool <span style="color:#f92672">=</span> False) <span style="color:#f92672">-&gt;</span> Dict[str: bool]:
+        <span style="color:#e6db74">&#34;&#34;&#34; Play the game &#34;&#34;&#34;</span>
+        deck <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>all_cards<span style="color:#f92672">.</span>copy() <span style="color:#75715e"># Get a dek of cards</span>
+        random<span style="color:#f92672">.</span>shuffle(deck) <span style="color:#75715e"># Shuffle a deck (in place)</span>
+
+        <span style="color:#75715e"># Select patterns</span>
+        computer_sequence <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_card_selection()
+        player_sequence <span style="color:#f92672">=</span>  self<span style="color:#f92672">.</span>_card_selection_winning(computer_sequence) \
+                                <span style="color:#66d9ef">if</span> is_winning_method_used <span style="color:#66d9ef">else</span> self<span style="color:#f92672">.</span>_card_selection()
+
+        <span style="color:#75715e"># Start playing game</span>
+        current_game_sequence <span style="color:#f92672">=</span> []
+        final_result <span style="color:#f92672">=</span> {}
+        <span style="color:#66d9ef">while</span> deck:
+            drawn_card <span style="color:#f92672">=</span> deck<span style="color:#f92672">.</span>pop()
+            current_game_sequence<span style="color:#f92672">.</span>append(drawn_card)
+            <span style="color:#75715e"># Adjust current_game_sequence to contain only three elements</span>
+            <span style="color:#66d9ef">if</span> len(current_game_sequence) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span>:
+                current_game_sequence <span style="color:#f92672">=</span> current_game_sequence[<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>:]
+            <span style="color:#75715e"># Check the result</span>
+            <span style="color:#66d9ef">if</span> len(current_game_sequence) <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>:
+                game_result <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_check_result(computer_sequence, player_sequence, current_game_sequence)
+                <span style="color:#66d9ef">if</span> True <span style="color:#f92672">in</span> game_result<span style="color:#f92672">.</span>values():
+                    final_result <span style="color:#f92672">=</span> game_result<span style="color:#f92672">.</span>copy()
+                    <span style="color:#66d9ef">break</span>
+
+        <span style="color:#66d9ef">return</span> final_result
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">start_experiment</span>(self, is_winning_method_used: bool <span style="color:#f92672">=</span> False, n: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>) <span style="color:#f92672">-&gt;</span> Dict[str, int]:
+        <span style="color:#e6db74">&#34;&#34;&#34; Start an experiment and Display the result &#34;&#34;&#34;</span>
+        experimental_result <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;player_won&#39;</span>: <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;computer_won&#39;</span>: <span style="color:#ae81ff">0</span>}
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isinstance(n, int):
+            <span style="color:#66d9ef">return</span> None
+
+        <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n):
+            game_result <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_play(is_winning_method_used)
+            experimental_result[<span style="color:#e6db74">&#39;player_won&#39;</span>] <span style="color:#f92672">+=</span> game_result[<span style="color:#e6db74">&#39;player_has_won&#39;</span>]
+            experimental_result[<span style="color:#e6db74">&#39;computer_won&#39;</span>] <span style="color:#f92672">+=</span> game_result[<span style="color:#e6db74">&#39;computer_has_won&#39;</span>]
+
+        <span style="color:#66d9ef">return</span> experimental_result
+</code></pre></div><p>As can be seen from the method <em>start_experiment</em>, the default value of <em>n</em> is 1000 which means the game will be played 1000 times.
+To start the experiment, I wrote the main function as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Import libraries</span>
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">from</span> game_engine <span style="color:#f92672">import</span> GameEngine
+
+
+<span style="color:#75715e"># Load Core GameEngine</span>
+game_engine <span style="color:#f92672">=</span> GameEngine()
+
+
+<span style="color:#75715e"># Main function</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>() <span style="color:#f92672">-&gt;</span> None:
+    <span style="color:#75715e"># Without a winning method</span>
+    without_winning_method_res <span style="color:#f92672">=</span> game_engine<span style="color:#f92672">.</span>start_experiment(is_winning_method_used<span style="color:#f92672">=</span>False)
+
+    <span style="color:#75715e"># With a winning method</span>
+    with_winning_method_res <span style="color:#f92672">=</span> game_engine<span style="color:#f92672">.</span>start_experiment(is_winning_method_used<span style="color:#f92672">=</span>True)
+
+    <span style="color:#75715e"># Prepare DataFrame</span>
+    df_without_winning_method <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame([without_winning_method_res])
+    df_without_winning_method[<span style="color:#e6db74">&#39;cat&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;without&#39;</span>
+    df_with_winning_method_res <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame([with_winning_method_res])
+    df_with_winning_method_res[<span style="color:#e6db74">&#39;cat&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;with&#39;</span>
+    df_final <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([df_without_winning_method, df_with_winning_method_res])
+    df_final <span style="color:#f92672">=</span> df_final<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;cat&#39;</span>)
+    <span style="color:#66d9ef">print</span>(df_final)
+
+    <span style="color:#75715e"># Visualisation</span>
+    df_final<span style="color:#f92672">.</span>plot<span style="color:#f92672">.</span>bar()
+    plt<span style="color:#f92672">.</span>show()
+
+    <span style="color:#66d9ef">return</span> None
+
+
+<span style="color:#75715e"># Execute the script</span>
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    main()
+</code></pre></div><h2 id="results">Results</h2>
+<p>The results showed that playing with the winning strategy, <strong>Player(B)</strong> had a greater chance of winning (72.9%) against <strong>Player(A)</strong> from 1000 games played. On the other hand, playing without the winning strategy both players had a similar chance of winning 50-50.</p>
+<p><em>NOTE: In this case, <strong>Player(A)</strong> is represented by computer</em></p>
+<pre><code class="language-console" data-lang="console">         player_won  computer_won
+cat
+without         555           575
+with            729           271
+</code></pre>
+    <img src="https://i.ibb.co/RhPJXV4/Figure-1.png"  alt="figure 1"  class="center"  />
+
+
+<h2 id="summary">Summary</h2>
+<p>The game that seems like a perfectly-balanced one may not be as it presents. A significant advantage can always be gained with the right strategies. As can be seen earlier that with a good mathematic strategy, one player could win more than 70% of the time.</p>
+<p>Furthermore, with a combination of probability and computer programming, everything can be proved. Therefore, this stresses that technical skills are highly needed and can lead to new exploratory opportunities.</p>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://plus.maths.org/content/os/issue55/features/nishiyama/index">Winning odds</a></li>
+<li><a href="https://www.futilitycloset.com/2010/10/08/run-toppers/">Run Toppers</a></li>
+<li><a href="https://www.futilitycloset.com/2016/12/31/humble-nishiyama-randomness-game/">The Humble-Nishiyama Randomness Game</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Penney%27s_game">Penney&rsquo;s game</a></li>
+</ul>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://nat236919.github.io/tags/blog">blog</a></span><span class="tag"><a href="https://nat236919.github.io/tags/python">python</a></span><span class="tag"><a href="https://nat236919.github.io/tags/curiosity-jar">curiosity-jar</a></span>
+  				</p>
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2021</span>
+            
+                <span><a href="https://nat236919.github.io">Nuttaphat Arunoprayoch</a></span>
+            
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://nat236919.github.io/bundle.min.28fcbbd62a0f37390697e85a62b1bc797a94acd8df73d92b2b34e1eaf3ddeb765b7b18922d5dbfe31682deaebd73cdafcc826ad5afba46a358bc19d5ca0bb027.js" integrity="sha512-KPy71ioPNzkGl&#43;haYrG8eXqUrNjfc9krKzTh6vPd63ZbexiSLV2/4xaC3q69c82vzIJq1a&#43;6RqNYvBnVyguwJw=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-125164332-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+
+
+    </body>
+</html>
