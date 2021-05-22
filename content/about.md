@@ -10,9 +10,9 @@ My name is **Nuttaphat Arunoprayoch (Chiang)**
 
 I am a software engineer and a data analyst who is gliding around open-source development.
 
-I have experiences in using **Python** for various projects and applications ranging from its web frameworks, data manipulation, and data visualization for developing APIs, statistical dashboards, and machine learning models.
+I have experiences in using **Python** for various projects and applications ranging from its web frameworks (e.g., **Flask**, **Fast API**, **Django**), data manipulation, and data visualization for developing APIs, statistical dashboards, and machine learning models.
 
-Additionally, I have experiences developing and maintaining web-app projects using **PHP (CodeIgniter)**, **JS (Vanilla, jQuery, Vue.js)**. I am also no stranger with a variety of databases (e.g., **MySQL**, **Azure Cosmos DB**, and **MongoDB**).  Furthermore, I am familiar with **HTML**, **CSS**, and its frameworks (e.g., **Bootstrap**, **Foundation**, **Bulma**, **Materialize**, etc.).
+Additionally, I have experiences developing and maintaining web-app projects using **PHP (CodeIgniter, Laravel)**, **JS (Vanilla, jQuery, Vue.js)**. I am also no stranger with a variety of databases (e.g., **MySQL**, **Azure Cosmos DB**, and **MongoDB**).  Furthermore, I am familiar with **HTML**, **CSS**, and its frameworks (e.g., **Bootstrap**, **Foundation**, **Bulma**, **Materialize**, etc.).
 
 Currently, I am working in a private R&D sector specialising in educational technology.
 
