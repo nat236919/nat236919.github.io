@@ -10,11 +10,11 @@ tags: ["blog", "python", "fastapi"]
 
 ## Introduction
 
-Developing APIs can be painful if we don't know where to start. As I've always been a fan of Python, it is my first language of choice for development. It has tons of frameworks supporting web development (e.g., [Django](https://www.djangoproject.com/), [Flask](https://flask.palletsprojects.com/en/2.0.x/), etc.). However, this time I would like to introduce a super-fast and easy-to-use framework which I've been using for a couple of years now: [FastAPI](https://fastapi.tiangolo.com/).
+Developing APIs can be painful if we don't know where to start. As I've always been a fan of Python, it is my first choice for development. It has a great number of frameworks and libraries supporting web development (e.g., [Django](https://www.djangoproject.com/), [Flask](https://flask.palletsprojects.com/en/2.0.x/), etc.). This time I would like to introduce a super-fast and easy-to-use framework which I've been using for a couple of years now: [FastAPI](https://fastapi.tiangolo.com/).
 
 ## FastAPI
 
-FastAPI is a high-performace web framework for creating APIs with Python. It is light and easy to start, we create a simple API with just a few lines of code
+FastAPI is a high-performace web framework for creating APIs with Python. It is light and easy to start, we can create a simple API with just a few lines of code
 
 ```python
 from typing import Optional
@@ -29,7 +29,7 @@ def read_root():
     return {"Hello": "World"}
 ```
 
-Start a sever by using **uvicorn main:app --reload**
+Start a server by using **uvicorn main:app --reload**
 
 ```console
 uvicorn main:app --reload
@@ -42,7 +42,7 @@ INFO: Application startup complete.
 
 ```
 
-It is so simple and fast to develop which is suitable for nowadays' rapid demands for development. Additionally, regardings its performance it is on par with **NodeJS** and **Go**, [Benchmarks](https://fastapi.tiangolo.com/benchmarks/).
+As can be seen above, it is so simple and fast to develop which is suitable for nowadays' rapid demands for development. Additionally, regardings its performance it is on par with **NodeJS** and **Go**, [Benchmarks](https://fastapi.tiangolo.com/benchmarks/).
 
 Not only it has incredible speed, but also comes with an auto-generated interactive API document (powered by [swagger-ui](https://github.com/swagger-api/swagger-ui)) which users can input parameters and validate outputs with ease.
 
@@ -59,20 +59,20 @@ from pydantic import BaseModel
 app = FastAPI()
 
 
-class ReponseModel(BaseModel):
+class ResponseModel(BaseModel):
     status: int
     data: Optional[Dict[str, Any]] = {}
 
 
 @app.get("/")
-def read_root() -> ReponseModel:
+def read_root() -> ResponseModel:
     res = {
         status: 1,
         data: {"Hello": "World"}
     }
-    return ReponseModel(**res)
+    return ResponseModel(**res)
 ```
 
 ## Summary
 
-When it comes to meeting deadline and avoid working overtime, [**FastAPI**](https://fastapi.tiangolo.com/) never disappoints me and my teammates. It is great for developing APIs as proof of concept or even for production. I personally recommend this framework for everyone to give it a try. It is awesome.
+When it comes to meeting deadline and avoiding working overtime, [**FastAPI**](https://fastapi.tiangolo.com/) never disappoints me and my teammates. It is great for developing APIs as proof of concept or even for production. I personally recommend this framework for everyone to give it a try. It is awesome.
