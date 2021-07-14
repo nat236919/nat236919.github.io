@@ -14,9 +14,9 @@ The fun started when I was working on a function that returns an object. The obj
 
 ```javascript
 function common_util_value_is_object(arg) {
-    return (typeof arg === "object");
+  return typeof arg === "object";
 }
-common_util_value_is_object({"data": "Hello There"}); // true
+common_util_value_is_object({ data: "Hello There" }); // true
 ```
 
 One day, while I was refactoring a back-end service (PHP), I encountered a weird behaviour causing a UI incorrect presentation. So I checked, since my refactored back-end service now can return a null value instead of an incomplete model object, I suspected it must be something about type checking.
@@ -24,8 +24,8 @@ One day, while I was refactoring a back-end service (PHP), I encountered a weird
 By rechecking the function, I discovered that **typeof**, somehow, yields **true** for a null value. **How?? I mean Why????**
 
 ```javascript
-console.log(typeof(null)); //object
-console.log(typeof(null) === "object"); // true
+console.log(typeof null); //object
+console.log(typeof null === "object"); // true
 ```
 
 Of course, this is not new and I am not the only one who was wondering what going on here. After some digging, the answer was just so simple; that is just how JS works as can be seen from primitive data types.
@@ -36,16 +36,15 @@ It had become clear that there was nothing I could do about it; therefore, I sim
 
 ```javascript
 function common_util_value_is_null(arg) {
-    return ((typeof arg === 'undefined') || arg === null || arg == undefined);
+  return typeof arg === "undefined" || arg === null || arg == undefined;
 }
 
 function common_util_value_is_object(arg) {
-    if (common_util_value_is_null(arg))
-        return false;
-    return (typeof arg === "object");
+  if (common_util_value_is_null(arg)) return false;
+  return typeof arg === "object";
 }
 
-common_util_value_is_object({"data": "Hello There"}); // true
+common_util_value_is_object({ data: "Hello There" }); // true
 common_util_value_is_object(null); // false
 ```
 
@@ -55,6 +54,6 @@ I do not know if this is a bug or merely a true nature. But it is something we a
 
 ### References
 
-* [JavaScript - typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#null)
-* [Why is typeof null “object”?](https://stackoverflow.com/questions/18808226/why-is-typeof-null-object)
-* [Why is null an object and what's the difference between null and undefined?](https://stackoverflow.com/questions/801032/why-is-null-an-object-and-whats-the-difference-between-null-and-undefined)
+- [JavaScript - typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#null)
+- [Why is typeof null “object”?](https://stackoverflow.com/questions/18808226/why-is-typeof-null-object)
+- [Why is null an object and what's the difference between null and undefined?](https://stackoverflow.com/questions/801032/why-is-null-an-object-and-whats-the-difference-between-null-and-undefined)

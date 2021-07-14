@@ -32,6 +32,7 @@ Recently, in order to match up with an increasing number of mobile usage, The Na
 
 1. Check your QR codes on your email or purchase history on [Nantou Bus website](https://ntbus.welcometw.com).
 2. For example, if you have purchased a [Sun Moon Lake Bike PASS](https://ntbus.welcometw.com/tour/p66v) (680 NTD for paper, 670 NTD for e-Pass). You will get several tickets and vouchers which can be redeemed as follows:
+
    1. Taichung – Sun Moon Lake Round-trip Bus Ticket -> [Nantou Bus Station](https://goo.gl/maps/XDGELyLWRQXcMnr5A)
    2. Sun Moon Lake Boat Voucher -> [Shueishe Visitors Center](https://goo.gl/maps/AW8b942Bd545LrsL9)
    3. Bike Rental Voucher -> the designated vendors (e.g. Giant, Merida, etc.)

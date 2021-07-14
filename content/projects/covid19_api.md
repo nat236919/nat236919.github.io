@@ -8,7 +8,7 @@ tags: ["project", "python", "covid19", "api"]
 
 {{< image src="https://i.ibb.co/Wg2yPBq/covid19-api-logo.png" alt="COVID-19 LOGO" position="center">}}
 
-*API for exploring covid-19 cases around the globe powered by FastAPI framework*
+_API for exploring covid-19 cases around the globe powered by FastAPI framework_
 
 ## Introduction
 
@@ -79,5 +79,5 @@ This project is an open-source API server powered by FastAPI allowing everyone t
 
 Please visit the following links
 
-* [Repository](https://github.com/nat236919/covid19-api)
-* [API documentation](https://nat236919.github.io/covid19-api)
+- [Repository](https://github.com/nat236919/covid19-api)
+- [API documentation](https://nat236919.github.io/covid19-api)

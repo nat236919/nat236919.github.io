@@ -14,9 +14,9 @@ This repository is a collection of data analysis projects focusing purely on exp
 
 It generally consists three main parts:
 
-* **Introduction** where a concept and questions are introduced
-* **Experimental Procedures** where a script is written to prove the concept
-* **Results** where statistical and visual results are presented
+- **Introduction** where a concept and questions are introduced
+- **Experimental Procedures** where a script is written to prove the concept
+- **Results** where statistical and visual results are presented
 
 ## Inspiration
 

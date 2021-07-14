@@ -24,14 +24,13 @@ Basically, what I did was modifying the concerned functions to handle an array c
 
 ```javascript
 function common_util_value_is_null(exp) {
-    return ((typeof exp === 'undefined') || exp === null || exp == undefined);
+  return typeof exp === "undefined" || exp === null || exp == undefined;
 }
 
 function layout_util_file_display_movie_set_time_marker(obj_player, i_time) {
-    if (common_util_value_is_null(i_time))
-        return false;
-    str_video_plugin_id = "video_plugin_name_example";
-    obj_player[str_video_plugin_id].addMark(i_time, "general");
+  if (common_util_value_is_null(i_time)) return false;
+  str_video_plugin_id = "video_plugin_name_example";
+  obj_player[str_video_plugin_id].addMark(i_time, "general");
 }
 ```
 
@@ -44,13 +43,21 @@ To solve this problem, we must check a video's length (duration), then proceed t
 I came across a solution, by using **loadedmetadata** will allow us to get its data beforehand which was what I needed. Combining with some conditions to assure that there would be no layout overflows, this is the result.
 
 ```javascript
-obj_player.on("loadedmetadata", function() {
-    if (!common_util_value_is_null(i_start_time) && i_start_time >= 0 && i_start_time <= obj_player.duration()) {
-        layout_util_file_display_movie_set_time_marker(obj_player, i_start_time);
-    }
-    if (!common_util_value_is_null(i_end_time) && i_end_time > i_start_time && i_end_time <= obj_player.duration()) {
-        layout_util_file_display_movie_set_time_marker(obj_player, i_end_time);
-    }
+obj_player.on("loadedmetadata", function () {
+  if (
+    !common_util_value_is_null(i_start_time) &&
+    i_start_time >= 0 &&
+    i_start_time <= obj_player.duration()
+  ) {
+    layout_util_file_display_movie_set_time_marker(obj_player, i_start_time);
+  }
+  if (
+    !common_util_value_is_null(i_end_time) &&
+    i_end_time > i_start_time &&
+    i_end_time <= obj_player.duration()
+  ) {
+    layout_util_file_display_movie_set_time_marker(obj_player, i_end_time);
+  }
 });
 ```
 
@@ -63,9 +70,9 @@ After some testing with different test cases. Time markers are presented correct
 This should have been an easy task given that **videojs** already provides a method namely **play()** to help us. By defining simple procedures, a small snippet code would do the job.
 
 ```javascript
-$(document).ready(function() {
+$(document).ready(function () {
   obj_player.play();
-})
+});
 ```
 
 Was I wrong, so wrong. Autoplay did not trigger at all on Chrome and Firefox, yet it worked on Safari and Edge. I had spent a great deal of time to figure out what went wrong. Eventually, it turned out that this problem had something to do with [Autoplay Policy Changes](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes).
@@ -77,14 +84,22 @@ As the Internet browsing has been moving towards improving UX, reducing ads, or 
 The last implementation was that we would like to have a video started playing from a specific time. Once again, **videojs** provides a method called **currentTime()** to help us. Without waiting for too long, I used this method in the existing code.
 
 ```javascript
-obj_player.on("loadedmetadata", function() {
-    if (!common_util_value_is_null(i_start_time) && i_start_time >= 0 && i_start_time <= obj_player.duration()) {
-        layout_util_file_display_movie_set_time_marker(obj_player, i_start_time);
-        obj_player.currentTime(i_start_time);
-    }
-    if (!common_util_value_is_null(i_end_time) && i_end_time > i_start_time && i_end_time <= obj_player.duration()) {
-        layout_util_file_display_movie_set_time_marker(obj_player, i_end_time);
-    }
+obj_player.on("loadedmetadata", function () {
+  if (
+    !common_util_value_is_null(i_start_time) &&
+    i_start_time >= 0 &&
+    i_start_time <= obj_player.duration()
+  ) {
+    layout_util_file_display_movie_set_time_marker(obj_player, i_start_time);
+    obj_player.currentTime(i_start_time);
+  }
+  if (
+    !common_util_value_is_null(i_end_time) &&
+    i_end_time > i_start_time &&
+    i_end_time <= obj_player.duration()
+  ) {
+    layout_util_file_display_movie_set_time_marker(obj_player, i_end_time);
+  }
 });
 ```
 
@@ -100,7 +115,7 @@ It turned out that in order to auto skip to a point of video time on **iOS Safar
 
 ```javascript
 var bool_is_initiation_done = false;
-obj_player.on("canplaythrough", function(){
+obj_player.on("canplaythrough", function () {
   if (!bool_is_initiation_done) {
     obj_player.currentTime(i_start_time);
     bool_is_initiation_done = true;
@@ -113,37 +128,47 @@ Eventually, I had a function that works across web browsers for the time being. 
 ```javascript
 // Utility
 function common_util_value_is_null(exp) {
-    return ((typeof exp === 'undefined') || exp === null || exp == undefined);
+  return typeof exp === "undefined" || exp === null || exp == undefined;
 }
 
 // Set time marker
 function layout_util_file_display_movie_set_time_marker(obj_player, i_time) {
-    if (common_util_value_is_null(i_time))
-        return false;
-    str_video_plugin_id = "video_plugin_name_example";
-    obj_player[str_video_plugin_id].addMark(i_time, "general");
+  if (common_util_value_is_null(i_time)) return false;
+  str_video_plugin_id = "video_plugin_name_example";
+  obj_player[str_video_plugin_id].addMark(i_time, "general");
 }
 
 // Set timerange (starttime, endtime)
-function layout_util_file_display_movie_set_timerange(obj_player, arr_timerange) {
+function layout_util_file_display_movie_set_timerange(
+  obj_player,
+  arr_timerange
+) {
   i_start_time = arr_timerange[0];
-  i_end_time = arr_timerange[arr_timerange.length-1];
+  i_end_time = arr_timerange[arr_timerange.length - 1];
 
   // Set starttime and endtime
   // Remark: endtime marker MUST NOT exceed video's length; otherwise, it will create a video display overflow
-  obj_player.on("loadedmetadata", function() {
-      if (!common_util_value_is_null(i_start_time) && i_start_time >= 0 && i_start_time <= obj_player.duration()) {
-          layout_util_file_display_movie_set_time_marker(obj_player, i_start_time);
-          obj_player.currentTime(i_start_time);
-      }
-      if (!common_util_value_is_null(i_end_time) && i_end_time > i_start_time && i_end_time <= obj_player.duration()) {
-          layout_util_file_display_movie_set_time_marker(obj_player, i_end_time);
-      }
+  obj_player.on("loadedmetadata", function () {
+    if (
+      !common_util_value_is_null(i_start_time) &&
+      i_start_time >= 0 &&
+      i_start_time <= obj_player.duration()
+    ) {
+      layout_util_file_display_movie_set_time_marker(obj_player, i_start_time);
+      obj_player.currentTime(i_start_time);
+    }
+    if (
+      !common_util_value_is_null(i_end_time) &&
+      i_end_time > i_start_time &&
+      i_end_time <= obj_player.duration()
+    ) {
+      layout_util_file_display_movie_set_time_marker(obj_player, i_end_time);
+    }
   });
 
   // iPhone and iPad need to play first, then set the starttime
   var bool_is_initiation_done = false;
-  obj_player.on("canplaythrough", function(){
+  obj_player.on("canplaythrough", function () {
     if (!bool_is_initiation_done) {
       obj_player.currentTime(i_start_time);
       bool_is_initiation_done = true;

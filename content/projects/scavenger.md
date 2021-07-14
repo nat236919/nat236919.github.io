@@ -14,9 +14,9 @@ tags: ["project", "python", "web-app", "web-scraping", "flask", "vue.js"]
 
 ## Features
 
-* **Web Scraping**: It gets its hands dirty going out to endless space of World Wide Web to make sure that you get what you need
-* **Processing**: Gliding through a scraped website to seek a piece of information as required
-* **Presenting**: It manages and presents the result beautifully to make it easier to comprehend
+- **Web Scraping**: It gets its hands dirty going out to endless space of World Wide Web to make sure that you get what you need
+- **Processing**: Gliding through a scraped website to seek a piece of information as required
+- **Presenting**: It manages and presents the result beautifully to make it easier to comprehend
 
 ## Inspiration
 
@@ -43,30 +43,28 @@ With the power of **beautifulsoup4**, web scraping functionalities rely heavily 
 Furthermore, since it is a containerized web application, everything can be up and running in a matter of seconds by hooking **Dockerhub**, where the container lies, with **Azure** server.
 
 > **Q:** So, how long did it take?
-> 
+>
 > **A:** Three weeks of my free time after work from scratch
-> 
+>
 > **Q:** Isn't that too slow?
-> 
+>
 > **A:** I have no idea. At least I did it.
 
 I hope you enjoy using it as much as I do. Cheers.
 
 ## Tech Stack
 
-* **Back-end**: [Flask](https://flask.palletsprojects.com/en/1.1.x/), [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
-  
-* **Front-end**: [Flask templates](https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/), [Vue.js](https://vuejs.org/), [axios](https://github.com/axios/axios), [Foundation](https://get.foundation/)
-  
-* **Servers**: [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/), [nginx](https://www.nginx.com/), [Azure](https://azure.microsoft.com/)
+- **Back-end**: [Flask](https://flask.palletsprojects.com/en/1.1.x/), [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
+- **Front-end**: [Flask templates](https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/), [Vue.js](https://vuejs.org/), [axios](https://github.com/axios/axios), [Foundation](https://get.foundation/)
+- **Servers**: [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/), [nginx](https://www.nginx.com/), [Azure](https://azure.microsoft.com/)
 
-* **CI/CD**: [Travis CI](https://travis-ci.org/), [Sentry](https://sentry.io/)
+- **CI/CD**: [Travis CI](https://travis-ci.org/), [Sentry](https://sentry.io/)
 
-* **Version Control**: [GitHub](https://github.com/), [Dockerhub](https://hub.docker.com/)
+- **Version Control**: [GitHub](https://github.com/), [Dockerhub](https://hub.docker.com/)
 
-* **Container**: [uwsgi-nginx-flask-docker](https://github.com/tiangolo/uwsgi-nginx-flask-docker)
+- **Container**: [uwsgi-nginx-flask-docker](https://github.com/tiangolo/uwsgi-nginx-flask-docker)
 
 ## Project links
 
-* [http://scavenger.nuttaphat.com/](http://scavenger.nuttaphat.com/)
-* [https://scavenger-project.azurewebsites.net/](https://scavenger-project.azurewebsites.net/)
+- [http://scavenger.nuttaphat.com/](http://scavenger.nuttaphat.com/)
+- [https://scavenger-project.azurewebsites.net/](https://scavenger-project.azurewebsites.net/)

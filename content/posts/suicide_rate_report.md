@@ -218,7 +218,6 @@ py.iplot(fig, filename='grouped-bar')
 
 {{< image src="/img/blog/suicide_rate_report/fig_4.jpg" alt="fig 4" position="center">}}
 
-
 ## Correlations among Factors
 
 By revealing correlations among factors provided by the dataset. It was found that the information was not enough for discovering the main factor of an increasing suicide rates.

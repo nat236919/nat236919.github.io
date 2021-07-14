@@ -12,9 +12,9 @@ The dashboard of Teaching and Learning Bigdata Management Service allows the sch
 
 ## Responsibility
 
-* Created a prototype version of the dashboard by analysing statistical data to determine appropriate presentations
-* Modified MVC modules to extract data and provide an API endpoint (JSON)
-* Validated the correctness of the queried data from the database
+- Created a prototype version of the dashboard by analysing statistical data to determine appropriate presentations
+- Modified MVC modules to extract data and provide an API endpoint (JSON)
+- Validated the correctness of the queried data from the database
 
 ## Find Out More
 

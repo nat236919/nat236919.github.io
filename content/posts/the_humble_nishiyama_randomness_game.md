@@ -16,18 +16,18 @@ The game is based on the idea of [Penney Ante game](https://en.wikipedia.org/wik
 
 The rule seems straight forward and fair. However, there is one great strategy that allows **Player(B)** has a bigger chance of winning than **Player(A)** up to 70%+
 
-*NOTE: Player(A) represents the first player who calls a sequence*.
+_NOTE: Player(A) represents the first player who calls a sequence_.
 
 ## The Winning Strategy
 
-Assume that **Player(A)** has selected a sequence *RED RED BLACK*. All **Player(B)** needs to do is that use his/her opponent sequence as a reference, take the second value, convert it into the opposite value, then put it in front of the sequence, finally ditch the last value.
+Assume that **Player(A)** has selected a sequence _RED RED BLACK_. All **Player(B)** needs to do is that use his/her opponent sequence as a reference, take the second value, convert it into the opposite value, then put it in front of the sequence, finally ditch the last value.
 
 **Example**
 Selecting RED RED BLACK
 
-* Take the second value and convert it to the opposite RED -> BLACK
-* Put the converted value in front of the sequence -> **BLACK** RED RED BLACK
-* Finally ditch the last value -> BLACK RED RED
+- Take the second value and convert it to the opposite RED -> BLACK
+- Put the converted value in front of the sequence -> **BLACK** RED RED BLACK
+- Finally ditch the last value -> BLACK RED RED
 
 According to the table below, with this strategy, it is guaranteed that **Player(B)** will always have a higher chance against **Player(A)** whatsoever.
 
@@ -37,7 +37,7 @@ According to the table below, with this strategy, it is guaranteed that **Player
 
 The rules and the strategy are easy to understand, yet clearer evidence is still needed. Therefore, I decided to create a program that simulates the nature of the game. First, I created a **GameEngine** class that contains everything we need (e.g., deck, rules, algorithm, play, experiment).
 
-* Create a GameEngine
+- Create a GameEngine
 
 ```python
 # Import libraries
@@ -48,11 +48,11 @@ from typing import List, Dict, Any
 # Core Game Engine
 class GameEngine:
     """ Two players play the game using an ordinary deck of cards.
-        The cards will be dealt out in a row, one after another. 
-        Before the dealing begins, each player claims an ordered sequence of colors that might turn up, 
-        for example “red black red” (RBR) or “black red red” (BRR). 
-        As the cards are dealt, if three successive cards turn up in one of these sequences, 
-        the player who claimed it gets to collect those three cards as a trick, and the dealing continues. 
+        The cards will be dealt out in a row, one after another.
+        Before the dealing begins, each player claims an ordered sequence of colors that might turn up,
+        for example “red black red” (RBR) or “black red red” (BRR).
+        As the cards are dealt, if three successive cards turn up in one of these sequences,
+        the player who claimed it gets to collect those three cards as a trick, and the dealing continues.
         When all 52 cards have been dealt, the player who has collected the most tricks wins
         (In a typical game, 7 to 9 tricks are won.)
     """
@@ -61,7 +61,7 @@ class GameEngine:
         self.all_cards = ['black' for _ in range(26)] + ['red' for _ in range(26)]
 ```
 
-* Create a card selection: with and without winning strategy
+- Create a card selection: with and without winning strategy
 
 ```python
     def _card_selection(self) -> List[str]:
@@ -84,7 +84,7 @@ class GameEngine:
         return winning_sequence
 ```
 
-* Create a core gameplay
+- Create a core gameplay
 
 ```python
     def _play(self, is_winning_method_used: bool = False) -> Dict[str: bool]:
@@ -116,7 +116,7 @@ class GameEngine:
         return final_result
 ```
 
-* Create a result checking method
+- Create a result checking method
 
 ```python
     def _check_result(self, computer_sequence: List[str],
@@ -140,7 +140,7 @@ class GameEngine:
         return result
 ```
 
-* In order to make it easier for the experiment, I also wrote a method to run the game *n* times.
+- In order to make it easier for the experiment, I also wrote a method to run the game _n_ times.
 
 ```python
     def start_experiment(self, is_winning_method_used: bool = False, n: int = 1000) -> Dict[str, int]:
@@ -157,7 +157,7 @@ class GameEngine:
         return experimental_result
 ```
 
-* Lastly, putting them all together, we got a complete core game engine to be used for the experiment.
+- Lastly, putting them all together, we got a complete core game engine to be used for the experiment.
 
 ```python
 # Import libraries
@@ -168,11 +168,11 @@ from typing import List, Dict, Any
 # Core Game Engine
 class GameEngine:
     """ Two players play the game using an ordinary deck of cards.
-        The cards will be dealt out in a row, one after another. 
-        Before the dealing begins, each player claims an ordered sequence of colors that might turn up, 
-        for example “red black red” (RBR) or “black red red” (BRR). 
-        As the cards are dealt, if three successive cards turn up in one of these sequences, 
-        the player who claimed it gets to collect those three cards as a trick, and the dealing continues. 
+        The cards will be dealt out in a row, one after another.
+        Before the dealing begins, each player claims an ordered sequence of colors that might turn up,
+        for example “red black red” (RBR) or “black red red” (BRR).
+        As the cards are dealt, if three successive cards turn up in one of these sequences,
+        the player who claimed it gets to collect those three cards as a trick, and the dealing continues.
         When all 52 cards have been dealt, the player who has collected the most tricks wins
         (In a typical game, 7 to 9 tricks are won.)
     """
@@ -262,7 +262,7 @@ class GameEngine:
         return experimental_result
 ```
 
-As can be seen from the method *start_experiment*, the default value of *n* is 1000 which means the game will be played 1000 times.
+As can be seen from the method _start_experiment_, the default value of _n_ is 1000 which means the game will be played 1000 times.
 To start the experiment, I wrote the main function as follows:
 
 ```python
@@ -309,7 +309,7 @@ if __name__ == '__main__':
 
 The results showed that playing with the winning strategy, **Player(B)** had a greater chance of winning (72.9%) against **Player(A)** from 1000 games played. On the other hand, playing without the winning strategy both players had a similar chance of winning 50-50.
 
-*NOTE: In this case, **Player(A)** is represented by computer*
+_NOTE: In this case, **Player(A)** is represented by computer_
 
 ```console
          player_won  computer_won
@@ -328,7 +328,7 @@ Furthermore, with a combination of probability and computer programming, everyth
 
 ### References
 
-* [Winning odds](https://plus.maths.org/content/os/issue55/features/nishiyama/index)
-* [Run Toppers](https://www.futilitycloset.com/2010/10/08/run-toppers/)
-* [The Humble-Nishiyama Randomness Game](https://www.futilitycloset.com/2016/12/31/humble-nishiyama-randomness-game/)
-* [Penney's game](https://en.wikipedia.org/wiki/Penney%27s_game)
+- [Winning odds](https://plus.maths.org/content/os/issue55/features/nishiyama/index)
+- [Run Toppers](https://www.futilitycloset.com/2010/10/08/run-toppers/)
+- [The Humble-Nishiyama Randomness Game](https://www.futilitycloset.com/2016/12/31/humble-nishiyama-randomness-game/)
+- [Penney's game](https://en.wikipedia.org/wiki/Penney%27s_game)

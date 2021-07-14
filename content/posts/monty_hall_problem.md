@@ -53,7 +53,7 @@ class MontyHall():
                 return True
             else:
                 return False
-        
+
         # Determine the result (Stay)
         result =  bool(user_selection == self.award_door)
 
