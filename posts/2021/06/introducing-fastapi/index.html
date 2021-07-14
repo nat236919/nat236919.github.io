@@ -10,7 +10,7 @@ FastAPI FastAPI is a high-performace web framework for creating APIs with Python
 app <span style=color:#f92672>=</span> FastAPI()
 
 
-<span style=color:#a6e22e>@app.get</span>(<span style=color:#e6db74>&#34;/&#34;</span>)
+<span style=color:#a6e22e>@app</span><span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;/&#34;</span>)
 <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>read_root</span>():
     <span style=color:#66d9ef>return</span> {<span style=color:#e6db74>&#34;Hello&#34;</span>: <span style=color:#e6db74>&#34;World&#34;</span>}
 </code></pre></div><p>Start a server by using <strong>uvicorn main:app &ndash;reload</strong></p><pre><code class=language-console data-lang=console>uvicorn main:app --reload
@@ -34,7 +34,7 @@ app <span style=color:#f92672>=</span> FastAPI()
     data: Optional[Dict[str, Any]] <span style=color:#f92672>=</span> {}
 
 
-<span style=color:#a6e22e>@app.get</span>(<span style=color:#e6db74>&#34;/&#34;</span>)
+<span style=color:#a6e22e>@app</span><span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;/&#34;</span>)
 <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>read_root</span>() <span style=color:#f92672>-&gt;</span> ResponseModel:
     res <span style=color:#f92672>=</span> {
         status: <span style=color:#ae81ff>1</span>,

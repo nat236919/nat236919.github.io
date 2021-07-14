@@ -49,9 +49,9 @@ addition(<span style=color:#ae81ff>1</span>, <span style=color:#e6db74>&#39;sd&#
 <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>type_check</span>(func):
     wraps(func)
     <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>wrapper</span>(<span style=color:#f92672>*</span>args, <span style=color:#f92672>**</span>kwargs):
-        res <span style=color:#f92672>=</span> None
+        res <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>
         <span style=color:#66d9ef>if</span> all([isinstance(num, int) <span style=color:#66d9ef>for</span> num <span style=color:#f92672>in</span> [<span style=color:#f92672>*</span>args]]):
-            <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#39;Running function {}&#39;</span><span style=color:#f92672>.</span>format(func<span style=color:#f92672>.</span>__name__))
+            print(<span style=color:#e6db74>&#39;Running function </span><span style=color:#e6db74>{}</span><span style=color:#e6db74>&#39;</span><span style=color:#f92672>.</span>format(func<span style=color:#f92672>.</span>__name__))
             res <span style=color:#f92672>=</span> func(<span style=color:#f92672>*</span>args, <span style=color:#f92672>**</span>kwargs)
         <span style=color:#66d9ef>return</span> res
     <span style=color:#66d9ef>return</span> wrapper

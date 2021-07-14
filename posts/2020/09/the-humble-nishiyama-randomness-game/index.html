@@ -15,15 +15,15 @@ Selecting RED RED BLACK</p><ul><li>Take the second value and convert it to the o
 <span style=color:#75715e># Core Game Engine</span>
 <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GameEngine</span>:
     <span style=color:#e6db74>&#34;&#34;&#34; Two players play the game using an ordinary deck of cards.
-</span><span style=color:#e6db74>        The cards will be dealt out in a row, one after another. 
-</span><span style=color:#e6db74>        Before the dealing begins, each player claims an ordered sequence of colors that might turn up, 
-</span><span style=color:#e6db74>        for example “red black red” (RBR) or “black red red” (BRR). 
-</span><span style=color:#e6db74>        As the cards are dealt, if three successive cards turn up in one of these sequences, 
-</span><span style=color:#e6db74>        the player who claimed it gets to collect those three cards as a trick, and the dealing continues. 
+</span><span style=color:#e6db74>        The cards will be dealt out in a row, one after another.
+</span><span style=color:#e6db74>        Before the dealing begins, each player claims an ordered sequence of colors that might turn up,
+</span><span style=color:#e6db74>        for example “red black red” (RBR) or “black red red” (BRR).
+</span><span style=color:#e6db74>        As the cards are dealt, if three successive cards turn up in one of these sequences,
+</span><span style=color:#e6db74>        the player who claimed it gets to collect those three cards as a trick, and the dealing continues.
 </span><span style=color:#e6db74>        When all 52 cards have been dealt, the player who has collected the most tricks wins
 </span><span style=color:#e6db74>        (In a typical game, 7 to 9 tricks are won.)
 </span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
-    <span style=color:#66d9ef>def</span> __init__(self) <span style=color:#f92672>-&gt;</span> None:
+    <span style=color:#66d9ef>def</span> __init__(self) <span style=color:#f92672>-&gt;</span> <span style=color:#66d9ef>None</span>:
         <span style=color:#e6db74>&#34;&#34;&#34; Generate a deck of cards containing blacks (26) and reds (26) &#34;&#34;&#34;</span>
         self<span style=color:#f92672>.</span>all_cards <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#39;black&#39;</span> <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>26</span>)] <span style=color:#f92672>+</span> [<span style=color:#e6db74>&#39;red&#39;</span> <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>26</span>)]
 </code></pre></div><ul><li>Create a card selection: with and without winning strategy</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_card_selection</span>(self) <span style=color:#f92672>-&gt;</span> List[str]:
@@ -44,7 +44,7 @@ Selecting RED RED BLACK</p><ul><li>Take the second value and convert it to the o
         winning_sequence <span style=color:#f92672>=</span> reference_sequence[:<span style=color:#ae81ff>2</span>]
         winning_sequence<span style=color:#f92672>.</span>insert(<span style=color:#ae81ff>0</span>, converted_value)
         <span style=color:#66d9ef>return</span> winning_sequence
-</code></pre></div><ul><li>Create a core gameplay</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_play</span>(self, is_winning_method_used: bool <span style=color:#f92672>=</span> False) <span style=color:#f92672>-&gt;</span> Dict[str: bool]:
+</code></pre></div><ul><li>Create a core gameplay</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_play</span>(self, is_winning_method_used: bool <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>) <span style=color:#f92672>-&gt;</span> Dict[str: bool]:
         <span style=color:#e6db74>&#34;&#34;&#34; Play the game &#34;&#34;&#34;</span>
         deck <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>all_cards<span style=color:#f92672>.</span>copy() <span style=color:#75715e># Get a dek of cards</span>
         random<span style=color:#f92672>.</span>shuffle(deck) <span style=color:#75715e># Shuffle a deck (in place)</span>
@@ -66,7 +66,7 @@ Selecting RED RED BLACK</p><ul><li>Take the second value and convert it to the o
             <span style=color:#75715e># Check the result</span>
             <span style=color:#66d9ef>if</span> len(current_game_sequence) <span style=color:#f92672>==</span> <span style=color:#ae81ff>3</span>:
                 game_result <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>_check_result(computer_sequence, player_sequence, current_game_sequence)
-                <span style=color:#66d9ef>if</span> True <span style=color:#f92672>in</span> game_result<span style=color:#f92672>.</span>values():
+                <span style=color:#66d9ef>if</span> <span style=color:#66d9ef>True</span> <span style=color:#f92672>in</span> game_result<span style=color:#f92672>.</span>values():
                     final_result <span style=color:#f92672>=</span> game_result<span style=color:#f92672>.</span>copy()
                     <span style=color:#66d9ef>break</span>
 
@@ -79,22 +79,22 @@ Selecting RED RED BLACK</p><ul><li>Take the second value and convert it to the o
 </span><span style=color:#e6db74>            return the result of a player winnig a game or not
 </span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
         result <span style=color:#f92672>=</span> {
-            <span style=color:#e6db74>&#39;computer_has_won&#39;</span>: False,
-            <span style=color:#e6db74>&#39;player_has_won&#39;</span>: False
+            <span style=color:#e6db74>&#39;computer_has_won&#39;</span>: <span style=color:#66d9ef>False</span>,
+            <span style=color:#e6db74>&#39;player_has_won&#39;</span>: <span style=color:#66d9ef>False</span>
         }
 
         <span style=color:#66d9ef>if</span> computer_sequence <span style=color:#f92672>==</span> current_game_sequence:
-            result[<span style=color:#e6db74>&#39;computer_has_won&#39;</span>] <span style=color:#f92672>=</span> True
+            result[<span style=color:#e6db74>&#39;computer_has_won&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
 
         <span style=color:#66d9ef>if</span> player_sequence <span style=color:#f92672>==</span> current_game_sequence:
-            result[<span style=color:#e6db74>&#39;player_has_won&#39;</span>] <span style=color:#f92672>=</span> True
+            result[<span style=color:#e6db74>&#39;player_has_won&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
 
         <span style=color:#66d9ef>return</span> result
-</code></pre></div><ul><li>In order to make it easier for the experiment, I also wrote a method to run the game <em>n</em> times.</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>start_experiment</span>(self, is_winning_method_used: bool <span style=color:#f92672>=</span> False, n: int <span style=color:#f92672>=</span> <span style=color:#ae81ff>1000</span>) <span style=color:#f92672>-&gt;</span> Dict[str, int]:
+</code></pre></div><ul><li>In order to make it easier for the experiment, I also wrote a method to run the game <em>n</em> times.</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>start_experiment</span>(self, is_winning_method_used: bool <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>, n: int <span style=color:#f92672>=</span> <span style=color:#ae81ff>1000</span>) <span style=color:#f92672>-&gt;</span> Dict[str, int]:
         <span style=color:#e6db74>&#34;&#34;&#34; Start an experiment and Display the result &#34;&#34;&#34;</span>
         experimental_result <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#39;player_won&#39;</span>: <span style=color:#ae81ff>0</span>, <span style=color:#e6db74>&#39;computer_won&#39;</span>: <span style=color:#ae81ff>0</span>}
         <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> isinstance(n, int):
-            <span style=color:#66d9ef>return</span> None
+            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>None</span>
 
         <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> range(n):
             game_result <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>_play(is_winning_method_used)
@@ -110,16 +110,16 @@ Selecting RED RED BLACK</p><ul><li>Take the second value and convert it to the o
 <span style=color:#75715e># Core Game Engine</span>
 <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GameEngine</span>:
     <span style=color:#e6db74>&#34;&#34;&#34; Two players play the game using an ordinary deck of cards.
-</span><span style=color:#e6db74>        The cards will be dealt out in a row, one after another. 
-</span><span style=color:#e6db74>        Before the dealing begins, each player claims an ordered sequence of colors that might turn up, 
-</span><span style=color:#e6db74>        for example “red black red” (RBR) or “black red red” (BRR). 
-</span><span style=color:#e6db74>        As the cards are dealt, if three successive cards turn up in one of these sequences, 
-</span><span style=color:#e6db74>        the player who claimed it gets to collect those three cards as a trick, and the dealing continues. 
+</span><span style=color:#e6db74>        The cards will be dealt out in a row, one after another.
+</span><span style=color:#e6db74>        Before the dealing begins, each player claims an ordered sequence of colors that might turn up,
+</span><span style=color:#e6db74>        for example “red black red” (RBR) or “black red red” (BRR).
+</span><span style=color:#e6db74>        As the cards are dealt, if three successive cards turn up in one of these sequences,
+</span><span style=color:#e6db74>        the player who claimed it gets to collect those three cards as a trick, and the dealing continues.
 </span><span style=color:#e6db74>        When all 52 cards have been dealt, the player who has collected the most tricks wins
 </span><span style=color:#e6db74>        (In a typical game, 7 to 9 tricks are won.)
 </span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
 
-    <span style=color:#66d9ef>def</span> __init__(self) <span style=color:#f92672>-&gt;</span> None:
+    <span style=color:#66d9ef>def</span> __init__(self) <span style=color:#f92672>-&gt;</span> <span style=color:#66d9ef>None</span>:
         <span style=color:#e6db74>&#34;&#34;&#34; Generate a deck of cards containing blacks (26) and reds (26) &#34;&#34;&#34;</span>
         self<span style=color:#f92672>.</span>all_cards <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#39;black&#39;</span> <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>26</span>)] <span style=color:#f92672>+</span> [<span style=color:#e6db74>&#39;red&#39;</span> <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>26</span>)]
 
@@ -150,19 +150,19 @@ Selecting RED RED BLACK</p><ul><li>Take the second value and convert it to the o
 </span><span style=color:#e6db74>            return the result of a player winnig a game or not
 </span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
         result <span style=color:#f92672>=</span> {
-            <span style=color:#e6db74>&#39;computer_has_won&#39;</span>: False,
-            <span style=color:#e6db74>&#39;player_has_won&#39;</span>: False
+            <span style=color:#e6db74>&#39;computer_has_won&#39;</span>: <span style=color:#66d9ef>False</span>,
+            <span style=color:#e6db74>&#39;player_has_won&#39;</span>: <span style=color:#66d9ef>False</span>
         }
 
         <span style=color:#66d9ef>if</span> computer_sequence <span style=color:#f92672>==</span> current_game_sequence:
-            result[<span style=color:#e6db74>&#39;computer_has_won&#39;</span>] <span style=color:#f92672>=</span> True
+            result[<span style=color:#e6db74>&#39;computer_has_won&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
 
         <span style=color:#66d9ef>if</span> player_sequence <span style=color:#f92672>==</span> current_game_sequence:
-            result[<span style=color:#e6db74>&#39;player_has_won&#39;</span>] <span style=color:#f92672>=</span> True
+            result[<span style=color:#e6db74>&#39;player_has_won&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
 
         <span style=color:#66d9ef>return</span> result
 
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_play</span>(self, is_winning_method_used: bool <span style=color:#f92672>=</span> False) <span style=color:#f92672>-&gt;</span> Dict[str: bool]:
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_play</span>(self, is_winning_method_used: bool <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>) <span style=color:#f92672>-&gt;</span> Dict[str: bool]:
         <span style=color:#e6db74>&#34;&#34;&#34; Play the game &#34;&#34;&#34;</span>
         deck <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>all_cards<span style=color:#f92672>.</span>copy() <span style=color:#75715e># Get a dek of cards</span>
         random<span style=color:#f92672>.</span>shuffle(deck) <span style=color:#75715e># Shuffle a deck (in place)</span>
@@ -184,17 +184,17 @@ Selecting RED RED BLACK</p><ul><li>Take the second value and convert it to the o
             <span style=color:#75715e># Check the result</span>
             <span style=color:#66d9ef>if</span> len(current_game_sequence) <span style=color:#f92672>==</span> <span style=color:#ae81ff>3</span>:
                 game_result <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>_check_result(computer_sequence, player_sequence, current_game_sequence)
-                <span style=color:#66d9ef>if</span> True <span style=color:#f92672>in</span> game_result<span style=color:#f92672>.</span>values():
+                <span style=color:#66d9ef>if</span> <span style=color:#66d9ef>True</span> <span style=color:#f92672>in</span> game_result<span style=color:#f92672>.</span>values():
                     final_result <span style=color:#f92672>=</span> game_result<span style=color:#f92672>.</span>copy()
                     <span style=color:#66d9ef>break</span>
 
         <span style=color:#66d9ef>return</span> final_result
 
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>start_experiment</span>(self, is_winning_method_used: bool <span style=color:#f92672>=</span> False, n: int <span style=color:#f92672>=</span> <span style=color:#ae81ff>1000</span>) <span style=color:#f92672>-&gt;</span> Dict[str, int]:
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>start_experiment</span>(self, is_winning_method_used: bool <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>, n: int <span style=color:#f92672>=</span> <span style=color:#ae81ff>1000</span>) <span style=color:#f92672>-&gt;</span> Dict[str, int]:
         <span style=color:#e6db74>&#34;&#34;&#34; Start an experiment and Display the result &#34;&#34;&#34;</span>
         experimental_result <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#39;player_won&#39;</span>: <span style=color:#ae81ff>0</span>, <span style=color:#e6db74>&#39;computer_won&#39;</span>: <span style=color:#ae81ff>0</span>}
         <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> isinstance(n, int):
-            <span style=color:#66d9ef>return</span> None
+            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>None</span>
 
         <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> range(n):
             game_result <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>_play(is_winning_method_used)
@@ -204,8 +204,8 @@ Selecting RED RED BLACK</p><ul><li>Take the second value and convert it to the o
         <span style=color:#66d9ef>return</span> experimental_result
 </code></pre></div><p>As can be seen from the method <em>start_experiment</em>, the default value of <em>n</em> is 1000 which means the game will be played 1000 times.
 To start the experiment, I wrote the main function as follows:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Import libraries</span>
-<span style=color:#f92672>import</span> pandas <span style=color:#f92672>as</span> pd
-<span style=color:#f92672>import</span> matplotlib.pyplot <span style=color:#f92672>as</span> plt
+<span style=color:#f92672>import</span> pandas <span style=color:#66d9ef>as</span> pd
+<span style=color:#f92672>import</span> matplotlib.pyplot <span style=color:#66d9ef>as</span> plt
 <span style=color:#f92672>from</span> game_engine <span style=color:#f92672>import</span> GameEngine
 
 
@@ -214,12 +214,12 @@ game_engine <span style=color:#f92672>=</span> GameEngine()
 
 
 <span style=color:#75715e># Main function</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>main</span>() <span style=color:#f92672>-&gt;</span> None:
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>main</span>() <span style=color:#f92672>-&gt;</span> <span style=color:#66d9ef>None</span>:
     <span style=color:#75715e># Without a winning method</span>
-    without_winning_method_res <span style=color:#f92672>=</span> game_engine<span style=color:#f92672>.</span>start_experiment(is_winning_method_used<span style=color:#f92672>=</span>False)
+    without_winning_method_res <span style=color:#f92672>=</span> game_engine<span style=color:#f92672>.</span>start_experiment(is_winning_method_used<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
 
     <span style=color:#75715e># With a winning method</span>
-    with_winning_method_res <span style=color:#f92672>=</span> game_engine<span style=color:#f92672>.</span>start_experiment(is_winning_method_used<span style=color:#f92672>=</span>True)
+    with_winning_method_res <span style=color:#f92672>=</span> game_engine<span style=color:#f92672>.</span>start_experiment(is_winning_method_used<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
 
     <span style=color:#75715e># Prepare DataFrame</span>
     df_without_winning_method <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>DataFrame([without_winning_method_res])
@@ -228,13 +228,13 @@ game_engine <span style=color:#f92672>=</span> GameEngine()
     df_with_winning_method_res[<span style=color:#e6db74>&#39;cat&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;with&#39;</span>
     df_final <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>concat([df_without_winning_method, df_with_winning_method_res])
     df_final <span style=color:#f92672>=</span> df_final<span style=color:#f92672>.</span>set_index(<span style=color:#e6db74>&#39;cat&#39;</span>)
-    <span style=color:#66d9ef>print</span>(df_final)
+    print(df_final)
 
     <span style=color:#75715e># Visualisation</span>
     df_final<span style=color:#f92672>.</span>plot<span style=color:#f92672>.</span>bar()
     plt<span style=color:#f92672>.</span>show()
 
-    <span style=color:#66d9ef>return</span> None
+    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>None</span>
 
 
 <span style=color:#75715e># Execute the script</span>

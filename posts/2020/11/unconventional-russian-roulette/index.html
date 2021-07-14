@@ -23,28 +23,28 @@ Three bullets are loaded into the cylinder adjacently, Player A has taken a shot
 </span><span style=color:#e6db74>        Now it is out turn to play; however, you were given a choice to take a shot or to stay. Here are rules
 </span><span style=color:#e6db74>            - If we took a shot, and it was empty -&gt; WE WON 1 MILIION DOLLARS
 </span><span style=color:#e6db74>            - If we chose to stay, and it was loaded -&gt; WE WON 1 MILIION DOLLARS
-</span><span style=color:#e6db74>            
+</span><span style=color:#e6db74>
 </span><span style=color:#e6db74>        The question raised here is that
 </span><span style=color:#e6db74>            - Should we take a shot or not? and why?
 </span><span style=color:#e6db74>            - Assuming that our main goal was to get 1 million dollars at all costs
 </span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
 
-    <span style=color:#66d9ef>def</span> __init__(self) <span style=color:#f92672>-&gt;</span> None:
+    <span style=color:#66d9ef>def</span> __init__(self) <span style=color:#f92672>-&gt;</span> <span style=color:#66d9ef>None</span>:
         <span style=color:#e6db74>&#34;&#34;&#34; Generate cylinders (6 rounds)
 </span><span style=color:#e6db74>            0   -&gt; Empty (n=3)
 </span><span style=color:#e6db74>            1   -&gt; Loaded (n=3)
 </span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
         self<span style=color:#f92672>.</span>_load_cylinder()
-    
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_load_cylinder</span>(self) <span style=color:#f92672>-&gt;</span> None:
+
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_load_cylinder</span>(self) <span style=color:#f92672>-&gt;</span> <span style=color:#66d9ef>None</span>:
         self<span style=color:#f92672>.</span>loaded_cylinder <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>] <span style=color:#f92672>+</span> [<span style=color:#ae81ff>0</span> <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>3</span>)] <span style=color:#75715e># 3 loaded; 3 empty</span>
-    
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_spin_cylinder</span>(self) <span style=color:#f92672>-&gt;</span> None:
+
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_spin_cylinder</span>(self) <span style=color:#f92672>-&gt;</span> <span style=color:#66d9ef>None</span>:
         <span style=color:#e6db74>&#34;&#34;&#34; Simulate spinning cylinder &#34;&#34;&#34;</span>
         random_spin_num <span style=color:#f92672>=</span> random<span style=color:#f92672>.</span>randrange(<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>7</span>) <span style=color:#75715e># random 1 - 6</span>
         self<span style=color:#f92672>.</span>loaded_cylinder <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>loaded_cylinder[random_spin_num:] <span style=color:#f92672>+</span> self<span style=color:#f92672>.</span>loaded_cylinder[:random_spin_num]
-    
-    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_play</span>(self, take_a_shot: bool <span style=color:#f92672>=</span> False) <span style=color:#f92672>-&gt;</span> bool:
+
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_play</span>(self, take_a_shot: bool <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>) <span style=color:#f92672>-&gt;</span> bool:
         <span style=color:#e6db74>&#34;&#34;&#34; Play the game
 </span><span style=color:#e6db74>            1.) Player A will guarantee to survive the first round
 </span><span style=color:#e6db74>            2.) Player B will need to choose to whether take a shoot or stay
@@ -54,14 +54,14 @@ Three bullets are loaded into the cylinder adjacently, Player A has taken a shot
         self<span style=color:#f92672>.</span>_load_cylinder()
         <span style=color:#66d9ef>while</span> self<span style=color:#f92672>.</span>loaded_cylinder[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>:
             self<span style=color:#f92672>.</span>_spin_cylinder()
-    
+
         <span style=color:#75715e># Skip the first round since it is guaranteed to be empty for Player A</span>
-        has_player_won_million <span style=color:#f92672>=</span> False
+        has_player_won_million <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>
         <span style=color:#66d9ef>for</span> bullet <span style=color:#f92672>in</span> self<span style=color:#f92672>.</span>loaded_cylinder[<span style=color:#ae81ff>1</span>:]:
             <span style=color:#66d9ef>if</span> take_a_shot <span style=color:#f92672>and</span> bullet <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>:
-                has_player_won_million <span style=color:#f92672>=</span> True
+                has_player_won_million <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
             <span style=color:#66d9ef>elif</span> <span style=color:#f92672>not</span> take_a_shot <span style=color:#f92672>and</span> bullet <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>:
-                has_player_won_million <span style=color:#f92672>=</span> True
+                has_player_won_million <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
             <span style=color:#66d9ef>break</span>
         <span style=color:#66d9ef>return</span> has_player_won_million
 
@@ -70,13 +70,13 @@ Three bullets are loaded into the cylinder adjacently, Player A has taken a shot
         <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> isinstance(n, int):
             <span style=color:#66d9ef>return</span> experimental_results
 
-        experimental_results[<span style=color:#e6db74>&#39;take_a_shot_won&#39;</span>] <span style=color:#f92672>=</span> sum([self<span style=color:#f92672>.</span>_play(take_a_shot<span style=color:#f92672>=</span>True) <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> range(n)])
-        experimental_results[<span style=color:#e6db74>&#39;pass_won&#39;</span>] <span style=color:#f92672>=</span> sum([self<span style=color:#f92672>.</span>_play(take_a_shot<span style=color:#f92672>=</span>False) <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> range(n)])
+        experimental_results[<span style=color:#e6db74>&#39;take_a_shot_won&#39;</span>] <span style=color:#f92672>=</span> sum([self<span style=color:#f92672>.</span>_play(take_a_shot<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>) <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> range(n)])
+        experimental_results[<span style=color:#e6db74>&#39;pass_won&#39;</span>] <span style=color:#f92672>=</span> sum([self<span style=color:#f92672>.</span>_play(take_a_shot<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>) <span style=color:#66d9ef>for</span> _ <span style=color:#f92672>in</span> range(n)])
         <span style=color:#66d9ef>return</span> experimental_results
 </code></pre></div><ul><li>Create a main function to play multiple games (<em>n=1000</em>) and visualize the result</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Import libraries</span>
-<span style=color:#f92672>import</span> matplotlib.pyplot <span style=color:#f92672>as</span> plt
-<span style=color:#f92672>import</span> pandas <span style=color:#f92672>as</span> pd
-<span style=color:#f92672>import</span> plotly.express <span style=color:#f92672>as</span> px
+<span style=color:#f92672>import</span> matplotlib.pyplot <span style=color:#66d9ef>as</span> plt
+<span style=color:#f92672>import</span> pandas <span style=color:#66d9ef>as</span> pd
+<span style=color:#f92672>import</span> plotly.express <span style=color:#66d9ef>as</span> px
 
 <span style=color:#f92672>from</span> game_engine <span style=color:#f92672>import</span> GameEngine
 
@@ -85,21 +85,21 @@ game_engine <span style=color:#f92672>=</span> GameEngine()
 
 
 <span style=color:#75715e># Main Function</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>main</span>() <span style=color:#f92672>-&gt;</span> None:
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>main</span>() <span style=color:#f92672>-&gt;</span> <span style=color:#66d9ef>None</span>:
     <span style=color:#75715e># Experimental Results</span>
     experimental_res <span style=color:#f92672>=</span> game_engine<span style=color:#f92672>.</span>start_experiment(n<span style=color:#f92672>=</span><span style=color:#ae81ff>1000</span>)
 
     <span style=color:#75715e># Prepare DataFrame</span>
     df <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>DataFrame({}, columns<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#39;cat&#39;</span>, <span style=color:#e6db74>&#39;num_of_winning&#39;</span>])
-    df <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>append({<span style=color:#e6db74>&#39;cat&#39;</span>: <span style=color:#e6db74>&#39;take_a_shot_won&#39;</span>, <span style=color:#e6db74>&#39;num_of_winning&#39;</span>: experimental_res<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;take_a_shot_won&#39;</span>)}, ignore_index<span style=color:#f92672>=</span>True)
-    df <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>append({<span style=color:#e6db74>&#39;cat&#39;</span>: <span style=color:#e6db74>&#39;pass_won&#39;</span>, <span style=color:#e6db74>&#39;num_of_winning&#39;</span>: experimental_res<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;pass_won&#39;</span>)}, ignore_index<span style=color:#f92672>=</span>True)
-    <span style=color:#66d9ef>print</span>(df)
+    df <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>append({<span style=color:#e6db74>&#39;cat&#39;</span>: <span style=color:#e6db74>&#39;take_a_shot_won&#39;</span>, <span style=color:#e6db74>&#39;num_of_winning&#39;</span>: experimental_res<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;take_a_shot_won&#39;</span>)}, ignore_index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+    df <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>append({<span style=color:#e6db74>&#39;cat&#39;</span>: <span style=color:#e6db74>&#39;pass_won&#39;</span>, <span style=color:#e6db74>&#39;num_of_winning&#39;</span>: experimental_res<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;pass_won&#39;</span>)}, ignore_index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+    print(df)
 
     <span style=color:#75715e># Visualisation</span>
-    fig <span style=color:#f92672>=</span> px<span style=color:#f92672>.</span>pie(df, values<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;num_of_winning&#39;</span>, names<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;cat&#39;</span>, hole<span style=color:#f92672>=.</span><span style=color:#ae81ff>3</span>)
+    fig <span style=color:#f92672>=</span> px<span style=color:#f92672>.</span>pie(df, values<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;num_of_winning&#39;</span>, names<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;cat&#39;</span>, hole<span style=color:#f92672>=</span><span style=color:#ae81ff>.3</span>)
     fig<span style=color:#f92672>.</span>show()
 
-    <span style=color:#66d9ef>return</span> None
+    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>None</span>
 
 
 <span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;__main__&#39;</span>:
