@@ -1,15 +1,92 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=author content="Nuttaphat Arunoprayoch "><meta name=description content="Read with Jupyter Viewer
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=author content="Nuttaphat Arunoprayoch ">
+<meta name=description content="Read with Jupyter Viewer
 1. Introduction Due to a high competion in every field nowadays. We cannot deny that we must speed our pace to get ahed of others. What does it lead to? It leads to anxiety, depression, and endless tiring situations. As a consequence, suicide rates sky rocket daily and they seem to not soon decrease.
-2. Objectives The main objectives of this short report are to raise the awareness of suicide rates, and provide insightful information for future research and usage."><meta name=keywords content="Nuttaphat,Arunoprayoch,Software Engineer,Data Analyst,blog,python,data-science"><meta name=robots content="noodp"><meta name=theme-color content="#252627"><meta property="og:image" content="https://i.ibb.co/K280nKy/social-sharing-img.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="500"><meta property="og:image:height" content="500"><link rel=canonical href=https://nuttaphat.com/posts/2019/04/suicide-rate-report-1985-to-2016/><title>Suicide Rate Report (1985 to 2016) :: Nuttaphat Arunoprayoch — Software Engineer | Data Analyst | Researcher</title><link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css rel=stylesheet type=text/css><link rel=stylesheet href=https://nuttaphat.com/main.99a2b4a7dc8bfd0f27e52c079c312203da0b670352e51ad4edd2c650dbc217ef.css><link rel=apple-touch-icon sizes=180x180 href=https://nuttaphat.com/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://nuttaphat.com/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://nuttaphat.com/favicon-16x16.png><link rel=manifest href=https://nuttaphat.com/site.webmanifest><link rel=mask-icon href=https://nuttaphat.com/safari-pinned-tab.svg color=#252627><link rel="shortcut icon" href=https://nuttaphat.com/favicon.ico><meta name=msapplication-TileColor content="#252627"><meta name=theme-color content="#252627"><meta itemprop=name content="Suicide Rate Report (1985 to 2016)"><meta itemprop=description content="Read with Jupyter Viewer
+2. Objectives The main objectives of this short report are to raise the awareness of suicide rates, and provide insightful information for future research and usage.">
+<meta name=keywords content="Nuttaphat,Arunoprayoch,Software Engineer,Data Analyst,blog,python,data-science">
+<meta name=robots content="noodp">
+<meta name=theme-color content="#252627">
+<meta property="og:image" content="https://i.ibb.co/K280nKy/social-sharing-img.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="500">
+<meta property="og:image:height" content="500">
+<link rel=canonical href=https://nuttaphat.com/posts/2019/04/suicide-rate-report-1985-to-2016/>
+<title>
+Suicide Rate Report (1985 to 2016) :: Nuttaphat Arunoprayoch — Software Engineer | Data Analyst | Researcher
+</title>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css rel=stylesheet type=text/css>
+<link rel=stylesheet href=https://nuttaphat.com/main.99a2b4a7dc8bfd0f27e52c079c312203da0b670352e51ad4edd2c650dbc217ef.css>
+<link rel=apple-touch-icon sizes=180x180 href=https://nuttaphat.com/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://nuttaphat.com/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://nuttaphat.com/favicon-16x16.png>
+<link rel=manifest href=https://nuttaphat.com/site.webmanifest>
+<link rel=mask-icon href=https://nuttaphat.com/safari-pinned-tab.svg color=#252627>
+<link rel="shortcut icon" href=https://nuttaphat.com/favicon.ico>
+<meta name=msapplication-TileColor content="#252627">
+<meta name=theme-color content="#252627">
+<meta itemprop=name content="Suicide Rate Report (1985 to 2016)">
+<meta itemprop=description content="Read with Jupyter Viewer
 1. Introduction Due to a high competion in every field nowadays. We cannot deny that we must speed our pace to get ahed of others. What does it lead to? It leads to anxiety, depression, and endless tiring situations. As a consequence, suicide rates sky rocket daily and they seem to not soon decrease.
-2. Objectives The main objectives of this short report are to raise the awareness of suicide rates, and provide insightful information for future research and usage."><meta itemprop=datePublished content="2019-04-21T16:43:26+08:00"><meta itemprop=dateModified content="2019-04-21T16:43:26+08:00"><meta itemprop=wordCount content="671"><meta itemprop=image content="https://nuttaphat.com"><meta itemprop=keywords content="blog,python,data-science,"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://nuttaphat.com"><meta name=twitter:title content="Suicide Rate Report (1985 to 2016)"><meta name=twitter:description content="Read with Jupyter Viewer
+2. Objectives The main objectives of this short report are to raise the awareness of suicide rates, and provide insightful information for future research and usage."><meta itemprop=datePublished content="2019-04-21T16:43:26+08:00">
+<meta itemprop=dateModified content="2019-04-21T16:43:26+08:00">
+<meta itemprop=wordCount content="671"><meta itemprop=image content="https://nuttaphat.com">
+<meta itemprop=keywords content="blog,python,data-science,">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://nuttaphat.com">
+<meta name=twitter:title content="Suicide Rate Report (1985 to 2016)">
+<meta name=twitter:description content="Read with Jupyter Viewer
 1. Introduction Due to a high competion in every field nowadays. We cannot deny that we must speed our pace to get ahed of others. What does it lead to? It leads to anxiety, depression, and endless tiring situations. As a consequence, suicide rates sky rocket daily and they seem to not soon decrease.
-2. Objectives The main objectives of this short report are to raise the awareness of suicide rates, and provide insightful information for future research and usage."><meta property="article:section" content="blog"><meta property="article:published_time" content="2019-04-21 16:43:26 +0800 +0800"></head><body><div class=container><header class=header><span class=header__inner><a href=https://nuttaphat.com/ style=text-decoration:none><div class=logo><span class=logo__mark>></span>
+2. Objectives The main objectives of this short report are to raise the awareness of suicide rates, and provide insightful information for future research and usage.">
+<meta property="article:section" content="blog">
+<meta property="article:published_time" content="2019-04-21 16:43:26 +0800 +0800">
+</head>
+<body>
+<div class=container>
+<header class=header>
+<span class=header__inner>
+<a href=https://nuttaphat.com/ style=text-decoration:none>
+<div class=logo>
+<span class=logo__mark>></span>
 <span class=logo__text>$ cd /home/</span>
-<span class=logo__cursor></span></div></a><span class=header__right><nav class=menu><ul class=menu__inner><li><a href=https://nuttaphat.com/about/>About</a></li><li><a href=https://nuttaphat.com/posts/>Blog</a></li><li><a href=https://nuttaphat.com/projects/>Projects</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><main class=post><div class=post-info></p></div><article><h2 class=post-title><a href=https://nuttaphat.com/posts/2019/04/suicide-rate-report-1985-to-2016/>Suicide Rate Report (1985 to 2016)</a></h2><div class=post-content><p><a href=https://nbviewer.jupyter.org/github/nat236919/Data_Science/blob/master/Project_1_Suicide_Rate/Suicide_Rate_Analysis.ipynb>Read with Jupyter Viewer</a></p><h2 id=1-introduction><strong>1. Introduction</strong></h2><p>Due to a high competion in every field nowadays. We cannot deny that we must speed our pace to get ahed of others. What does it lead to? It leads to anxiety, depression, and endless tiring situations. As a consequence, suicide rates sky rocket daily and they seem to not soon decrease.</p><h2 id=2-objectives><strong>2. Objectives</strong></h2><p>The main objectives of this short report are to raise the awareness of suicide rates, and provide insightful information for future research and usage.</p><h2 id=3-data-analysis><strong>3. Data Analysis</strong></h2><p>Import all necessary libraries</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Import Data Manipluation Libraries</span>
+<span class=logo__cursor>
+</span>
+</div>
+</a>
+<span class=header__right>
+<nav class=menu>
+<ul class=menu__inner><li><a href=https://nuttaphat.com/about/>About</a></li><li><a href=https://nuttaphat.com/posts/>Blog</a></li><li><a href=https://nuttaphat.com/projects/>Projects</a></li>
+</ul>
+</nav>
+<span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+</span>
+<span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg>
+</span>
+</span>
+</span>
+</header>
+<div class=content>
+<main class=post>
+<div class=post-info>
+</p>
+</div>
+<article>
+<h2 class=post-title><a href=https://nuttaphat.com/posts/2019/04/suicide-rate-report-1985-to-2016/>Suicide Rate Report (1985 to 2016)</a></h2>
+<div class=post-content>
+<p><a href=https://nbviewer.jupyter.org/github/nat236919/Data_Science/blob/master/Project_1_Suicide_Rate/Suicide_Rate_Analysis.ipynb>Read with Jupyter Viewer</a></p>
+<h2 id=1-introduction><strong>1. Introduction</strong></h2>
+<p>Due to a high competion in every field nowadays. We cannot deny that we must speed our pace to get ahed of others. What does it lead to? It leads to anxiety, depression, and endless tiring situations. As a consequence, suicide rates sky rocket daily and they seem to not soon decrease.</p>
+<h2 id=2-objectives><strong>2. Objectives</strong></h2>
+<p>The main objectives of this short report are to raise the awareness of suicide rates, and provide insightful information for future research and usage.</p>
+<h2 id=3-data-analysis><strong>3. Data Analysis</strong></h2>
+<p>Import all necessary libraries</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Import Data Manipluation Libraries</span>
 <span style=color:#f92672>import</span> pandas <span style=color:#66d9ef>as</span> pd
 <span style=color:#f92672>import</span> numpy <span style=color:#66d9ef>as</span> np
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Import Data Visualization</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Import Data Visualization</span>
 <span style=color:#f92672>import</span> matplotlib.pyplot <span style=color:#66d9ef>as</span> plt
 <span style=color:#f92672>import</span> seaborn <span style=color:#66d9ef>as</span> sns
 <span style=color:#f92672>from</span> bokeh.core.properties <span style=color:#f92672>import</span> value
@@ -31,9 +108,17 @@ plotly<span style=color:#f92672>.</span>tools<span style=color:#f92672>.</span>s
 <span style=color:#f92672>import</span> plotly.figure_factory <span style=color:#66d9ef>as</span> ff
 <span style=color:#f92672>from</span> plotly.offline <span style=color:#f92672>import</span> download_plotlyjs, init_notebook_mode, plot, iplot
 init_notebook_mode(connected<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
-</code></pre></div><p>The table below shows an example of the dataset which contains several factors that will be analysed</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_csv(<span style=color:#e6db74>&#39;https://raw.githubusercontent.com/nat236919/Data_Science/master/Project_1_Suicide_Rate/master.csv&#39;</span>)
+</code></pre></div><p>The table below shows an example of the dataset which contains several factors that will be analysed</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_csv(<span style=color:#e6db74>&#39;https://raw.githubusercontent.com/nat236919/Data_Science/master/Project_1_Suicide_Rate/master.csv&#39;</span>)
 display(df<span style=color:#f92672>.</span>head(<span style=color:#ae81ff>5</span>))
-</code></pre></div><img src=https://nuttaphat.com/img/blog/suicide_rate_report/table_1.jpg alt="table 1" class=center><h2 id=countries>Countries</h2><p>By analysing the dataset based on countries and &lsquo;suicides/100k pop&rsquo;, the author depicts the results as a world map below.</p><p>However, due to missing values from some countires, the world map is not fully complete.</p><img src=https://nuttaphat.com/img/blog/suicide_rate_report/fig_1.jpg alt="fig 1" class=center><p>Interesingly, based on the data collected from 1985 to 2016. Lithuania had the highest suicide rates per 100k people. Followed by Sri Lanka and Russia respectively. The chart below shows the top 10 highest suicide rates.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df_grouped_country <span style=color:#f92672>=</span> df_grouped_country<span style=color:#f92672>.</span>sort_values(by<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#39;suicides/100k pop&#39;</span>], ascending<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</code></pre></div>
+<img src=https://nuttaphat.com/img/blog/suicide_rate_report/table_1.jpg alt="table 1" class=center>
+<h2 id=countries>Countries</h2>
+<p>By analysing the dataset based on countries and &lsquo;suicides/100k pop&rsquo;, the author depicts the results as a world map below.</p>
+<p>However, due to missing values from some countires, the world map is not fully complete.</p>
+<img src=https://nuttaphat.com/img/blog/suicide_rate_report/fig_1.jpg alt="fig 1" class=center>
+<p>Interesingly, based on the data collected from 1985 to 2016. Lithuania had the highest suicide rates per 100k people. Followed by Sri Lanka and Russia respectively. The chart below shows the top 10 highest suicide rates.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df_grouped_country <span style=color:#f92672>=</span> df_grouped_country<span style=color:#f92672>.</span>sort_values(by<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#39;suicides/100k pop&#39;</span>], ascending<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
 df_grouped_country<span style=color:#f92672>.</span>head(<span style=color:#ae81ff>10</span>)
 
 x <span style=color:#f92672>=</span> df_grouped_country[<span style=color:#e6db74>&#39;suicides/100k pop&#39;</span>][:<span style=color:#ae81ff>10</span>]<span style=color:#f92672>.</span>tolist()[::<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>]
@@ -52,7 +137,11 @@ data <span style=color:#f92672>=</span> [go<span style=color:#f92672>.</span>Bar
 )]
 
 py<span style=color:#f92672>.</span>iplot(data, filename<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;horizontal-bar&#39;</span>)
-</code></pre></div><img src=https://nuttaphat.com/img/blog/suicide_rate_report/fig_2.jpg alt="fig 2" class=center><h2 id=gender-and-age>Gender and Age</h2><p>By exploring regarding sex and age range, it was found that 79% of the participants were males, and 21% were females. And most of them were aged more than 75 years old.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df_grouped_sex_sr <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>groupby([<span style=color:#e6db74>&#39;sex&#39;</span>])[<span style=color:#e6db74>&#39;suicides/100k pop&#39;</span>]<span style=color:#f92672>.</span>mean()<span style=color:#f92672>.</span>reset_index()
+</code></pre></div>
+<img src=https://nuttaphat.com/img/blog/suicide_rate_report/fig_2.jpg alt="fig 2" class=center>
+<h2 id=gender-and-age>Gender and Age</h2>
+<p>By exploring regarding sex and age range, it was found that 79% of the participants were males, and 21% were females. And most of them were aged more than 75 years old.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df_grouped_sex_sr <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>groupby([<span style=color:#e6db74>&#39;sex&#39;</span>])[<span style=color:#e6db74>&#39;suicides/100k pop&#39;</span>]<span style=color:#f92672>.</span>mean()<span style=color:#f92672>.</span>reset_index()
 df_grouped_age_sr <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>groupby([<span style=color:#e6db74>&#39;age&#39;</span>])[<span style=color:#e6db74>&#39;suicides/100k pop&#39;</span>]<span style=color:#f92672>.</span>mean()<span style=color:#f92672>.</span>reset_index()
 
 df_grouped_sex_sr<span style=color:#f92672>.</span>head()
@@ -111,7 +200,11 @@ fig <span style=color:#f92672>=</span> {
 }
 
 py<span style=color:#f92672>.</span>iplot(fig, filename<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;donut&#39;</span>)
-</code></pre></div><img src=https://nuttaphat.com/img/blog/suicide_rate_report/fig_3.jpg alt="fig 3" class=center><h2 id=suicide-rates-on-gender-and-age>Suicide Rates on Gender and Age</h2><p>According to the results, it can be said that Males had higher suicide rates compared to females in every age range. It is noticable that those who aged more than 75 years old had the highest suicide rates compared to the others.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df_grouped_sex_age <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>groupby([<span style=color:#e6db74>&#39;sex&#39;</span>, <span style=color:#e6db74>&#39;age&#39;</span>])[<span style=color:#e6db74>&#39;suicides/100k pop&#39;</span>]<span style=color:#f92672>.</span>mean()<span style=color:#f92672>.</span>reset_index()
+</code></pre></div>
+<img src=https://nuttaphat.com/img/blog/suicide_rate_report/fig_3.jpg alt="fig 3" class=center>
+<h2 id=suicide-rates-on-gender-and-age>Suicide Rates on Gender and Age</h2>
+<p>According to the results, it can be said that Males had higher suicide rates compared to females in every age range. It is noticable that those who aged more than 75 years old had the highest suicide rates compared to the others.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df_grouped_sex_age <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>groupby([<span style=color:#e6db74>&#39;sex&#39;</span>, <span style=color:#e6db74>&#39;age&#39;</span>])[<span style=color:#e6db74>&#39;suicides/100k pop&#39;</span>]<span style=color:#f92672>.</span>mean()<span style=color:#f92672>.</span>reset_index()
 
 display(df_grouped_sex_age)
 
@@ -156,8 +249,12 @@ layout <span style=color:#f92672>=</span> go<span style=color:#f92672>.</span>La
 
 fig <span style=color:#f92672>=</span> go<span style=color:#f92672>.</span>Figure(data<span style=color:#f92672>=</span>data, layout<span style=color:#f92672>=</span>layout)
 py<span style=color:#f92672>.</span>iplot(fig, filename<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;grouped-bar&#39;</span>)
-</code></pre></div><img src=https://nuttaphat.com/img/blog/suicide_rate_report/table_2.jpg alt="table 2" class=center>
-<img src=https://nuttaphat.com/img/blog/suicide_rate_report/fig_4.jpg alt="fig 4" class=center><h2 id=correlations-among-factors>Correlations among Factors</h2><p>By revealing correlations among factors provided by the dataset. It was found that the information was not enough for discovering the main factor of an increasing suicide rates.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>sub_df <span style=color:#f92672>=</span> df[:] <span style=color:#75715e>#Subsetting the data</span>
+</code></pre></div>
+<img src=https://nuttaphat.com/img/blog/suicide_rate_report/table_2.jpg alt="table 2" class=center>
+<img src=https://nuttaphat.com/img/blog/suicide_rate_report/fig_4.jpg alt="fig 4" class=center>
+<h2 id=correlations-among-factors>Correlations among Factors</h2>
+<p>By revealing correlations among factors provided by the dataset. It was found that the information was not enough for discovering the main factor of an increasing suicide rates.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>sub_df <span style=color:#f92672>=</span> df[:] <span style=color:#75715e>#Subsetting the data</span>
 cor <span style=color:#f92672>=</span> sub_df<span style=color:#f92672>.</span>corr() <span style=color:#75715e>#&#39;&#39;Calculate the correlation of the above variables</span>
 display(cor)
 
@@ -165,6 +262,34 @@ display(cor)
 fig, ax <span style=color:#f92672>=</span> plt<span style=color:#f92672>.</span>subplots()
 fig<span style=color:#f92672>.</span>set_size_inches(<span style=color:#ae81ff>18.5</span>, <span style=color:#ae81ff>10.5</span>)
 sns<span style=color:#f92672>.</span>heatmap(cor, annot<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, square<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>, fmt<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;f&#39;</span>) <span style=color:#75715e># Plot the correlation as heat map</span>
-</code></pre></div><img src=https://nuttaphat.com/img/blog/suicide_rate_report/table_3.jpg alt="table3 1" class=center>
-<img src=https://nuttaphat.com/img/blog/suicide_rate_report/fig_5.jpg alt="fig 5" class=center></div></article><hr><div class=post-info><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg><span class=tag><a href=https://nuttaphat.com/tags/blog>blog</a></span><span class=tag><a href=https://nuttaphat.com/tags/python>python</a></span><span class=tag><a href=https://nuttaphat.com/tags/data-science>data-science</a></span></p></div></main></div><footer class=footer><div class=footer__inner><div class=footer__content><span>&copy; 2021</span>
-<span><a href=https://nuttaphat.com>Nuttaphat Arunoprayoch</a></span></div></div><div class=footer__inner><div class=footer__content><span>Powered by <a href=http://gohugo.io>Hugo</a></span></div></div></footer></div><script type=text/javascript src=https://nuttaphat.com/bundle.min.08440793d186da35ee2275db9076f7566f43d298d5cd765f870df301ecf9be1c683ee5785037e93b8906b3762cfe1a3bb864b2220446e9ed2f1775b02c1c6486.js integrity="sha512-CEQHk9GG2jXuInXbkHb3Vm9D0pjVzXZfhw3zAez5vhxoPuV4UDfpO4kGs3Ys/ho7uGSyIgRG6e0vF3WwLBxkhg=="></script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-125164332-1','auto'),ga('send','pageview'))</script></body></html>
+</code></pre></div>
+<img src=https://nuttaphat.com/img/blog/suicide_rate_report/table_3.jpg alt="table3 1" class=center>
+<img src=https://nuttaphat.com/img/blog/suicide_rate_report/fig_5.jpg alt="fig 5" class=center>
+</div>
+</article>
+<hr>
+<div class=post-info>
+<p>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg><span class=tag><a href=https://nuttaphat.com/tags/blog>blog</a></span><span class=tag><a href=https://nuttaphat.com/tags/python>python</a></span><span class=tag><a href=https://nuttaphat.com/tags/data-science>data-science</a></span>
+</p>
+</div>
+</main>
+</div>
+<footer class=footer>
+<div class=footer__inner>
+<div class=footer__content>
+<span>&copy; 2021</span>
+<span><a href=https://nuttaphat.com>Nuttaphat Arunoprayoch</a></span>
+</div>
+</div>
+<div class=footer__inner>
+<div class=footer__content>
+<span>Powered by <a href=http://gohugo.io>Hugo</a></span>
+</div>
+</div>
+</footer>
+</div>
+<script type=text/javascript src=https://nuttaphat.com/bundle.min.08440793d186da35ee2275db9076f7566f43d298d5cd765f870df301ecf9be1c683ee5785037e93b8906b3762cfe1a3bb864b2220446e9ed2f1775b02c1c6486.js integrity="sha512-CEQHk9GG2jXuInXbkHb3Vm9D0pjVzXZfhw3zAez5vhxoPuV4UDfpO4kGs3Ys/ho7uGSyIgRG6e0vF3WwLBxkhg=="></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-125164332-1','auto'),ga('send','pageview'))</script>
+</body>
+</html>
