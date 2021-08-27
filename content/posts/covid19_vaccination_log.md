@@ -12,11 +12,13 @@ On **18-Aug-2020**, Taiwan finally opened its first appointment for locally-made
 
 I will keep updating this log as I receive more information before and after receiving my first dose.
 
-## Vaccination Log
+## Vaccination Log (1st Dose)
 
 | Date            | Time  | Remark                                          |
 | --------------- | ----- | ----------------------------------------------- |
 | **23-Aug-2021** | 11.40 | Received First Dose                             |
 |                 | 12.10 | Felt a bit sore on a left arm (vaccinated spot) |
-|                 | 12.41 | Experience a minor headache                     |
+|                 | 12.41 | Experienced a minor headache                    |
 |                 | 17.00 | Felt normal, able to workout normally           |
+| **24-Aug-2021** | 10.00 | Had mild diarrhoea                              |
+|                 | 13.00 | Felt normal                                     |
