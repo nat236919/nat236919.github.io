@@ -89,15 +89,15 @@ app <span style=color:#f92672>=</span> FastAPI()
 <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>read_root</span>():
     <span style=color:#66d9ef>return</span> {<span style=color:#e6db74>&#34;Hello&#34;</span>: <span style=color:#e6db74>&#34;World&#34;</span>}
 </code></pre></div><p>Start a server by using <strong>uvicorn main:app &ndash;reload</strong></p>
-<pre tabindex=0><code class=language-console data-lang=console>uvicorn main:app --reload
-
-INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-console data-lang=console>uvicorn main:app --reload
+<span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span>INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 INFO: Started reloader process [28720]
 INFO: Started server process [28722]
 INFO: Waiting for application startup.
 INFO: Application startup complete.
-
-</code></pre><p>As can be seen above, it is so simple and fast to develop which is suitable for nowadays' rapid demands for development. Additionally, regardings its performance it is on par with <strong>NodeJS</strong> and <strong>Go</strong>, <a href=https://fastapi.tiangolo.com/benchmarks/>Benchmarks</a>.</p>
+<span style=color:#960050;background-color:#1e0010>
+</span></code></pre></div><p>As can be seen above, it is so simple and fast to develop which is suitable for nowadays' rapid demands for development. Additionally, regardings its performance it is on par with <strong>NodeJS</strong> and <strong>Go</strong>, <a href=https://fastapi.tiangolo.com/benchmarks/>Benchmarks</a>.</p>
 <p>Not only it has incredible speed, but also comes with an auto-generated interactive API document (powered by <a href=https://github.com/swagger-api/swagger-ui>swagger-ui</a>) which users can input parameters and validate outputs with ease.</p>
 <img src=https://camo.githubusercontent.com/0a4b5cd30b256fcc8e27189516d1b7efcd119dbf23fb38e4b3b0466a2d8bfc06/68747470733a2f2f666173746170692e7469616e676f6c6f2e636f6d2f696d672f696e6465782f696e6465782d30312d737761676765722d75692d73696d706c652e706e67 alt="FastAPI docs" class=center>
 <p>And my favourite part is that it works perfectly with <a href=https://github.com/samuelcolvin/pydantic>Pydantic</a>. It just makes data validation and setting management so much fun to handle with proper structures.</p>

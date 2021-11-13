@@ -107,18 +107,18 @@ For instance, the tension among global giants, protesting, Australian bushfire s
 }
 </code></pre></div><h3 id=deployment>Deployment</h3>
 <p>Moreover, a Dockerfile is also included. This will allow the API server to be deployed with ease by simply using</p>
-<pre tabindex=0><code class=language-console data-lang=console>docker-compose up -d
-</code></pre><p>This will deploy and run a server on the background with pre-defined configurations which can be altered as see fit. Alternatively, we can also run a server with uvicorn as shown below for debugging purposes:</p>
-<pre tabindex=0><code class=language-console data-lang=console>$ uvicorn main:app --reload
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-console data-lang=console>docker-compose up -d
+</code></pre></div><p>This will deploy and run a server on the background with pre-defined configurations which can be altered as see fit. Alternatively, we can also run a server with uvicorn as shown below for debugging purposes:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-console data-lang=console>$ uvicorn main:app --reload
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 INFO:     Started reloader process [16788]
 INFO:     Started server process [9784]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     127.0.0.1:51196 - &quot;GET / HTTP/1.1&quot; 307
-INFO:     127.0.0.1:51196 - &quot;GET /docs HTTP/1.1&quot; 200
-INFO:     127.0.0.1:51196 - &quot;GET /openapi.json HTTP/1.1&quot; 200
-</code></pre><h2 id=summary>Summary</h2>
+INFO:     127.0.0.1:51196 - &#34;GET / HTTP/1.1&#34; 307
+INFO:     127.0.0.1:51196 - &#34;GET /docs HTTP/1.1&#34; 200
+INFO:     127.0.0.1:51196 - &#34;GET /openapi.json HTTP/1.1&#34; 200
+</code></pre></div><h2 id=summary>Summary</h2>
 <p>This project is an open-source API server powered by FastAPI allowing everyone to access the COVID-19 data effortlessly. With a powerful library, as such Pandas, it allows the data manipulation to be performed quickly and clearly; furthermore, the data analysis can be done more efficiently. Without a doubt, the combination of FastAPI and Pandas demonstrates how impactful open data can be.</p>
 <h2 id=to-learn-more>To Learn More</h2>
 <p>Please visit the following links</p>
