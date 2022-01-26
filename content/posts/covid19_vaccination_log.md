@@ -12,7 +12,9 @@ On **18-Aug-2020**, Taiwan finally opened its first appointment for locally-made
 
 I will keep updating this log as I receive more information before and after receiving my doses.
 
-## Vaccination Log (1st Dose)
+---
+
+## Vaccination Log - Medigen (1st Dose)
 
 | Date            | Time  | Remark                                          |
 | --------------- | ----- | ----------------------------------------------- |
@@ -23,10 +25,22 @@ I will keep updating this log as I receive more information before and after rec
 | **24-Aug-2021** | 10.00 | Had mild diarrhoea                              |
 |                 | 13.00 | Felt normal                                     |
 
-## Vaccination Log (2nd Dose)
+---
+
+## Vaccination Log - Medigen (2nd Dose)
 
 | Date            | Time  | Remark                  |
 | --------------- | ----- | ----------------------- |
 | **01-Oct-2021** | 16.30 | Received The Seond Dose |
 |                 | 17.00 | Had mild diarrhoea      |
 |                 | 17.20 | Felt normal             |
+
+---
+
+## Vaccination Log - Moderna (3rd Dose - Booster)
+
+| Date            | Time  | Remark                                          |
+| --------------- | ----- | ----------------------------------------------- |
+| **25-Jan-2022** | 16.00 | Received The Seond Dose                         |
+|                 | 18.00 | Experienced a minor fatigue                     |
+| **26-Jan-2022** | 8.30  | Felt a bit sore on a left arm (vaccinated spot) |
