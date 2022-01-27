@@ -44,3 +44,6 @@ I will keep updating this log as I receive more information before and after rec
 | **25-Jan-2022** | 16.00 | Received The Seond Dose                         |
 |                 | 18.00 | Experienced a minor fatigue                     |
 | **26-Jan-2022** | 8.30  | Felt a bit sore on a left arm (vaccinated spot) |
+|                 | 14.00 | Fatigue                                         |
+|                 | 19.30 | Extreme Fatigue and felt cold                   |
+| **27-Jan-2022** | 8.00  | Felt better than yesterday                      |
