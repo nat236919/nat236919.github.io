@@ -7,6 +7,7 @@ tags: ["blog", "python", "curiosity-jar"]
 ---
 
 [Source Code](https://github.com/nat236919/CuriosityJar/tree/master/TheHumbleNishiyamaRandomnessGame)
+[Game GUI](https://humble-nishiyama-randomness-game.netlify.app/)
 
 ## What is The Humble-Nishiyama Randomness Game?
 
