@@ -14,36 +14,33 @@ I have experiences in using **Python** for various projects and applications ran
 
 Additionally, I have experiences developing and maintaining web-app projects using **PHP (CodeIgniter, Laravel)**, **JS (Vanilla, jQuery, Vue.js)**. I am also no stranger with a variety of databases (e.g., **MySQL**, **Azure Cosmos DB**, and **MongoDB**). Furthermore, I am familiar with **HTML**, **CSS**, and its frameworks (e.g., **Bootstrap**, **Foundation**, **Bulma**, **Materialize**, etc.).
 
-Currently, I am working in a private R&D sector specialising in educational technology.
+Currently, I am working at a private firm specialising in IT monitoring and automation platform.
 
 ---
 
 ### Skills
 
+- Back-End
+  - API Development (RESTful)
+  - Python (Django, Flask, FastAPI)
+  - PHP (Laravel, CodeIgniter)
+  - Design Patterns (MVC, etc.)
+- Databases
+  - MySQL, MongoDB, Azure
+  - Cosmos DB
+- Front-End
+  - HTML
+  - CSS (Bootstrap, Foundation, etc.)
+  - JavaScript (jQuery, Vue.js, Nuxt.js)
+  - UX/UI
 - Data Analysis
-
   - Exploratory Data Analysis
-  - Jupyter Notebook / Lab
-  - Data Manipulation (Pandas, Numpy)
-  - Data Visualization (Matplotlib, Seaborn, Bokeh, Plotly)
+  - Data Manipulation
+  - Data Visualization
   - Machine Learning
-
-- Web Development
-
-  - Backend
-    - API Development
-        - Python (Django, Flask, FastAPI)
-        - PHP (Laravel, CodeIgniter)
-    - Databases
-        - MySQL
-        - MongoDB, CosmosDB
-  - Frontend
-    - HTML
-    - CSS
-    - JavaScript (jQuery, Vue.js)
-
 - Miscellaneous
   - Git version control
+  - CI/CD
   - Docker
   - Microsoft Azure Cloud
 
