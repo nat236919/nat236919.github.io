@@ -8,15 +8,18 @@ tags: ["blog", "python", "generators"]
 
 ## Objectives
 
-In this short blog, I'd like to introduce **Python generators**. After reading this blog, I do hope that you will understand
+In this short blog, I'd like to introduce **Python Generators**. After reading this blog, I do hope that you will understand
 
 - What **Python generators** are
 - What **generator function** and **generator expression** are
 - How to use them
 
+---
+
 ## What are Python Generators?
 
 A special function in Python that returns a lazy iterator. It works similar to a list, but it doesn't store all values in memory
+
 
 ## Implementation
 
@@ -38,7 +41,7 @@ We can solve the problem by using **yield** instead of **return** to create a **
 ```python
 def datasource():
     num = 9999
-    while(True):
+    while True:
         yield num
         num *= 2
 ```
@@ -67,6 +70,24 @@ datasource_gen = (n for n in range(11))
 ```
 
 The difference between **datasource_list** and **datasource_gen** is that **datasource_list** populates a list of numbers and store them in memory; however, **datasource_gen** does not.
+
+## Implementation (Contd.)
+
+Another example, still remeber **Fibonacci** sequence? We can easily implement **generator function** to create it as follows:
+
+```python
+def fibo_sequence(n=2):
+    a, b = 0, 1
+    for i in range(n):
+        yield b
+        a, b = b, a + b
+```
+
+```python
+fibo_seq = fibo_sequence(10)
+list(fibo_seq) # [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+```
+---
 
 ## Conclusion
 
