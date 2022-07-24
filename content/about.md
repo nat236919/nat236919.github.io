@@ -14,8 +14,7 @@ I have experiences in using **Python** for various projects and applications ran
 
 Additionally, I have experiences developing and maintaining web-app projects using **PHP (CodeIgniter, Laravel)**, **JS (Vanilla, jQuery, Vue.js)**. I am also no stranger with a variety of databases (e.g., **MySQL**, **Azure Cosmos DB**, and **MongoDB**). Furthermore, I am familiar with **HTML**, **CSS**, and its frameworks (e.g., **Bootstrap**, **Foundation**, **Bulma**, **Materialize**, etc.).
 
-Currently, I am working at a private firm specialising in IT monitoring and automation platform.
-
+Currently, I am working as a professional services constultant at a private firm specialising in AI operations, IT monitoring and automation.
 ---
 
 ### Skills
