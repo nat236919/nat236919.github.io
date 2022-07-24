@@ -12,10 +12,9 @@ I am a software engineer and a data analyst who is gliding around open-source de
 
 I have experiences in using **Python** for various projects and applications ranging from its web frameworks (e.g., **Flask**, **FastAPI**, **Django**), data manipulation, and data visualization for developing APIs, statistical dashboards, and machine learning models.
 
-Additionally, I have experiences developing and maintaining web-app projects using **PHP (CodeIgniter, Laravel)**, **JS (Vanilla, jQuery, Vue.js)**. I am also no stranger with a variety of databases (e.g., **MySQL**, **Azure Cosmos DB**, and **MongoDB**). Furthermore, I am familiar with **HTML**, **CSS**, and its frameworks (e.g., **Bootstrap**, **Foundation**, **Bulma**, **Materialize**, etc.).
+Additionally, I have experiences developing and maintaining web-app projects using **PHP (CodeIgniter, Laravel)**, **JS (Vanilla, jQuery, Vue.js)**. I am also no stranger with a variety of databases (e.g., **MySQL**, **Azure Cosmos DB**, and **MongoDB**). Furthermore, I am familiar with **HTML**, **CSS**, and its frameworks (e.g., **Bootstrap**, **Foundation**, **Bulma**, **Materialize**, etc.).ss
 
 Currently, I am working as a professional services constultant at a private firm specialising in AI operations, IT monitoring and automation.
----
 
 ### Skills
 
