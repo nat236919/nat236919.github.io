@@ -8,7 +8,7 @@ tags: ["blog", "ssh", "paramiko", "python"]
 
 ## Introduction
 
-Connecting to a remote service using a python module **paramiko** has always been one of the well-known methods to handle such tasks. Executing commands and receving the data back from the connected server can be done at ease. The following code is a basic usage of **paramiko** to interact with the server.
+Connecting to a remote service using a python module **paramiko** has always been one of the well-known methods to handle such tasks. Executing commands and receiving the data from the connected server can be done quickly. The following code is a primary usage of **paramiko** to interact with the server.
 
 ```python
 import paramiko
@@ -33,11 +33,11 @@ client.close()
 /c/Users/n.arunoprayoch
 ```
 
-However, when it comes to conecction to a Cisco device via SSH, it is not that simple. This is a case study of Cisco CUCM Cluster SSH connection. When an SSH connection is establised on a Cisco CUCM cluster, it actually activates an interactive session dicpicted in the following image
+However, when it comes to connecting to a Cisco device via SSH, it is not that simple. This is a case study of the Cisco CUCM Cluster SSH connection. When an SSH connection is established on a Cisco CUCM cluster, it activates an interactive session depicted in the following image
 
 {{< image src="https://i.ibb.co/PgkVBh1/download.png" alt="Cisco CUCM Cluster CLI" position="center">}}
 
-If we were to connect and retrive the data using **exec_command** method, we would only keep getting this result
+If we were to connect and retrieve the data using **exec_command** method, we would only keep getting this result
 
 ```shell
 Command Line Interface is starting up, please wait ..
@@ -51,7 +51,7 @@ Command Line Interface is starting up, please wait ..
 
 {{< image src="https://i.ibb.co/RbBNv74/cucm-attemp-flowchart-attemp-2.jpg" alt="flowchart" position="center">}}
 
-According to the diagram above, we are able to write code as follows:
+According to the diagram above, we can write code as follows:
 
 ```python
 import paramiko
@@ -67,7 +67,7 @@ class SSHService:
         ssh.connect(hostname=ssh_hostname, username=ssh_username,
                     password=ssh_password, port=ssh_port, timeout=ssh_timeout)
 
-        # Add a delay to wait for finishing loggin-in
+        # Add a delay to wait for finishing logging-in
         if apply_conn_delay:
             time.sleep(SSH_CONN_DELAY)
 
@@ -138,14 +138,14 @@ class CUCMClusterService:
         return str(cmd_data)
 ```
 
-Essentially, we are able to successfully establish the connection, send commands, and retrieve the data from the connected CUCM cluster.
+Essentially, we can successfully establish the connection, send commands, and retrieve the data from the connected CUCM cluster.
 
 ## Key Points
 
 1. Investigation: SSH type (ordinary, interactive, etc.)
 2. Regarding **paramiko** lib, use **.invoke_shell()** method to establish an SSH channel to handle an interactive CLI
 3. Create an infinite loop to interact with the established channel
-4. Ensure that the loop has termination condition setup
+4. Ensure that the loop has termination conditions setup
     - Max Loop
     - Max duplicate result
     - Max time
