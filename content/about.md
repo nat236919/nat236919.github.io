@@ -20,12 +20,16 @@ Currently, I am working as a professional services consultant at a private firm 
 
 - Back-End
   - API Development (RESTful)
-  - Python (Django, Flask, FastAPI)
+  - GraphQL
+  - Python 2 and 3 (Django, Flask, FastAPI)
   - PHP (Laravel, CodeIgniter)
   - Design Patterns (MVC, etc.)
+  - Monitoring and Automation scripting
 - Databases
-  - MySQL, MongoDB, Azure
-  - Cosmos DB
+  - MySQL
+  - MariaDB
+  - MongoDB
+  - Azure Cosmos DB
 - Front-End
   - HTML
   - CSS (Bootstrap, Foundation, etc.)
@@ -37,10 +41,11 @@ Currently, I am working as a professional services consultant at a private firm 
   - Data Visualization
   - Machine Learning
 - Miscellaneous
-  - Git version control
+  - Git Version Control
   - CI/CD
   - Docker
   - Microsoft Azure Cloud
+  - Linux Administration
 
 ---
 
