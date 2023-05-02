@@ -6,15 +6,11 @@ categories: ["about"]
 tags: []
 ---
 
-My name is **Nuttaphat Arunoprayoch (Chiang)**
+My name is **Nuttaphat Arunoprayoch (Sean)**, and I am a software engineer and data analyst with a passion for open-source development.
 
-I am a software engineer and a data analyst who is gliding around open-source development.
+I specialize in using Python for various projects and applications, such as web frameworks like Flask, FastAPI, and Django, as well as data manipulation and visualization for developing APIs, statistical dashboards, and machine learning models. I also have experience developing and maintaining web-app projects using PHP (CodeIgniter, Laravel), JS (Vanilla, jQuery, Vue.js), and various databases such as MySQL, Azure Cosmos DB, and MongoDB. Additionally, I am familiar with HTML, CSS, and its frameworks (Bootstrap, Foundation, Bulma, Materialize, etc.).
 
-I have experiences in using **Python** for various projects and applications ranging from its web frameworks (e.g., **Flask**, **FastAPI**, **Django**), data manipulation, and data visualization for developing APIs, statistical dashboards, and machine learning models.
-
-Additionally, I have experiences developing and maintaining web-app projects using **PHP (CodeIgniter, Laravel)**, **JS (Vanilla, jQuery, Vue.js)**. I am also no stranger with a variety of databases (e.g., **MySQL**, **Azure Cosmos DB**, and **MongoDB**). Furthermore, I am familiar with **HTML**, **CSS**, and its frameworks (e.g., **Bootstrap**, **Foundation**, **Bulma**, **Materialize**, etc.).ss
-
-Currently, I am working as a professional services consultant at a private firm specialising in AI operations, IT monitoring and automation.
+Currently, I work as a professional services consultant at a private firm specializing in AI operations, IT monitoring, and automation.
 
 ### Skills
 
