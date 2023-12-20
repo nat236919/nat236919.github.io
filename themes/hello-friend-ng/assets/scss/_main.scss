@@ -14,7 +14,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
   font-display: auto;
   font-size: 1rem;
   line-height: 1.54;
@@ -40,7 +40,11 @@ body {
   }
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   display: flex;
   align-items: center;
   line-height: 1.3;
@@ -101,9 +105,15 @@ img {
     margin-left: auto;
   }
 
-  &.circle {
+  &.circled {
     border-radius: 50%;
     max-width: 35%;
+    margin: auto;
+  }
+
+  &.squared {
+    border-radius: 15%;
+    max-width: 40%;
     margin: auto;
   }
 
@@ -126,6 +136,7 @@ figure {
   &.left-floated {
     margin-right: auto;
     float: left;
+
     img {
       margin: 20px 20px 20px 0;
     }
@@ -143,6 +154,7 @@ figure {
   &.right-floated {
     margin-left: auto;
     float: right;
+
     img {
       margin: 20px 0 20px 20px;
     }
@@ -174,7 +186,7 @@ figure {
 }
 
 code {
-  font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
   font-display: auto;
   font-feature-settings: normal;
   background: $light-background-secondary;
@@ -242,7 +254,8 @@ blockquote {
   }
 }
 
-ul, ol {
+ul,
+ol {
   margin-left: 40px;
   padding: 0;
 
@@ -305,35 +318,35 @@ hr {
 
 // Accessibility
 .screen-reader-text {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	clip-path: none;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-    width: auto;
-    top: 5px;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	z-index: 100000;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  width: auto;
+  top: 5px;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  z-index: 100000;
 }
