@@ -6,8 +6,6 @@ categories: ["about"]
 tags: []
 ---
 
-# About
-
 Greetings! I'm **Nuttaphat Arunoprayoch (Sean)**, a seasoned software engineer and data analyst deeply passionate about open-source development.
 
 ## Experience
