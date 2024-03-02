@@ -1,5 +1,5 @@
 ---
-title: "Technology For Change Asia 4"
+title: "Technology For Change Asia 4: Keynotes"
 date: 2024-03-01T16:04:59+08:00
 draft: false
 categories: ["blog"]
@@ -14,7 +14,7 @@ tags: ["blog"]
 
 **Description**: Named a "web celeb" by Forbes, Jimmy Wales is best known as the founder of Wikipedia, a collaborative free encyclopaedia, and the Wikimedia Foundation, a charitable organisation dedicated to encouraging the growth, development and distribution of free, multilingual content. Mr Wales will delve into his journey through the world of technology, covering themes including AI, automation and disruptive technological innovation ().
 
-![keynote1](https://i.ibb.co/y8S6YYD/IMG20240227094035.jpg){: .center}
+![keynote1](https://i.ibb.co/y8S6YYD/IMG20240227094035.jpg)
 
 The keynote address promises to offer insights into Wales' experiences navigating the ever-evolving landscape of technology, shedding light on his perspectives regarding artificial intelligence (AI), automation, and disruptive technological innovation. Furthermore, the discussion will likely explore the intersection of these themes with the mission and evolution of Wikipedia and the Wikimedia Foundation.
 
@@ -24,7 +24,7 @@ During the interview, particular emphasis will be placed on understanding the im
 
 **Description**: Michio Kaku is a globally renowned theoretical physicist and futurist, a bestselling author and a populariser of science. As an originator of string field theory, he carries on Einstein’s quest to unite the four fundamental forces of nature into a grand unified theory of everything. Mr Kaku will share insights into quantum computing, focusing on the future of AI and other new technologies.
 
-![keynote2](https://i.ibb.co/k3rgjwM/IMG20240228091449.jpg){: .center}
+![keynote2](https://i.ibb.co/k3rgjwM/IMG20240228091449.jpg)
 
 ### Decoding Quantum Computing
 
