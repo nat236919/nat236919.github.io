@@ -6,7 +6,7 @@ categories: ["blog"]
 tags: ["blog"]
 ---
 
-![TFCA4](https://i.ibb.co/DM19znq/IMG20240227084112.jpg){: .center}
+![TFCA4](https://i.ibb.co/DM19znq/IMG20240227084112.jpg)
 
 [**Technology for Change Asia 4th**](https://events.economist.com/technology-for-change-week/) featuring the founder of Wikipedia, internet entrepreneur, wiki pioneer, and technology visionary Jimmy Wales, and globally-renowned theoretical physicist, activist, futurologist, and popular science writer Michio Kaku. I had an opportunity to participate in this event for inspiring two days. Here's the summary of each session.
 
