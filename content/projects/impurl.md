@@ -6,7 +6,7 @@ categories: ["projects"]
 tags: ["project", "python", "web-app", "vue.js", "fastapi"]
 ---
 
-{{< image src="<https://i.ibb.co/HYLVVy9/impurl.jpg>" alt="impurl" position="center">}}
+{{< image src="https://i.ibb.co/HYLVVy9/impurl.jpg" alt="impurl" position="center">}}
 
 ## Introduction
 
@@ -28,7 +28,7 @@ The intuitive and visually appealing web user interface of ImpURL is built on Nu
 
 ### CI/CD Pipeline
 
-{{< image src="<https://i.ibb.co/1KKXP7q/impurl-drawio.png>" alt="CICD" position="center">}}
+{{< image src="https://i.ibb.co/1KKXP7q/impurl-drawio.png" alt="CICD" position="center">}}
 
 ImpURL implements a comprehensive CI/CD pipeline to streamline the development and deployment process:
 
