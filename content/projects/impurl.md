@@ -1,9 +1,9 @@
 ---
 title: "ImpURL"
-date: 2024-04-25T10:57:13+08:00
+date: 2024-04-25T10:06:18+08:00
 draft: false
 categories: ["projects"]
-tags: ["project", "python", "web-app", "vue.js", "fastapi"]
+tags: ["project", "python", "web-app", "nuxt3", "fastapi", "azure"]
 ---
 
 {{< image src="https://i.ibb.co/HYLVVy9/impurl.jpg" alt="impurl" position="center">}}
