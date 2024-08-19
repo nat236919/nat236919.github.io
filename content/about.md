@@ -15,20 +15,25 @@ With a rich background in utilizing Python for diverse projects and applications
 ## Skills
 
 ### Back-End
+
 - API Development (RESTful), GraphQL
 - Python (Django, Flask, FastAPI), PHP (Laravel, CodeIgniter)
 - Design Patterns (MVC, etc.), Monitoring, Automation scripting
 
 ### Databases
+
 - MySQL, MariaDB, MongoDB, Azure Cosmos DB
 
 ### Front-End
+
 - HTML, CSS (Bootstrap, Foundation), JavaScript (jQuery, Vue.js, Nuxt.js), UX/UI
 
 ### Data Analysis
+
 - Exploratory Data Analysis, Data Manipulation, Data Visualization, Machine Learning
 
 ### Miscellaneous
+
 - Git Version Control, CI/CD, Docker, Microsoft Azure Cloud, Linux Administration
 
 ## Publications
