@@ -28,7 +28,7 @@ Together, these components enable you to build an API that responds quickly whil
 
 ## How Does the Stack Work?
 
-{{< image src="<https://i.ibb.co/gWgjhWq/high-app-diagram.jpg>" alt="stack-diagram" position="center">}}
+{{< image src="https://i.ibb.co/gWgjhWq/high-app-diagram.jpg" alt="stack-diagram" position="center">}}
 
 1. FastAPI receives an API request that triggers a task (e.g., sending an email).
 
@@ -219,7 +219,7 @@ GET http://localhost:8000/task-status/{task_id}
 
 Visit <http://localhost:5555> to view task statuses and worker health in real-time.
 
-{{< image src="<https://i.ibb.co/p3XDY6F/flower.jpg>" alt="flower" position="center">}}
+{{< image src="https://i.ibb.co/p3XDY6F/flower.jpg" alt="flower" position="center">}}
 
 ## Use Cases of This Stack
 
