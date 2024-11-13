@@ -6,11 +6,11 @@ categories: ["about"]
 tags: []
 ---
 
-Greetings! I'm **Nuttaphat Arunoprayoch (Sean)**, a seasoned software engineer and data analyst deeply passionate about open-source development.
+Greetings! I'm **Nuttaphat Arunoprayoch (Sean)**, a results-driven Full-Stack Developer with extensive experience in AI-powered monitoring and automation platforms, and scalable web systems. I have a proven track record in designing innovative solutions that optimize workflows and reduce costs. I am an expert in web development and cutting-edge technologies, with hands-on experience across the entire SDLC.
 
 ## Experience
 
-With a rich background in utilizing Python for diverse projects and applications, including web frameworks like Flask, FastAPI, and Django, I bring a wealth of expertise to API development, data manipulation, and visualization. My proficiency extends to PHP (CodeIgniter, Laravel), JS (Vanilla, jQuery, Vue.js), and various databases such as MySQL, Azure Cosmos DB, and MongoDB. Currently, I thrive as a professional services consultant at a private firm specializing in AI operations, IT monitoring, and automation.
+With a rich background in utilizing Python for diverse projects and applications, including web frameworks like Flask, FastAPI, and Django, I bring a wealth of expertise to API development, data manipulation, and visualization. My proficiency extends to PHP (CodeIgniter, Laravel), JS (Vanilla, jQuery, Vue.js), and various databases such as MySQL, Azure Cosmos DB, and MongoDB. Currently, I serve as a solutions architect at a private firm specializing in AI operations, IT monitoring, and automation.
 
 ## Skills
 
@@ -34,7 +34,7 @@ With a rich background in utilizing Python for diverse projects and applications
 
 ### Miscellaneous
 
-- Git Version Control, CI/CD, Docker, Microsoft Azure Cloud, Linux Administration
+- Celery, Redis, Git Version Control, CI/CD, Docker, Microsoft Azure Cloud, Linux Administration
 
 ## Publications
 
