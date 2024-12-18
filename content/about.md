@@ -16,7 +16,7 @@ tags: []
 
 [![View @nat236919's Holopin badges](https://holopin.me/nat236919)](https://holopin.io/@nat236919)  
 
-I'm a passionate **Software Engineer** and **Data Analyst** with a love for **open-source contributions**. I enjoy creating impactful solutions and collaborating on diverse projects to solve complex problems.  
+I'm a passionate **Full-Stack Developer** and **Data Analyst** with a love for **open-source contributions**. I enjoy creating impactful solutions and collaborating on diverse projects to solve complex problems.  
 
 ### Projects I've Created and Maintain  
 

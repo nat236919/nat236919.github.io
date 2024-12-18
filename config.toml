@@ -54,11 +54,11 @@ disableHugoGeneratorInject = false
   dateformNumTime = "2006-01-02 15:04 -0700"
 
   # Metadata mostly used in document's head
-  description = "Nuttaphat Arunoprayoch is a software engineer and a data analyst who is gliding around open-source development"
-  keywords = "Nuttaphat, Arunoprayoch, Software Engineer, Data Analyst"
+  description = "Nuttaphat Arunoprayoch is a full stack developer and a data analyst specializing in open-source development, web technologies, and data analysis."
+  keywords = "Nuttaphat, Nuttaphat Arunoprayoch, Software Engineer, Full Stack Developer, Data Analyst, Open Source, Web Development, Data Analysis"
   images = [""]
 
-  homeSubtitle = "Software Engineer | Data Analyst | Researcher"
+  homeSubtitle = "Software Engineer | Full Stack Developer | Data Analyst | Researcher"
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   # gitUrl = ""
@@ -78,7 +78,7 @@ disableHugoGeneratorInject = false
   vueJS = false
 
   # Social Share Image
-  socialShareImg = "https://i.ibb.co/K280nKy/social-sharing-img.png"
+  socialShareImg = "https://nuttaphat.com/img/profile_img.jpg"
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
   justifyContent = true  # Set "text-align: justify" to .content.
@@ -119,6 +119,14 @@ disableHugoGeneratorInject = false
   [[params.social]]
     name = "stackoverflow"
     url  = "https://stackoverflow.com/users/6926444/n-arunoprayoch"
+
+  # Open Graph metadata
+  [params.opengraph]
+    title = "Nuttaphat Arunoprayoch"
+    description = "Nuttaphat Arunoprayoch is a full stack developer and a data analyst specializing in open-source development, web technologies, and data analysis."
+    type = "website"
+    url = "https://nuttaphat.com"
+    image = "https://nuttaphat.com/img/profile_img.jpg"
 
 [languages]
   [languages.en]
