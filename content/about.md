@@ -6,38 +6,62 @@ categories: ["about"]
 tags: []
 ---
 
-Greetings! I'm **Nuttaphat Arunoprayoch (Sean)**, a results-driven Full-Stack Developer with extensive experience in AI-powered monitoring and automation platforms, and scalable web systems. I have a proven track record in designing innovative solutions that optimize workflows and reduce costs. I am an expert in web development and cutting-edge technologies, with hands-on experience across the entire SDLC.
+## About
 
-## Experience
+**Results-driven Full-Stack Developer** with extensive expertise in **AI-powered monitoring and automation platforms** and **scalable web systems**. Proven track record of designing innovative solutions that streamline workflows and reduce costs. Passionate about leveraging **cutting-edge technologies** and delivering robust solutions across the entire Software Development Life Cycle (SDLC).  
 
-With a rich background in utilizing Python for diverse projects and applications, including web frameworks like Flask, FastAPI, and Django, I bring a wealth of expertise to API development, data manipulation, and visualization. My proficiency extends to PHP (CodeIgniter, Laravel), JS (Vanilla, jQuery, Vue.js), and various databases such as MySQL, Azure Cosmos DB, and MongoDB. Currently, I serve as a solutions architect at a private firm specializing in AI operations, IT monitoring, and automation.
+---
 
-## Skills
+## Who I Am  
 
-### Back-End
+[![View @nat236919's Holopin badges](https://holopin.me/nat236919)](https://holopin.io/@nat236919)  
 
-- API Development (RESTful), GraphQL
-- Python (Django, Flask, FastAPI), PHP (Laravel, CodeIgniter)
-- Design Patterns (MVC, etc.), Monitoring, Automation scripting
+I'm a passionate **Software Engineer** and **Data Analyst** with a love for **open-source contributions**. I enjoy creating impactful solutions and collaborating on diverse projects to solve complex problems.  
 
-### Databases
+### Projects I've Created and Maintain  
 
-- MySQL, MariaDB, MongoDB, Azure Cosmos DB
+- [**impURL**](https://impurl.netlify.app/): A lightweight and efficient URL shortener.  
+- [**covid19-api**](https://nat236919.github.io/covid19-api/): A powerful API for COVID-19 data aggregation and analysis.  
+- [**scavenger**](https://scavenger-project.azurewebsites.net/): A prototype project exploring web scraping as a service.  
+- [**daylify**](https://daylify.nuttaphat.com/): A tool designed to simplify and track daily mood measurements.  
 
-### Front-End
+---
 
-- HTML, CSS (Bootstrap, Foundation), JavaScript (jQuery, Vue.js, Nuxt.js), UX/UI
+## Skills  
 
-### Data Analysis
+### Back-End Development  
 
-- Exploratory Data Analysis, Data Manipulation, Data Visualization, Machine Learning
+- **API Development**: RESTful, GraphQL  
+- Programming: Python (Flask, FastAPI), PHP (Laravel, CodeIgniter), JavaScript (Node.js, Express.js)  
+- **Design Patterns**: MVC, Facade  
 
-### Miscellaneous
+### Databases  
 
-- Celery, Redis, Git Version Control, CI/CD, Docker, Microsoft Azure Cloud, Linux Administration
+- Relational: MySQL, MariaDB  
+- Non-relational: MongoDB, Azure Cosmos DB  
 
-## Publications
+### Front-End Development  
 
-- N. Arunoprayoch, C. Lai, P. Tho, J. Liang, and J. Yang, "Effects of Question Types on Engagement and Performance of Programming Learning for Non-computer Science Majors," _2018 7th International Congress on Advanced Applied Informatics (IIAI-AAI)_, Yonago, Japan, 2018, doi: [10.1109/IIAI-AAI.2018.00065](https://ieeexplore.ieee.org/document/8693438).
+- HTML, CSS, JavaScript (Vue.js, Nuxt.js, jQuery)  
 
-- Arunoprayoch, Nuttaphat & Lai, Chih-Hung & Tho, Pham-Duc & Liang, Jing-San. (2017). "Effects of Peer Interaction on Web-Based Computer Programming Learning," _The 25th International Conference on Computers in Education (ICCE 2017)_, New Zealand, 2017, [read the paper](https://www.researchgate.net/publication/322853323_Effects_of_Peer_Interaction_on_Web-Based_Computer_Programming_Learning).
+### Data Analysis  
+
+- Exploratory Data Analysis (EDA)  
+- Data Manipulation & Visualization  
+- Machine Learning  
+
+### Miscellaneous  
+
+- **Task Queues**: Celery, Redis  
+- **Version Control**: Git  
+- **DevOps**: CI/CD, Docker  
+- **Cloud Platforms**: Microsoft Azure  
+- **System Administration**: Linux  
+
+---
+
+## Publications  
+
+1. **N. Arunoprayoch**, C. Lai, P. Tho, J. Liang, and J. Yang, "Effects of Question Types on Engagement and Performance of Programming Learning for Non-computer Science Majors," _2018 7th International Congress on Advanced Applied Informatics (IIAI-AAI)_, Yonago, Japan, 2018. [DOI: 10.1109/IIAI-AAI.2018.00065](https://ieeexplore.ieee.org/document/8693438)  
+
+2. **N. Arunoprayoch**, C. Lai, P. Tho, J. Liang, "Effects of Peer Interaction on Web-Based Computer Programming Learning," _The 25th International Conference on Computers in Education (ICCE 2017)_, New Zealand, 2017. [Read the paper](https://www.researchgate.net/publication/322853323_Effects_of_Peer_Interaction_on_Web-Based_Computer_Programming_Learning)  
