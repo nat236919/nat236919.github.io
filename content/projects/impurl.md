@@ -10,7 +10,7 @@ tags: ["project", "python", "web-app", "nuxt3", "fastapi", "azure"]
 
 ## Introduction
 
-[ImpURL](https://impurl.nuttaphat.com/) is an experimental and user-friendly web application designed to help you shorten URL links efficiently. In today's fast-paced digital world, the ability to quickly share concise links can streamline communication and improve productivity.
+[ImpURL](https://impurl.cc/) is an experimental and user-friendly web application designed to help you shorten URL links efficiently. In today's fast-paced digital world, the ability to quickly share concise links can streamline communication and improve productivity.
 
 ## Inspiration
 
@@ -41,8 +41,8 @@ ImpURL implements a comprehensive CI/CD pipeline to streamline the development a
 
 ## Project Links
 
-- [Visit ImpURL](https://impurl.nuttaphat.com/)
-- [ImpURL on Netlify](https://impurl.netlify.com/)
+- [Visit ImpURL](https://impurl.cc/)
+- [ImpURL on Netlify](https://impurl.netlify.app/)
 
 ## Conclusion
 
