@@ -16,6 +16,8 @@ In this article, I'll explain the problem, walk you through my thought process, 
 
 ### The Problem
 
+[Link to question](https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays)
+
 You are given two 0-indexed integer permutations **A** and **B** of length **n**. A **prefix common array** of **A** and **B** is an array **C** where `C[i]` equals the count of numbers that are present at or before index `i` in both **A** and **B**.
 
 **Input Constraints:**
