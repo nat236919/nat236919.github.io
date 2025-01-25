@@ -121,7 +121,7 @@ class Solution:
 
 This approach ensures that we handle large inputs efficiently by leveraging the properties of the problem and making two linear passes to accumulate the necessary operations.
 
-{{ <image src="https://i.ibb.co/TvPQCHx/leetcode-passing-ball-count.jpg"  alt="Solution Result" position="center"> }}
+{{<image src="https://i.ibb.co/TvPQCHx/leetcode-passing-ball-count.jpg" alt="Solution Result" position="center">}}
 
 ---
 
