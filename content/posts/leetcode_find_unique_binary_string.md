@@ -8,7 +8,7 @@ tags: ["blog", "python", "leetcode"]
 
 ### Introduction
 
-This blog post covers a solution to a Leetcode problem that requires designing an algorithm to accept a stream of integers and retrieve the product of the last k integers of the stream. The task is both interesting and practical, showcasing the application of algorithm design for efficiency.
+This blog post covers a solution to a Leetcode problem that requires finding a unique binary string that does not appear in a given list of binary strings. The task is both interesting and practical, showcasing the application of algorithm design for efficiency.
 
 In this article, I'll explain the problem, walk you through my thought process, and share the solution I came up with.
 
@@ -16,17 +16,9 @@ In this article, I'll explain the problem, walk you through my thought process, 
 
 ### The Problem
 
-[Link to question](https://leetcode.com/problems/product-of-the-last-k-numbers)
+[Link to question](https://leetcode.com/problems/find-unique-binary-string)
 
-Design an algorithm that accepts a stream of integers and retrieves the product of the last k integers of the stream.
-
-Implement the `ProductOfNumbers` class:
-
-- `ProductOfNumbers()` Initializes the object with an empty stream.
-- `void add(int num)` Appends the integer `num` to the stream.
-- `int getProduct(int k)` Returns the product of the last `k` numbers in the current list. You can assume that always the current list has at least `k` numbers.
-
-The test cases are generated so that, at any time, the product of any contiguous sequence of numbers will fit into a single 32-bit integer without overflowing.
+Given an array of binary strings `nums`, return a binary string that does not appear in `nums`. If there are multiple answers, you may return any of them.
 
 ---
 
@@ -35,62 +27,61 @@ The test cases are generated so that, at any time, the product of any contiguous
 **Example 1:**
 
 ```raw
-Input: ["ProductOfNumbers","add","add","add","add","add","getProduct","getProduct","getProduct","add","getProduct"]
-       [[],[3],[0],[2],[5],[4],[2],[3],[4],[8],[2]]
+Input: nums = ["01","10"]
+Output: "11"
+Explanation: "11" does not appear in nums. "00" would also be correct.
+```
 
-Output: [null,null,null,null,null,null,20,40,0,null,32]
+**Example 2:**
 
-Explanation:
-ProductOfNumbers productOfNumbers = new ProductOfNumbers();
-productOfNumbers.add(3);        // [3]
-productOfNumbers.add(0);        // [3,0]
-productOfNumbers.add(2);        // [3,0,2]
-productOfNumbers.add(5);        // [3,0,2,5]
-productOfNumbers.add(4);        // [3,0,2,5,4]
-productOfNumbers.getProduct(2); // return 20. The product of the last 2 numbers is 5 * 4 = 20
-productOfNumbers.getProduct(3); // return 40. The product of the last 3 numbers is 2 * 5 * 4 = 40
-productOfNumbers.getProduct(4); // return 0. The product of the last 4 numbers is 0 * 2 * 5 * 4 = 0
-productOfNumbers.add(8);        // [3,0,2,5,4,8]
-productOfNumbers.getProduct(2); // return 32. The product of the last 2 numbers is 4 * 8 = 32
+```raw
+Input: nums = ["00","01"]
+Output: "11"
+Explanation: "11" does not appear in nums. "10" would also be correct.
+```
+
+**Example 3:**
+
+```raw
+Input: nums = ["111","011","001"]
+Output: "101"
+Explanation: "101" does not appear in nums. "000", "010", "100", and "110" would also be correct.
 ```
 
 ---
 
 ### My Solution
 
-The goal is to design an algorithm that accepts a stream of integers and retrieves the product of the last k integers of the stream. To achieve this, we can use a prefix product array to efficiently calculate the product of the last k numbers.
+The goal is to find a unique binary string that does not appear in the given list of binary strings. To achieve this, we can use a set to store the integer representations of the binary strings and then generate all possible binary strings of the same length to find one that is not in the set.
 
 #### Thought Process
 
-- **Initialization**: We initialize the `ProductOfNumbers` class with an empty stream. We use a list called `prefix_numbers` to store the prefix products, starting with an initial value of `1`.
+- **Initialization**: We initialize a set to store the integer representations of the binary strings.
 
-- **Adding Numbers**: When a new number is added to the stream:
-  - If the number is `0`, it resets the prefix product list to `[1]` because any product involving `0` will be `0`.
-  - Otherwise, it appends the product of the last element in `prefix_numbers` and the new number to the list.
+- **Transform Binary to Int**: For each binary string in the input list, convert it to an integer and add it to the set.
 
-- **Getting Product**: To get the product of the last k numbers:
-  - If `k` is greater than or equal to the length of `prefix_numbers`, it means there are not enough numbers to calculate the product, so we return `0`.
-  - Otherwise, we return the integer division of the last element in `prefix_numbers` by the element at the position `len(prefix_numbers) - 1 - k`.
+- **Generate Possible Numbers**: Generate all possible numbers in the range of the length of the input list plus one.
+
+- **Check for Uniqueness**: For each generated number, check if it is not in the set. If it is not, convert it back to a binary string and return it, ensuring it has the correct length by prepending zeros if necessary.
 
 Here is the implementation of the solution
 
 ```python
-class ProductOfNumbers:
+class Solution:
+    def findDifferentBinaryString(self, nums: List[str]) -> str:
+        # Transform binary to int
+        ints = set()
+        for num in nums:
+            ints.add(int(num, 2))
 
-    def __init__(self):
-        self.prefix_numbers = [1]  # Init number with 1
+        # Generate all possible numbers in range of nums
+        num_length = len(nums)
+        for num in range(2 ** num_length):
+            if num not in ints:
+                bin_num = bin(num)[2:]  # Get rid of '0b' prefix
+                return bin_num.zfill(num_length)  # Prepend 0's until length
 
-    def add(self, num: int) -> None:
-        if num == 0:
-            self.prefix_numbers = [1]
-        else:
-            # Append with a product of last elem * num
-            self.prefix_numbers.append(self.prefix_numbers[-1] * num)
-
-    def getProduct(self, k: int) -> int:
-        if k >= len(self.prefix_numbers):
-            return 0
-        return self.prefix_numbers[-1] // self.prefix_numbers[-1 - k]
+        return ''
 ```
 
 ---
@@ -98,22 +89,22 @@ class ProductOfNumbers:
 ### Complexity Analysis
 
 - Time Complexity:
-  - The add operation takes `O(1)` time.
-  - The getProduct operation takes `O(1)` time.
-  - Thus, the overall time complexity is `O(1)` for both operations.
+  - The transformation of binary strings to integers takes `O(n)` time, where `n` is the number of strings.
+  - The generation and checking of possible numbers take `O(2^m)` time, where `m` is the length of the binary strings.
+  - Thus, the overall time complexity is `O(n + 2^m)`.
 
 - Space Complexity:
-  - We use a prefix product array to store the products, which takes `O(n)` space.
+  - We use a set to store the integer representations of the binary strings, which takes `O(n)` space.
   - Hence, the space complexity is `O(n)`.
 
-This approach ensures that we handle large inputs efficiently by leveraging the properties of the heap data structure to perform the necessary operations.
+This approach ensures that we handle the problem efficiently by leveraging the properties of sets and binary string manipulation.
 
-{{<image src="https://i.ibb.co/SDPrV30H/leetcode-product-the-last-k-numbers-sol.jpg" alt="Solution Result" position="center">}}
+{{<image src="https://i.ibb.co/95hNBx6/leetcode-find-unique-binary-string.jpg" alt="Solution Result" position="center">}}
 
 ---
 
 ### Reflections and Takeaways
 
-This problem is a great example of how to efficiently calculate the product of the last k numbers using a prefix product array. By leveraging the properties of the prefix product array, we can efficiently perform the required operations. This approach ensures that we handle large inputs efficiently.
+This problem is a great example of how to efficiently find a unique binary string using set operations and binary string manipulation. By leveraging these properties, we can efficiently perform the required operations. This approach ensures that we handle large inputs efficiently.
 
-Let me know if you came up with a different approach—I'd love to hear it!
+Let me know if you came up with a different approach—I'd love to hear it
